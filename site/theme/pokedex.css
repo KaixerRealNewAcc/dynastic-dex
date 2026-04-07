@@ -491,3 +491,175 @@ a.subtle:hover {
 .tabbar .button.nav-last {
 	border-top-right-radius: 5px;
 }
+
+.theme-dark .pokedex h1 a,
+.theme-dark .dexentry h1 a.subtle {
+	color: #dce6f5;
+}
+
+.theme-dark .dexentry dt,
+.theme-dark .dexentry .minor,
+.theme-dark .movetag {
+	color: #9ab0d2;
+}
+
+.theme-dark .tabbar:after {
+	background: #0f172a;
+	border-color: #4b607f;
+}
+
+.theme-dark .tabbar .button.cur,
+.theme-dark .tabbar .button.cur:hover {
+	color: #9fb3d3;
+	background: #0f172a;
+	border-color: #4b607f;
+}
+
+.theme-dark .utilichart a {
+	color: #dce6f5;
+}
+
+.theme-dark .utilichart a.active,
+.theme-dark .utilichart a.active:hover,
+.theme-dark .utilichart.nokbd a:hover {
+	border-color: #4b607f;
+	background: #1a253b;
+}
+
+.theme-dark .utilichart a.sel,
+.theme-dark .utilichart a.sel:hover,
+.theme-dark .utilichart a.cur,
+.theme-dark .utilichart a.cur:hover {
+	border-color: #6b86ae;
+	background: #21324e;
+}
+
+.theme-dark .utilichart .notfound em {
+	color: #aabbd6;
+}
+
+.theme-dark .utilichart li.result,
+.theme-dark .utilichart .col {
+	color: #dce6f5 !important;
+	text-shadow: none;
+}
+
+.theme-dark .utilichart .pokemonnamecol,
+.theme-dark .utilichart .shortpokemonnamecol {
+	color: #f2f7ff !important;
+	font-weight: 600;
+}
+
+.theme-dark .utilichart .abilitycol,
+.theme-dark .utilichart .twoabilitycol {
+	color: #c5d5ec !important;
+}
+
+.theme-dark .utilichart .statcol,
+.theme-dark .utilichart .numcol {
+	color: #d8e5fa !important;
+}
+
+.theme-dark .utilichart .statcol em {
+	color: #9fb5d8 !important;
+}
+
+.theme-dark .utilichart .resultheader,
+.theme-dark .utilichart .resultheader h3 {
+	color: #e9f2ff !important;
+}
+
+.theme-dark .utilichart .resultheader {
+	background: #1c2a40 !important;
+	border-color: #4b607f !important;
+}
+
+.theme-dark .utilichart .resultheader h3,
+.theme-dark .utilichart .resultheader h3 a {
+	background: #1c2a40 !important;
+	color: #f3f8ff !important;
+	text-shadow: none !important;
+	text-decoration: none !important;
+}
+
+.theme-dark .utilichart .resultheader a {
+	color: #eef5ff !important;
+}
+
+.theme-dark .utilichart .resultheader a:hover {
+	color: #ffffff !important;
+}
+
+.theme-dark .utilichart .sortcol {
+	color: #e1ebfa !important;
+	background: #1c2a40 !important;
+	border-color: #4b607f !important;
+	text-shadow: none;
+}
+
+.theme-dark .utilichart .sortcol.cur {
+	background: #243856 !important;
+	color: #f3f8ff !important;
+}
+
+.theme-dark .utilichart .sortrow {
+	width: 100%;
+	box-sizing: border-box;
+	background: #1c2a40 !important;
+	border: 1px solid #4b607f !important;
+}
+
+.theme-dark .utilichart.item-location-chart .resultheader {
+	background: #0d1d38 !important;
+	border: 1px solid #2a5fae !important;
+}
+
+.theme-dark .utilichart.item-location-chart .resultheader h3,
+.theme-dark .utilichart.item-location-chart .resultheader h3 a {
+	color: #eef5ff !important;
+	text-shadow: none !important;
+}
+
+.theme-dark .dexentry .utilichart.metricchart li.result > h3 {
+	background: #1c2a40 !important;
+	border: 1px solid #4b607f !important;
+	border-radius: 4px;
+	color: #f2f7ff !important;
+	padding: 3px 8px;
+	margin: 2px 5px;
+	text-shadow: none !important;
+}
+
+.theme-dark .utilichart li.result {
+	background: #0f172a !important;
+}
+
+.theme-dark .utilichart .resultheader,
+.theme-dark .utilichart li.result > h3,
+.theme-dark .utilichart .sortrow,
+.theme-dark .utilichart .sortcol,
+.theme-dark .utilichart .sortcol.cur {
+	background-image: none !important;
+}
+
+.theme-dark .dexentry h3 {
+	color: #eef5ff !important;
+}
+
+.theme-dark .warning {
+	background: #2f2418;
+	border-color: #c88939;
+	color: #fff2de;
+}
+
+.theme-dark .warning a {
+	color: #ffd48c;
+}
+
+.theme-dark a.subtle {
+	color: #dce6f5;
+}
+
+.theme-dark a.subtle:hover {
+	color: #c6dbff;
+}

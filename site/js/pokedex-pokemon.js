@@ -193,11 +193,11 @@ var PokedexPokemonPanel = PokedexResultPanel.extend({
 		}
 
 		// learnset
-        if (pokemon.tier === 'obtainable') {
+		if (pokemon.tier === 'obtainable') {
 			buf += '<ul class="tabbar"><li><button class="button nav-first cur" value="move">Moves</button></li><li><button class="button" value="details">Flavor</button></li><li><button class="button" value="encounters">Encounters</button></li></ul>';
 		} else {
 			buf += '<ul class="tabbar"><li><button class="button nav-first cur" value="move">Moves</button></li><li><button class="button" value="details">Flavor</button></li></ul>';
-        }
+		}
 
 		buf += '<ul class="utilichart nokbd">';
 		buf += '<li class="resultheader"><h3>Level-up</h3></li>';
@@ -303,9 +303,9 @@ var PokedexPokemonPanel = PokedexResultPanel.extend({
 		case 'details':
 			this.renderDetails();
 			break;
-        case 'encounters':
-            this.renderEncounters();
-            break;
+		case 'encounters':
+			this.renderEncounters();
+			break;
 		}
 	},
 	renderFullLearnset: function() {
@@ -556,128 +556,172 @@ var PokedexPokemonPanel = PokedexResultPanel.extend({
 
 		this.$('.utilichart').html(buf);
 	},
-    getEncounterLocations: function(pokemon) {
-        if (this.results) return this.results;
+	getEncounterLocations: function(pokemon) {
+		if (this.results) return this.results;
 
-        var rates = BattleLocationdex['rates'];
+		var rates = BattleLocationdex['rates'];
 
-        let isInZone = function(location, enc_mode, pokemon) {
-            let for_mode = location[enc_mode]
-            if (!('encs' in for_mode)) {
-                return 0;
-            }
+		var isInZone = function(location, encMode, monId) {
+			var forMode = location[encMode];
+			if (!('encs' in forMode)) {
+				return 0;
+			}
 
-            let sum_rate = 0;
-            for (let i = 0; i < for_mode['encs'].length; i++) {
-                let slot = for_mode['encs'][i];
-                let species = slot['species'];
-                if (species === pokemon) {
-                    sum_rate += rates[enc_mode][i];
-                }
-            }
+			var sumRate = 0;
+			for (var i = 0; i < forMode.encs.length; i++) {
+				var slot = forMode.encs[i];
+				if (slot.species === monId) {
+					sumRate += rates[encMode][i];
+				}
+			}
+			return sumRate;
+		};
 
-            return sum_rate;
-        }
+		var fishRatesByRod = function(location, monId) {
+			var result = {old: 0, good: 0, super: 0};
+			var fishZone = location.fish;
+			if (!fishZone || !('encs' in fishZone)) {
+				return result;
+			}
 
-        var formatRate = function(i) {
-            return i.toString().padStart(3, 'z') + '% ';
-        }
+			var fishRates = (rates && rates.fish) || {};
+			var oldRates = fishRates.old || [];
+			var goodRates = fishRates.good || [];
+			var superRates = fishRates.super || [];
+			var oldCount = oldRates.length;
+			var goodCount = goodRates.length;
+			var superCount = superRates.length;
 
-        var results = [];
-        for (let location in BattleLocationdex) {
-            if (location === 'rates') {
-                continue;
-            }
+			for (var i = 0; i < fishZone.encs.length; i++) {
+				var slot = fishZone.encs[i];
+				if (slot.species !== monId) continue;
 
-            let encounters = BattleLocationdex[location];
-            let land_rate = isInZone(encounters, 'land', pokemon)
-            let surf_rate = isInZone(encounters, 'surf', pokemon)
-            let rock_rate = isInZone(encounters, 'rock', pokemon)
-            let fish_rate = isInZone(encounters, 'fish', pokemon)
+				if (i < oldCount) {
+					result.old += oldRates[i] || 0;
+				} else if (i < oldCount + goodCount) {
+					result.good += goodRates[i - oldCount] || 0;
+				} else if (i < oldCount + goodCount + superCount) {
+					result.super += superRates[i - oldCount - goodCount] || 0;
+				}
+			}
 
-            if (land_rate > 0) {
-                if (!results.includes('A')) {
-                    results.push('A');
-                }
+			return result;
+		};
 
-                results.push('A ' + formatRate(land_rate) + location);
-            }
-            if (surf_rate > 0) {
-                if (!results.includes('B')) {
-                    results.push('B');
-                }
+		var formatRate = function(rate) {
+			return rate.toString().padStart(3, 'z') + '% ';
+		};
 
-                results.push('B ' + formatRate(surf_rate) + location);
-            }
-            if (rock_rate > 0) {
-                if (!results.includes('C')) {
-                    results.push('C');
-                }
+		var results = [];
+		for (var location in BattleLocationdex) {
+			if (location === 'rates') continue;
 
-                results.push('C ' + formatRate(rock_rate) + location);
-            }
-            if (fish_rate > 0) {
-                if (!results.includes('D')) {
-                    results.push('D');
-                }
+			var zone = BattleLocationdex[location];
+			var landRate = isInZone(zone, 'land', pokemon);
+			var surfRate = isInZone(zone, 'surf', pokemon);
+			var rockRate = isInZone(zone, 'rock', pokemon);
+			var fishRates = fishRatesByRod(zone, pokemon);
 
-                results.push('D ' + formatRate(fish_rate) + location);
-            }
-        }
+			if (landRate > 0) {
+				if (!results.includes('A')) results.push('A');
+				results.push('A ' + formatRate(landRate) + location);
+			}
+			if (surfRate > 0) {
+				if (!results.includes('B')) results.push('B');
+				results.push('B ' + formatRate(surfRate) + location);
+			}
+			if (rockRate > 0) {
+				if (!results.includes('C')) results.push('C');
+				results.push('C ' + formatRate(rockRate) + location);
+			}
+			if (fishRates.old > 0) {
+				if (!results.includes('O')) results.push('O');
+				results.push('O ' + formatRate(fishRates.old) + location);
+			}
+			if (fishRates.good > 0) {
+				if (!results.includes('G')) results.push('G');
+				results.push('G ' + formatRate(fishRates.good) + location);
+			}
+			if (fishRates.super > 0) {
+				if (!results.includes('S')) results.push('S');
+				results.push('S ' + formatRate(fishRates.super) + location);
+			}
+		}
 
-        results.sort();
-        return results;
-    },
-    renderEncounters: function() {
-        var locations = this.getEncounterLocations(this.id);
-        var buf = '';
-        for (let i = 0; i < locations.length; i++) {
-            let location = locations[i];
-            if (location.length == 1) {
-                if (buf.length != 0) {
-                    buf += '</ul>'
-                }
-                switch (location) {
-                case 'A': // land
-                    buf += '<li class="resultheader"><h3>Land</h3></li>';
-                    break;
-                case 'B': // surfing
-                    buf += '<li class="resultheader"><h3>Surfing</h3></li>';
-                    break;
-                case 'C': // rock smash
-                    buf += '<li class="resultheader"><h3>Rock Smash</h3></li>';
-                    break;
-                case 'D': // fishing
-                    buf += '<li class="resultheader"><h3>Fishing</h3></li>';
-                    break;
-                case 'O':
-                    buf += '<li class="resultheader"><h3>Old Rod</h3></li>';
-                    break;
-                case 'G':
-                    buf += '<li class="resultheader"><h3>Good Rod</h3></li>';
-                    break;
-                case 'S':
-                    buf += '<li class="resultheader"><h3>Super Rod</h3></li>';
-                    break;
-                default:
-                    buf += '<pre>error: "'+location+'"</pre>';
-                    break;
-                }
-                buf += '<ul>';
-            } else {
-                let rate = location.substr(2, 4).replace('z', '').replace('z', '');
-                let zoneid = location.slice(7);
-                let zone = BattleLocationdex[zoneid];
-                buf += BattleSearch.renderTaggedEncounterRow(zone, rate);
-            }
-        }
+		var encounterOrder = {
+			'A': 0,
+			'B': 1,
+			'C': 2,
+			'O': 3,
+			'G': 4,
+			'S': 5
+		};
+		results.sort(function (left, right) {
+			var leftType = left.charAt(0);
+			var rightType = right.charAt(0);
+			var leftOrder = Object.prototype.hasOwnProperty.call(encounterOrder, leftType) ? encounterOrder[leftType] : 99;
+			var rightOrder = Object.prototype.hasOwnProperty.call(encounterOrder, rightType) ? encounterOrder[rightType] : 99;
+			if (leftOrder !== rightOrder) {
+				return leftOrder - rightOrder;
+			}
 
-        if (buf.length != 0) {
-            buf += '</ul>';
-        }
+			var leftIsHeader = left.length === 1;
+			var rightIsHeader = right.length === 1;
+			if (leftIsHeader !== rightIsHeader) {
+				return leftIsHeader ? -1 : 1;
+			}
+
+			return left < right ? -1 : (left > right ? 1 : 0);
+		});
+		return results;
+	},
+	renderEncounters: function() {
+		var locations = this.getEncounterLocations(this.id);
+		var buf = '';
+		for (var i = 0; i < locations.length; i++) {
+			var location = locations[i];
+			if (location.length === 1) {
+				if (buf.length !== 0) {
+					buf += '</ul>';
+				}
+				switch (location) {
+				case 'A':
+					buf += '<li class="resultheader"><h3>Land</h3></li>';
+					break;
+				case 'B':
+					buf += '<li class="resultheader"><h3>Surfing</h3></li>';
+					break;
+				case 'C':
+					buf += '<li class="resultheader"><h3>Rock Smash</h3></li>';
+					break;
+				case 'O':
+					buf += '<li class="resultheader"><h3>Old Rod</h3></li>';
+					break;
+				case 'G':
+					buf += '<li class="resultheader"><h3>Good Rod</h3></li>';
+					break;
+				case 'S':
+					buf += '<li class="resultheader"><h3>Super Rod</h3></li>';
+					break;
+				default:
+					buf += '<pre>error: "' + location + '"</pre>';
+					break;
+				}
+				buf += '<ul>';
+			} else {
+				var rate = location.substr(2, 4).replace('z', '').replace('z', '');
+				var zoneId = location.slice(7);
+				var zone = BattleLocationdex[zoneId];
+				buf += BattleSearch.renderTaggedEncounterRow(zone, rate);
+			}
+		}
+
+		if (buf.length !== 0) {
+			buf += '</ul>';
+		}
 
 		this.$('.utilichart').html(buf);
-    },
+	},
 	getStat: function(baseStat, isHP, level, iv, ev, natureMult) {
 		if (isHP) {
 			if (baseStat === 1) return 1;

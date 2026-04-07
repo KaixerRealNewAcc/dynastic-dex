@@ -10,7 +10,7 @@ DIST := dist
 FAKE_LIBC := fake_libc_include
 GIT := git
 MAKE := make
-PYTHON := python
+PYTHON ?= python3
 PIP := pip
 PYCPARSER := pycparser
 PYCPARSER_GIT := https://github.com/eliben/$(PYCPARSER).git
@@ -25,7 +25,6 @@ VENV_PIP := $(VENV)/bin/pip
 setup:
 	@$(MAKE) venv
 	@$(MAKE) dependencies
-	@$(MAKE) fake_libc
 	@$(MAKE) install
 	@$(MAKE) link
 
@@ -44,14 +43,15 @@ fake_libc:
 	$(GIT) clone -n --depth=1 --filter=tree:0 "$(PYCPARSER_GIT)"
 	cd $(PYCPARSER) ; $(GIT) sparse-checkout set --no-cone utils
 	cd $(PYCPARSER) ; $(GIT) checkout
+	rm -rf "$(FAKE_LIBC)"
 	cp -r "$(PYCPARSER_FAKE_LIBC)" "$(FAKE_LIBC)"
 	rm -rf "$(PYCPARSER)"
 
 install:
-	source $(VENVACTIVATE) ; $(PYINSTALLER) --noconfirm porydex.py
+	"$(VENV)/bin/$(PYINSTALLER)" --noconfirm porydex.py
 
 link:
-	ln -s $(shell $(REALPATH) dist/porydex/porydex) "$(VENV)/bin/porydex"
+	ln -sfn $(shell $(REALPATH) dist/porydex/porydex) "$(VENV)/bin/porydex"
 	
 clean:
 	rm -rf "$(VENV)"
@@ -59,4 +59,3 @@ clean:
 	rm -rf "$(FAKE_LIBC)"
 	rm -rf "$(BUILD)"
 	rm -rf "$(DIST)"
-

@@ -115,10 +115,12 @@ def parse_moves(fname: pathlib.Path) -> dict:
     moves_data: ExprList
     with yaspin(text=f'Loading moves data: {fname}', color='cyan') as spinner:
         moves_data = load_truncated(fname, extra_includes=[
+            # Expansion v1.15+ uses ADDITIONAL_EFFECTS(...) in moves_info.h.
+            # The macro is defined in move.h (not constants/moves.h).
+            r'-include', r'move.h',
             r'-include', r'constants/battle.h',
             r'-include', r'constants/moves.h',
         ])
         spinner.ok("✅")
 
     return parse_moves_data(moves_data)
-

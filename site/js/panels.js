@@ -78,7 +78,8 @@ if (!Function.prototype.bind) {
 
 			initialize.apply(this, arguments);
 
-			Backbone.history.start({root: this.root, pushState: true, hashChange: false});
+			var usePushState = location.protocol !== 'file:';
+			Backbone.history.start({root: this.root, pushState: usePushState, hashChange: !usePushState});
 			this.fragment = Backbone.history.fragment;
 			$(window).resize(function(){
 				this.resize();
@@ -107,6 +108,12 @@ if (!Function.prototype.bind) {
 		// routing functions
 
 		go: function(fragment, loc, replace, source, instant) {
+			if (fragment && fragment.charAt(0) === '#') {
+				fragment = fragment.slice(1);
+			}
+			if (fragment && fragment.charAt(0) === '/') {
+				fragment = fragment.slice(1);
+			}
 			if (fragment && fragment.substr(0,this.root.length) === this.root) {
 				fragment = fragment.substr(this.root.length);
 			}

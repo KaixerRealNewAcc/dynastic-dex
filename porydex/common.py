@@ -55,14 +55,21 @@ BINARY_BOOL_OPS = {
     '<=': operator.le,
     '<': operator.lt,
     '!=': operator.ne,
+    '&&': lambda l, r: bool(l) and bool(r),
+    '||': lambda l, r: bool(l) or bool(r),
     '+': operator.add,
     '-': operator.sub,
     '*': operator.mul,
     '/': operator.itruediv,
+    '%': operator.mod,
+    '<<': operator.lshift,
+    '>>': operator.rshift,
+    '&': operator.and_,
+    '|': operator.or_,
+    '^': operator.xor,
 }
 
 SPLIT_CHARS = re.compile(r"[\W_-]+")
 
 def name_key(name: str) -> str:
     return ''.join(SPLIT_CHARS.split(name.replace('é', 'e'))).lower()
-
