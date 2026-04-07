@@ -6,7 +6,12 @@ import os
 import porydex.config
 import porydex.showdown
 
-from porydex.common import PICKLE_PATH, name_key
+from porydex.common import PICKLE_PATH
+from porydex.included_species import (
+    build_included_species,
+    load_manual_mega_species,
+    write_included_species,
+)
 from porydex.parse.abilities import parse_abilities
 from porydex.parse.encounters import parse_encounters
 from porydex.parse.form_tables import parse_form_tables
@@ -16,8 +21,6 @@ from porydex.parse.maps import parse_maps
 from porydex.parse.moves import parse_moves
 from porydex.parse.national_dex import parse_national_dex_enum
 from porydex.parse.species import parse_species
-
-MAX_SPECIES_EXPANSION = 1523 + 1
 
 def prepend_file(f, s: str):
     f_data = f.read()
@@ -91,11 +94,6 @@ def extract(args):
     teach_learnsets = parse_teachable_learnsets(expansion_data / 'pokemon' / 'teachable_learnsets.h', move_names)
     national_dex = parse_national_dex_enum(porydex.config.expansion / 'include' / 'constants' / 'pokedex.h')
 
-    included_mons = []
-    if porydex.config.included_mons_file:
-        with open(porydex.config.included_mons_file, 'r', encoding='utf-8') as included:
-            included_mons = list(filter(lambda s: len(s) > 0, map(lambda s: s.strip(), included.readlines())))
-
     species, learnsets = parse_species(
         expansion_data / 'pokemon' / 'species_info.h',
         abilities,
@@ -106,11 +104,17 @@ def extract(args):
         lvlup_learnsets,
         teach_learnsets,
         national_dex,
-        included_mons,
+        [],
     )
 
-    species_names = ['????????????'] * (MAX_SPECIES_EXPANSION + 1)
+    species_names = ['????????????'] * (
+        max((mon['num'] for mon in species.values()), default=0) + 1
+    )
     for mon in species.values():
+        # Keep this resilient if expansion IDs exceed the initial computed max.
+        if mon['num'] >= len(species_names):
+            species_names.extend(['????????????'] * (mon['num'] + 1 - len(species_names)))
+
         if mon.get('cosmetic', False):
             species_names[mon['num']] = mon['name'].split('-')[0]
         else:
@@ -122,10 +126,25 @@ def extract(args):
         if mon.get('cosmetic', False):
             to_purge.append(key)
     for key in to_purge:
-        del species[key]
+        species.pop(key, None)
 
     # species_names = [mon['name'] for mon in sorted(species.values(), key=lambda m: m['num'])]
     encounters = parse_encounters(expansion_data / 'wild_encounters.h', species_names)
+
+    if porydex.config.included_mons_file:
+        included_species_file = pathlib.Path(porydex.config.included_mons_file)
+        manual_mega_species = load_manual_mega_species(included_species_file)
+        included_mons = build_included_species(
+            porydex.config.expansion,
+            species,
+            encounters,
+            manual_mega_species,
+        )
+        write_included_species(included_species_file, included_mons)
+
+        included_mons_set = set(included_mons)
+        for mon in species.values():
+            mon['tier'] = 'obtainable' if mon['name'] in included_mons_set else 'unobtainable'
 
     # Re-index num to nationalDex on the species before finishing up
     for _, mon in species.items():
@@ -193,4 +212,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-

@@ -1414,9 +1414,7 @@ var BattleItemSearch = /** @class */ (function (_super) {
 var BattleLocationSearch = /** @class */ (function (_super) {
     __extends(BattleLocationSearch, _super);
     function BattleLocationSearch() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.sortRow = ['sortmove', ''];
-        return _this;
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     BattleLocationSearch.prototype.getTable = function () {
         return BattleLocationdex;
@@ -1425,9 +1423,16 @@ var BattleLocationSearch = /** @class */ (function (_super) {
         var results = [];
         results.push(['header', "Location"]);
         for (var id in BattleLocationdex) {
+            if (id === 'rates')
+                continue;
+            if (!BattleLocationdex[id] || !BattleLocationdex[id].name)
+                continue;
             results.push(['location', id]);
         }
         return results;
+    };
+    BattleLocationSearch.prototype.getBaseResults = function () {
+        return this.getDefaultResults();
     };
     BattleLocationSearch.prototype.filter = function (row, filters) {
         if (!filters)
@@ -1450,9 +1455,9 @@ var BattleLocationSearch = /** @class */ (function (_super) {
         var sortOrder = reverseSort ? -1 : 1;
         switch (sortCol) {
             case 'name':
-                return results.sort(function (_a, _b) {
-                    var name1 = id1;
-                    var name2 = id2;
+                return results.sort(function (a, b) {
+                    var name1 = (BattleLocationdex[a[1]] && BattleLocationdex[a[1]].name) || '';
+                    var name2 = (BattleLocationdex[b[1]] && BattleLocationdex[b[1]].name) || '';
                     return (name1 < name2 ? -1 : name1 > name2 ? 1 : 0) * sortOrder;
                 });
         }
@@ -2039,4 +2044,3 @@ var BattleTypeSearch = /** @class */ (function (_super) {
     };
     return BattleTypeSearch;
 }(BattleTypedSearch));
-

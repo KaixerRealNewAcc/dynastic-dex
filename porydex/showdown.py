@@ -216,20 +216,22 @@ def index(moves: dict, species: dict, learnsets: dict, encounters: dict):
     index.sort()
 
 # manually rearrange some entries
-    index[index.index('grass type')] = 'grass egggroup'
-    index[index.index('grass egggroup')] = 'grass type'
-    index[index.index('fairy type')] = 'fairy egggroup'
-    index[index.index('fairy egggroup')] = 'fairy type'
-    index[index.index('flying type')] = 'flying egggroup'
-    index[index.index('flying egggroup')] = 'flying type'
-    index[index.index('dragon type')] = 'dragon egggroup'
-    index[index.index('dragon egggroup')] = 'dragon type'
-    index[index.index('bug type')] = 'bug egggroup'
-    index[index.index('bug egggroup')] = 'bug type'
-    index[index.index('psychic type')] = 'psychic egggroup'
-    index[index.index('psychic egggroup')] = 'psychic type'
-    index[index.index('ditto pokemon')] = 'ditto egggroup'
-    index[index.index('ditto egggroup')] = 'ditto pokemon'
+    def swap_search_entries(left: str, right: str):
+        if left not in index or right not in index:
+            return
+
+        left_i = index.index(left)
+        right_i = index.index(right)
+        index[left_i] = right
+        index[right_i] = left
+
+    swap_search_entries('grass type', 'grass egggroup')
+    swap_search_entries('fairy type', 'fairy egggroup')
+    swap_search_entries('flying type', 'flying egggroup')
+    swap_search_entries('dragon type', 'dragon egggroup')
+    swap_search_entries('bug type', 'bug egggroup')
+    swap_search_entries('psychic type', 'psychic egggroup')
+    swap_search_entries('ditto pokemon', 'ditto egggroup')
 
     def index_map(s: str) -> list:
         spl: list = list(s.split(' '))

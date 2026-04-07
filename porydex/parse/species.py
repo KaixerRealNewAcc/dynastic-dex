@@ -4,12 +4,12 @@ from dataclasses import dataclass
 import pathlib
 import re
 
-from pycparser.c_ast import Constant, ExprList, NamedInitializer
+from pycparser.c_ast import Constant, Decl, ExprList, NamedInitializer
 from yaspin import yaspin
 
 from porydex.common import name_key
 from porydex.model import ExpansionEvoMethod, DAMAGE_TYPE, EGG_GROUP, BODY_COLOR, EVO_METHOD
-from porydex.parse import load_truncated, extract_id, extract_int, extract_u8_str
+from porydex.parse import load_data, extract_id, extract_int, extract_u8_str
 
 EXPANSION_GEN9_START = 1289
 VANILLA_GEN9_START = 906
@@ -267,13 +267,23 @@ def parse_mon(struct_init: NamedInitializer,
                     if method_id == 0xFFFF:
                         break
 
+                    # explicit "no evolution" entry used by newer expansion data
+                    if method_id == 0:
+                        continue
+
                     if method_id == 0xFFFE:
                         continue
 
                     if method_id == ExpansionEvoMethod.SPECIFIC_MAP.value: # TODO:: Leafeon, Glaceon
                         continue
 
-                    evos.append([ExpansionEvoMethod(method_id), extract_int(evo_method.exprs[1]), extract_int(evo_method.exprs[2])])
+                    try:
+                        method = ExpansionEvoMethod(method_id)
+                    except ValueError:
+                        # ignore unsupported or unknown evolution methods gracefully
+                        continue
+
+                    evos.append([method, extract_int(evo_method.exprs[1]), extract_int(evo_method.exprs[2])])
                 evos.sort(key=lambda evo: evo[2])
             case 'levelUpLearnset':
                 lvlup_learnset = level_up_learnsets.get(extract_id(field_expr), {})
@@ -492,9 +502,18 @@ def parse_species(fname: pathlib.Path,
                   included_mons: list[str]) -> tuple[dict, dict]:
     species_data: ExprList
     with yaspin(text=f'Loading species data: {fname}', color='cyan') as spinner:
-        species_data = load_truncated(fname, extra_includes=[
+        species_exts = load_data(fname, extra_includes=[
             r'-include', r'constants/moves.h',
         ])
+        species_data = []
+        for entry in reversed(species_exts):
+            if not isinstance(entry, Decl):
+                continue
+            if entry.name == 'gSpeciesInfo' and entry.init and hasattr(entry.init, 'exprs'):
+                species_data = entry.init.exprs
+                break
+        if not species_data:
+            raise ValueError('failed to locate gSpeciesInfo in species_info.h')
         spinner.ok("✅")
 
     return parse_species_data(
@@ -509,4 +528,3 @@ def parse_species(fname: pathlib.Path,
         national_dex,
         included_mons,
     )
-

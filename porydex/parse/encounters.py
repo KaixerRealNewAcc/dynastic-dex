@@ -88,27 +88,45 @@ def parse_encounter_init(init: NamedInitializer,
 def parse_encounter_header(header: InitList,
                            info_sections: dict[str, EncounterInfo],
                            encounter_defs: dict[str, list[Encounter]]) -> MapEncounters:
-    field_inits = header.exprs
     encs = MapEncounters(None, None, None, None, None)
-    for init in field_inits:
-        result = None
+
+    def parse_header_fields(field_inits: list[NamedInitializer]):
+        nonlocal encs
+        for init in field_inits:
+            match init.name[0].name:
+                case 'landMonsInfo':
+                    result = parse_encounter_init(init, info_sections, encounter_defs)
+                    if result:
+                        encs.name, encs.land = result
+                case 'waterMonsInfo':
+                    result = parse_encounter_init(init, info_sections, encounter_defs)
+                    if result:
+                        encs.name, encs.surf = result
+                case 'rockSmashMonsInfo':
+                    result = parse_encounter_init(init, info_sections, encounter_defs)
+                    if result:
+                        encs.name, encs.rock = result
+                case 'fishingMonsInfo':
+                    result = parse_encounter_init(init, info_sections, encounter_defs)
+                    if result:
+                        encs.name, encs.fish = result
+
+    for init in header.exprs:
         match init.name[0].name:
-            case 'landMonsInfo':
-                result = parse_encounter_init(init, info_sections, encounter_defs)
-                if result:
-                    encs.name, encs.land = result
-            case 'waterMonsInfo':
-                result = parse_encounter_init(init, info_sections, encounter_defs)
-                if result:
-                    encs.name, encs.surf = result
-            case 'rockSmashMonsInfo':
-                result = parse_encounter_init(init, info_sections, encounter_defs)
-                if result:
-                    encs.name, encs.rock = result
-            case 'fishingMonsInfo':
-                result = parse_encounter_init(init, info_sections, encounter_defs)
-                if result:
-                    encs.name, encs.fish = result
+            case 'landMonsInfo' | 'waterMonsInfo' | 'rockSmashMonsInfo' | 'fishingMonsInfo':
+                # Old format: encounter fields are directly on the header struct.
+                parse_header_fields(header.exprs)
+                break
+            case 'encounterTypes':
+                # Newer format: encounter fields are nested by time of day.
+                if not isinstance(init.expr, InitList):
+                    continue
+                for time_entry in init.expr.exprs:
+                    if not isinstance(time_entry, NamedInitializer):
+                        continue
+                    if not isinstance(time_entry.expr, InitList):
+                        continue
+                    parse_header_fields(time_entry.expr.exprs)
 
     return encs
 
@@ -133,6 +151,13 @@ def parse_encounters_data(exts, jd: dict, species_names: list[str]) -> dict[str,
         if not isinstance(entry, Decl):
             continue
 
+        # Preferred header table for overworld encounters.
+        # Some expansion versions emit AST type shapes that do not match the
+        # strict Struct checks below, so detect by declaration name first.
+        if entry.name == 'gWildMonHeaders' and isinstance(entry.init, InitList):
+            headers = entry.init.exprs
+            break
+
         if (isinstance(entry.type, TypeDecl)
                 and isinstance(entry.type.type, Struct)
                 and entry.type.type.name == 'WildPokemonInfo'):
@@ -149,7 +174,7 @@ def parse_encounters_data(exts, jd: dict, species_names: list[str]) -> dict[str,
                     parse_encounter_def(enc_def, species_names)
                     for enc_def in entry.init.exprs
                 ]
-            if entry.type.type.type.name == 'WildPokemonHeader':
+            if entry.type.type.type.name == 'WildPokemonHeader' and entry.name == 'gWildMonHeaders':
                 headers = entry.init.exprs
                 break
 
@@ -206,8 +231,7 @@ def parse_encounters(fname: pathlib.Path,
                      species_names: list[str]) -> dict[str, dict[str, EncounterRate] | dict[str, dict]]:
     encounters: ExprList
     with yaspin(text=f'Loading encounter tables: {fname}', color='cyan') as spinner:
-        encounters = load_data(fname)
+        encounters = load_data(fname, extra_includes=[r'-DEMERALD=1'])
         spinner.ok("✅")
 
     return parse_encounters_data(encounters, load_json(fname.with_suffix('.json')), species_names)
-
