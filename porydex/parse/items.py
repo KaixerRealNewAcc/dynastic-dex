@@ -83,18 +83,29 @@ def get_item_name(struct_init: NamedInitializer) -> str:
     print(struct_init.show())
     raise ValueError('no name for item structure')
 
-def all_item_names(items_data, item_constants: dict[str, int] | None=None) -> list[str]:
-    item_constants = item_constants or {}
+@def all_item_names(items_data, item_constants: dict[str, int] | None=None) -> list[str]:
+@    item_constants = item_constants or {}
+@    d_items = {}
+@    for item in items_data:
+@       item_id = item.name[0]
+@        try:
+@            item_num = extract_int(item_id)
+@        except ValueError:
+@            if not isinstance(item_id, ID) or item_id.name not in item_constants:
+@                raise
+@            item_num = item_constants[item_id.name]
+@       d_items[item_num] = get_item_name(item)
+@    capacity = max(d_items.keys()) + 1
+@    l_items = [d_items[0]] * capacity
+@    for i, name in d_items.items():
+@        l_items[i] = name
+
+@    return l_items
+
+def all_item_names(items_data) -> list[str]:
     d_items = {}
     for item in items_data:
-        item_id = item.name[0]
-        try:
-            item_num = extract_int(item_id)
-        except ValueError:
-            if not isinstance(item_id, ID) or item_id.name not in item_constants:
-                raise
-            item_num = item_constants[item_id.name]
-        d_items[item_num] = get_item_name(item)
+        d_items[extract_int(item.name[0])] = get_item_name(item)
 
     capacity = max(d_items.keys()) + 1
     l_items = [d_items[0]] * capacity
