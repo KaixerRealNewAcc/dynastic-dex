@@ -51,6 +51,60 @@ SPECIAL_ABILITIES: dict[str, SpecialAbilities] = {
     'Zygarde': SpecialAbilities('Power-Construct', 'Power Construct'),
 }
 
+
+# Map named Expansion type constants (TYPE_FIRE, TYPE_WATER, etc.) to the
+# indexes used by Porydex's DAMAGE_TYPE table.
+TYPE_ID_TO_INDEX = {
+    f'TYPE_{name.upper()}': idx
+    for idx, name in enumerate(DAMAGE_TYPE)
+}
+
+
+def extract_known_int(expr, known_ids: dict[str, int]) -> int:
+    """Read either a numeric C expression or a known named constant."""
+    try:
+        return extract_int(expr)
+    except (AttributeError, ValueError):
+        key = extract_id(expr)
+        if key in known_ids:
+            return known_ids[key]
+        raise
+
+
+def extract_damage_type(expr) -> str:
+    """
+    Convert an Expansion type expression into the Showdown/Porydex type name.
+
+    Older Porydex DAMAGE_TYPE tables may stop at Fairy while Expansion 1.13
+    can expose TYPE_STELLAR as numeric id 20. Handle that here instead of
+    indexing past the end of DAMAGE_TYPE.
+    """
+    try:
+        type_id = extract_int(expr)
+    except (AttributeError, ValueError):
+        type_name = extract_id(expr)
+
+        if type_name in TYPE_ID_TO_INDEX:
+            return DAMAGE_TYPE[TYPE_ID_TO_INDEX[type_name]]
+
+        if type_name == 'TYPE_STELLAR':
+            return 'Stellar'
+
+        raise ValueError(f'unknown Pokemon type constant: {type_name}')
+
+    if 0 <= type_id < len(DAMAGE_TYPE):
+        return DAMAGE_TYPE[type_id]
+
+    # Expansion's Stellar type. This is the value that causes older Porydex
+    # versions to throw: IndexError: list index out of range.
+    if type_id == 20:
+        return 'Stellar'
+
+    raise ValueError(
+        f'Pokemon type id {type_id} is not supported by this Porydex '
+        f'(DAMAGE_TYPE has {len(DAMAGE_TYPE)} entries)'
+    )
+
 def parse_mon(struct_init: NamedInitializer,
               ability_names: list[str],
               item_names: list[str],
@@ -89,7 +143,7 @@ def parse_mon(struct_init: NamedInitializer,
             case 'baseSpDefense':
                 mon['baseStats']['spd'] = extract_int(field_expr)
             case 'types':
-                types = [DAMAGE_TYPE[extract_int(t)] for t in field_expr.exprs]
+                types = [extract_damage_type(t) for t in field_expr.exprs]
                 unique_types = []
                 [unique_types.append(t) for t in types if t not in unique_types]
                 mon['types'].extend(unique_types)
@@ -246,17 +300,43 @@ def parse_mon(struct_init: NamedInitializer,
                     else:
                         mon['otherFormes'] = mon['formeOrder'][1:]
                 else:
-                    # ugly ogerpon tera forms hack
-                    if mon['name'] == 'Ogerpon' and mon['num'] not in table:
+                    # Some Expansion/custom species can reference a form table that
+                    # does not contain their exact numeric species id. Do not index
+                    # the table blindly, because that raises KeyError (for example
+                    # KeyError: 1553).
+                    form_table_name = extract_id(field_expr)
+
+                    # Ogerpon's Tera formes are offset from the normal form entries.
+                    if (mon['name'] == 'Ogerpon'
+                            and mon['num'] not in table
+                            and (mon['num'] - 4) in table):
                         form_name = f'{table[mon["num"] - 4]}-Tera'
-                    # ugly xerneas neutral-active swap
+
+                    # Xerneas' alternate entry is represented specially by Showdown.
                     elif mon['name'] == 'Xerneas':
                         form_name = 'Neutral'
-                    # ugly urshifu forms hack
+
+                    # If this species id is not actually present in the form table,
+                    # skip form renaming rather than crashing the entire extraction.
+                    # The warning tells us exactly which species/table needs a more
+                    # specific mapping if one is required.
+                    elif mon['num'] not in table:
+                        print(
+                            f'warning: species {mon.get("name", "?")} '
+                            f'(id {mon["num"]}) references {form_table_name}, '
+                            f'but that id is not in the parsed form table; '
+                            f'available ids: {list(table.keys())}'
+                        )
+                        continue
+
+                    # Urshifu form names contain -Style in Expansion, which Showdown
+                    # does not use in the forme name.
                     elif mon['name'] == 'Urshifu':
                         form_name = table[mon['num']].replace('-Style', '')
+
                     else:
                         form_name = table[mon['num']]
+
                     mon['baseSpecies'] = mon['name']
                     mon['forme'] = form_name
                     mon['name'] = f'{mon["name"]}-{form_name}'
