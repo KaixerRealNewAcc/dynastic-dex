@@ -5,7 +5,6 @@
     { "source": "/moves/(.*)", "destination": "/index.html" },
     { "source": "/items/(.*)", "destination": "/index.html" },
     { "source": "/encounters/(.*)", "destination": "/index.html" },
-    { "source": "/encounterlist/(.*)", "destination": "/index.html" },
     { "source": "/itemlocations/(.*)", "destination": "/index.html" },
     { "source": "/egggroups/(.*)", "destination": "/index.html" }
   ]
