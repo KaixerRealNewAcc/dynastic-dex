@@ -4,16 +4,19 @@ var Pokedex = Panels.App.extend({
 	states2: {
 		'pokemon/:pokemon': PokedexPokemonPanel,
 		'moves/:move': PokedexMovePanel,
+		'tags/:tag': PokedexTagPanel,
 		'items/:item': PokedexItemPanel,
 		'abilities/:ability': PokedexAbilityPanel,
 		'types/:type': PokedexTypePanel,
 		'egggroups/:egggroup': PokedexEggGroupPanel,
 		'encounters/:location': PokedexEncountersPanel,
+		'encounterlist/': PokedexEncounterListPanel,
+		'itemlocations/': PokedexItemLocationsPanel,
 
 		'': PokedexSearchPanel,
 		'pokemon/': PokedexSearchPanel,
-		'encounters/': PokedexSearchPanel,
 		'moves/': PokedexSearchPanel,
+		'encounters/': PokedexSearchPanel,
 		':q': PokedexSearchPanel
 	},
 	initialize: function() {
