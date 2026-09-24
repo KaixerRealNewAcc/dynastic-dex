@@ -5,6 +5,8 @@ import porydex.config
 
 from porydex.common import name_key
 
+VANILLA_MOVE_KEY_ALIASES: dict[str, str] = {}
+
 def index(moves: dict, species: dict, learnsets: dict, encounters: dict):
     vanilla_data_dir = pathlib.Path('vanilla')
     abilities = json.load(open(vanilla_data_dir / 'abilities.json', 'r', encoding='utf-8'))
