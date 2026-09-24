@@ -9,9 +9,7 @@ var Pokedex = Panels.App.extend({
 		'types/:type': PokedexTypePanel,
 		'egggroups/:egggroup': PokedexEggGroupPanel,
 		'encounters/:location': PokedexEncountersPanel,
-		'itemlocations/': PokedexItemLocationsPanel,
 
-		'': PokedexSearchPanel,
 		'pokemon/': PokedexSearchPanel,
 		'moves/': PokedexSearchPanel,
 	},
