@@ -59,6 +59,20 @@ TYPE_ID_TO_INDEX = {
     for idx, name in enumerate(DAMAGE_TYPE)
 }
 
+# Recent pokeemerald-expansion versions use a compact evolution-method enum
+# rather than the older one-method-per-condition enum this parser originally
+# targeted.  Translate those source IDs to the parser's internal methods.
+CURRENT_EXPANSION_EVO_METHODS = {
+    1: ExpansionEvoMethod.LEVEL,       # EVO_LEVEL
+    2: ExpansionEvoMethod.TRADE,       # EVO_TRADE
+    3: ExpansionEvoMethod.ITEM,        # EVO_ITEM
+    4: ExpansionEvoMethod.LEVEL,       # EVO_SPLIT_FROM_EVO
+    5: ExpansionEvoMethod.SCRIPT_TRIGGER_DMG,
+    6: ExpansionEvoMethod.LEVEL,       # EVO_LEVEL_BATTLE_ONLY
+    7: ExpansionEvoMethod.SCRIPT_TRIGGER_DMG,
+    8: ExpansionEvoMethod.LEVEL,       # EVO_SPIN
+}
+
 
 def extract_known_int(expr, known_ids: dict[str, int]) -> int:
     """Read either a numeric C expression or a known named constant."""
@@ -357,11 +371,17 @@ def parse_mon(struct_init: NamedInitializer,
                     if method_id == ExpansionEvoMethod.SPECIFIC_MAP.value: # TODO:: Leafeon, Glaceon
                         continue
 
-                    try:
-                        method = ExpansionEvoMethod(method_id)
-                    except ValueError:
-                        # ignore unsupported or unknown evolution methods gracefully
-                        continue
+                    # The current expansion uses EVO_LEVEL=1, EVO_TRADE=2,
+                    # EVO_ITEM=3, etc.  Older Porydex code treated 1 as
+                    # friendship, which made every level evolution appear as
+                    # high friendship.
+                    method = CURRENT_EXPANSION_EVO_METHODS.get(method_id)
+                    if method is None:
+                        # Support the legacy one-method-per-condition table.
+                        try:
+                            method = ExpansionEvoMethod(method_id)
+                        except ValueError:
+                            continue
 
                     evos.append([method, extract_int(evo_method.exprs[1]), extract_int(evo_method.exprs[2])])
                 evos.sort(key=lambda evo: evo[2])
