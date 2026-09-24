@@ -1,372 +1,1672 @@
+/* Make existing .dark-mode styles also apply to .theme-dark */
+.theme-dark { }
+.theme-dark .pfx-topbar,
+.theme-dark .pfx-panel,
+.theme-dark .pfx-body,
+.theme-dark .pfx-popup,
+.theme-dark .pfx-loading,
+.theme-dark .textbox,
+.theme-dark .footer,
+.theme-dark .linklist a,
+.theme-dark .utilichart,
+.theme-dark .dexentry,
+.theme-dark .tabbar .button,
+.theme-dark .nav .button,
+.theme-dark .pfx-topbar .button,
+.theme-dark .searchbox,
+.theme-dark .warning,
+.theme-dark .statbar span,
+.theme-dark .type,
+.theme-dark a.subtle,
+.theme-dark .minor,
+.theme-dark .bst { /* empty: just selector aliasing */ }
 
 p {
-	line-height: 130%;
+  line-height: 130%;
 }
 h1 {
-	text-align: center;
-	margin: 0;
-	padding: 15px;
-	font-size: 16pt;
+  text-align: center;
+  margin: 0;
+  padding: 15px;
+  font-size: 16pt;
 }
+
 .pfx-backbutton {
-	margin-top: 20px;
+  margin-top: 20px;
 }
 
 .ladderlist {
-	max-width: 240px;
+  max-width: 240px;
 }
 .ladder {
-	padding: 0 15px 15px 15px;
-	max-width: 600px;
+  padding: 0 15px 15px 15px;
+  max-width: 600px;
 }
 .ladder table {
-	margin: 0 auto;
+  margin: 0 auto;
 }
-.ladder table, .ladder td, .ladder th {
-	border-collapse: collapse;
-	border: 1px solid #BBBBBB;
+.ladder table,
+.ladder td,
+.ladder th {
+  border-collapse: collapse;
+  border: 1px solid #bbbbbb;
 }
-.ladder td, th {
-	padding: 3px 5px;
+.ladder td,
+th {
+  padding: 3px 5px;
 }
 .ladder th {
-	text-align: left;
-	font-size: 9pt;
-	background: #EEEEEE;
+  text-align: left;
+  font-size: 9pt;
+  background: #eeeeee;
 }
 
-.laddernav, .laddernav li {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+.laddernav,
+.laddernav li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .laddernav {
-	margin: 0 15px 15px 15px;
+  margin: 0 15px 15px 15px;
 }
 
 a.subtle {
-	text-decoration: none;
+  text-decoration: none;
 }
 a.subtle:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 .laddernav .button {
-	display: block;
-	position: relative;
-	padding: 5px 10px;
-	margin: 0 0 -1px 0;
-	border-radius: 0;
+  display: block;
+  position: relative;
+  padding: 5px 10px;
+  margin: 0 0 -1px 0;
+  border-radius: 0;
 }
 .laddernav .button:hover {
-	z-index: 10;
+  z-index: 10;
 }
 .laddernav .button.nav-first {
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .laddernav .button.nav-last {
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 /* replay */
 
 .linklist {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .linklist a {
-	display: block;
-	margin: 2px 0px 8px 0px;
-	padding: 3px 7px 4px 7px;
-	border: 1px solid #BBCCDD;
-	background: #F8FBFD;
+  display: block;
+  margin: 2px 0px 8px 0px;
+  padding: 3px 7px 4px 7px;
+  border: 1px solid #bbccdd;
+  background: #f8fbfd;
 
-	border-radius: 4px;
-	text-decoration: none;
-	color: #336699;
-	text-shadow: #ffffff 0px -1px 0;
-	box-shadow: 1px 1px 1px #D5D5D5;
-	cursor: pointer;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #336699;
+  text-shadow: #ffffff 0px -1px 0;
+  box-shadow: 1px 1px 1px #d5d5d5;
+  cursor: pointer;
 
-	overflow: hidden;
-	white-space: nowrap;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .linklist a small {
-	font-size: 9pt;
-	color: #6699CC;
+  font-size: 9pt;
+  color: #6699cc;
 }
 .linklist a:hover {
-	border: 1px solid #8899AA;
-	background: #F1F4F9;
-	color: #224466;
+  border: 1px solid #8899aa;
+  background: #f1f4f9;
+  color: #224466;
 }
 
-.pfx-topbar .header {
-	position: relative;
+.dark-mode .dexentry dt,
+.dark-mode .movetag,
+.dark-mode .type {
+  color: #cccccc !important;
 }
 
-.theme-toggle {
-	position: fixed;
-	top: 10px;
-	right: 12px;
-	font-size: 9pt;
-	z-index: 200;
+.dark-mode .linklist a small,
+.dark-mode .minor,
+.dark-mode .bst,
+.dark-mode .dexentry .tier {
+  color: #aaaaaa !important;
 }
 
-.item-location-chart .resultheader h3 {
-	margin: 0;
-	padding: 0 8px;
+.dark-mode .type {
+  background-color: #444 !important;
+  border-color: #666 !important;
 }
 
-.item-location-chart .itemlocation-headertext {
-	display: block;
-	text-decoration: none !important;
-	background: transparent !important;
-	border: 0 !important;
-	box-shadow: none !important;
-	line-height: 1.2;
-	position: relative;
-	z-index: 1;
+.dark-mode .textbox::placeholder {
+  color: #888 !important;
 }
 
-.item-location-chart.metricchart li {
-	height: auto;
+.dark-mode .buttonbar .button,
+.dark-mode .searchbox {
+  background: #2a2a2a !important;
+  color: #e0e0e0 !important;
+  border-color: #444 !important;
 }
 
-.item-location-chart .resultheader {
-	margin: 0 5px 3px 5px;
-	border-radius: 4px;
+.dark-mode .dexentry,
+.dark-mode .dexentry h1,
+.dark-mode .dexentry h2,
+.dark-mode .dexentry dt,
+.dark-mode .dexentry dd {
+  background-color: transparent !important;
+  color: #ccc !important;
 }
 
-.item-location-chart .result {
-	margin-bottom: 2px;
+.dark-mode .dexentry .tier,
+.dark-mode .type,
+.dark-mode .utilichart a {
+  background-color: #333 !important;
+  border-color: #666 !important;
+  color: #eee !important;
+  text-shadow: none !important;
 }
 
-.item-location-chart .result a,
-.item-location-chart .result .itemlocation-row {
-	display: flex;
-	align-items: center;
-	gap: 8px;
-	margin: 0 5px;
-	padding: 4px 10px 4px 10px;
-	border: 1px solid #a9bcd7;
-	border-radius: 4px;
-	background: #f7fbff;
-	color: #1a2d4d;
-	text-decoration: none;
-	font-size: 11pt !important;
-	line-height: 1.3;
-	opacity: 1;
-	text-decoration: none !important;
+.dark-mode .utilichart a.active,
+.dark-mode .utilichart a.sel,
+.dark-mode .utilichart a.cur {
+  background-color: #444 !important;
+  border-color: #888 !important;
+}
+.dark-mode .warning {
+  background-color: #3a2a2a !important;
+  border-color: #ff9800 !important;
+  color: #fbc02d !important;
+}
+.dark-mode .pfx-topbar {
+  background: #1e1e1e !important;
+  background-image: none !important;
+  border-bottom: 1px solid #333 !important;
+  text-shadow: none !important;
+  color: #e0e0e0 !important;
 }
 
-.item-location-chart .result a *,
-.item-location-chart .result .itemlocation-row * {
-	opacity: 1 !important;
-	text-shadow: none !important;
+.dark-mode .pfx-topbar .userbar,
+.dark-mode .pfx-topbar .header {
+  color: #e0e0e0 !important;
 }
 
-.item-location-chart .result a:hover,
-.item-location-chart .result .itemlocation-row:hover {
-	border-color: #6f93c8;
-	background: #edf4ff;
-	color: #0f2342;
+.dark-mode .pfx-topbar a {
+  color: #90caf9 !important;
+}
+.dark-mode .pfx-topbar a:hover {
+  color: #e3f2fd !important;
+}
+.dark-mode .nav .button,
+.dark-mode .pfx-topbar .button,
+.dark-mode .tabbar .button {
+  background: #1e1e1e !important;
+  color: #ccc !important;
+  border: 1px solid #333 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
 }
 
-.item-location-chart .itemlocation-kind {
-	flex: 0 0 72px;
-	font-size: 11pt !important;
-	font-weight: 600;
-	line-height: 1.25;
-	text-align: left;
-	color: #13325e;
-	white-space: nowrap;
+.dark-mode .nav .button:hover,
+.dark-mode .tabbar .button:hover,
+.dark-mode .pfx-topbar .button:hover {
+  background: #2a2a2a !important;
+  border-color: #555 !important;
+  color: #fff !important;
 }
 
-.item-location-chart .itemlocation-divider {
-	width: 1px;
-	align-self: stretch;
-	background: #8da8cc;
+.dark-mode .nav li:first-child .button,
+.dark-mode .nav li:last-child .button {
+  border-radius: 5px !important;
+}
+.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
 }
 
-.item-location-chart .itemlocation-entry {
-	flex: 1 1 auto;
-	display: flex;
-	align-items: center;
-	min-width: 0;
-	font-size: 11pt !important;
-	line-height: 1.25;
-	overflow: hidden;
+/* Restore original dark mode surfaces */
+.dark-mode .pfx-topbar {
+  background-color: #1e1e1e !important;
+  background-image: none !important;
+  border-bottom: 1px solid #333 !important;
+  text-shadow: none !important;
 }
 
-.item-location-chart .itemlocation-icon {
-	margin-right: 8px;
+.dark-mode .pfx-panel,
+.dark-mode .pfx-body,
+.dark-mode .pfx-popup,
+.dark-mode .pfx-loading,
+.dark-mode .textbox,
+.dark-mode .footer,
+.dark-mode .linklist a {
+  background-color: #1e1e1e !important;
+  border-color: #444 !important;
 }
 
-.item-location-chart .itemlocation-fallback-icon {
-	margin-right: 8px;
-	color: #6e88ad;
+.dark-mode .textbox,
+.dark-mode .textbox:focus {
+  color: #ffffff !important;
 }
 
-.item-location-chart .itemlocation-item {
-	display: inline-block;
-	max-width: 100%;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	color: #0d2240;
-	font-weight: 600;
-	font-size: 11pt !important;
+/* Buttons: revert back while improving text */
+.dark-mode .button,
+.dark-mode .nav .button,
+.dark-mode .tabbar .button {
+  background-color: #2a2a2a !important;
+  color: #eeeeee !important;
+  border-color: #555 !important;
 }
 
-.item-location-chart .resultheader h3 a {
-	text-decoration: none !important;
-	background: transparent !important;
-	box-shadow: none !important;
+.dark-mode .button:hover {
+  background-color: #3a3a3a !important;
+  color: #ffffff !important;
 }
 
-.theme-dark body {
-	background: #0b1320;
-	color: #d7e0ec;
+/* Utility panels */
+.dark-mode .utilichart,
+.dark-mode .dexentry {
+  background-color: #1e1e1e !important;
 }
 
-.theme-dark a {
-	color: #9ac0ff;
+/* Highlight sections */
+.dark-mode .tier,
+.dark-mode .type,
+.dark-mode .movetag {
+  background-color: #2c2c2c !important;
+  border-color: #555 !important;
+  color: #f5f5f5 !important;
 }
 
-.theme-dark a:hover {
-	color: #c6dbff;
+/* Minor text */
+.dark-mode .minor,
+.dark-mode .bst,
+.dark-mode .dexentry small,
+.dark-mode small {
+  color: #bbbbbb !important;
 }
 
-.theme-dark .pfx-topbar {
-	background: linear-gradient(#1a2439, #121b2d);
-	border-bottom-color: #0a0f1a;
-	text-shadow: none;
+/* ===== Dark mode – minimal, targeted fixes ===== */
+
+/* Search + Sort bar contrast (keeps them readable but unobtrusive) */
+.dark-mode .searchbox {
+  background: #1b1b1b !important;
+  color: #eaeaea !important;
+  border: 1px solid #565656 !important;
+}
+.dark-mode .searchbox::placeholder { color: #8f8f8f !important; }
+
+/* "Sort:" header row and column labels */
+.dark-mode .utilichart .content,
+.dark-mode .utilichart .content * {
+  /* don't change colors globally here */
+}
+.dark-mode .utilichart .content .header,
+.dark-mode .utilichart .content .sort,
+.dark-mode .utilichart table thead th {
+  background: #2a2a2a !important;
+  color: #ffffff !important;
+  border-color: #565656 !important;
 }
 
-.theme-dark .pfx-panel,
-.theme-dark .pfx-go-left,
-.theme-dark .pfx-go-right {
-	background-color: #0f172a;
-	border-color: #243047;
+/* Encounter rows (Pokemon list) */
+.dark-mode .utilichart a {
+  background: #1a1a1a !important;
+  border: 1px solid #404040 !important;
+  color: #f0f0f0 !important;
+}
+.dark-mode .utilichart a:hover {
+  background: #232323 !important;
+  border-color: #6f6f6f !important;
 }
 
-.theme-dark .pfx-go-left:hover,
-.theme-dark .pfx-go-right:hover {
-	background-color: #1a253b;
+/* Encounter section headings: Land / Surfing / Fishing */
+.dark-mode .utilichart h3,
+.dark-mode .utilichart dt {
+  background: #202020 !important;
+  color: #ffffff !important;
+  border: 1px solid #3f3f3f !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
 }
 
-.theme-dark .button {
-	color: #dce6f5;
-	border-color: #4b607f;
-	background: linear-gradient(#2a3953, #1f2d44);
-	text-shadow: none;
-	box-shadow: 0 1px 2px rgba(0,0,0,.35), inset 0 -1px 2px rgba(255,255,255,.08);
+/* Level-up section title bar and table cells */
+.dark-mode .dexentry h2,
+.dark-mode .dexentry .movestitle {
+  background: #2a2a2a !important;
+  color: #ffffff !important;
+  border: 1px solid #565656 !important;
 }
 
-.theme-dark .button:hover {
-	color: #f2f6ff;
-	border-color: #6b86ae;
-	background: linear-gradient(#334764, #253853);
+.dark-mode .dexentry table td,
+.dark-mode .dexentry table th,
+.dark-mode .dexentry dt,
+.dark-mode .dexentry dd,
+.dark-mode .dexentry .movetag {
+  color: #e6e6e6 !important;
 }
 
-.theme-dark .button.cur,
-.theme-dark .button.cur:hover,
-.theme-dark .button:disabled,
-.theme-dark .button:disabled:hover {
-	color: #9fb3d3;
-	border-color: #5a6f8f;
-	background: #162238;
+/* Keep base stat bars exactly as they are in light mode (do NOT recolor) */
+.dark-mode .statbar span {
+  box-shadow: inherit !important;       /* keep original styling */
+  filter: none !important;              /* don't dim */
+}
+.dark-mode table.stats td,
+.dark-mode table.stats th { color: #e0e0e0 !important; }
+
+/* Type badges remain vivid on dark backgrounds */
+.dark-mode .type {
+  border-color: #666 !important;
+  text-shadow: none !important;
 }
 
-.theme-dark .textbox {
-	background: #111c2f;
-	border-color: #445b79;
-	color: #e0ebf8;
-	box-shadow: inset 0 1px 2px rgba(0,0,0,.35), 1px 1px 0 rgba(255,255,255,.06);
+/* ===== Dark mode – text + selected-route fixes ===== */
+
+/* 1) Names/links: override "a.subtle" and inner links so they aren't black */
+.dark-mode a.subtle,
+.dark-mode .utilichart a a,
+.dark-mode .dexentry a.subtle {
+  color: #f0f0f0 !important;
+}
+.dark-mode a.subtle:hover,
+.dark-mode .utilichart a a:hover,
+.dark-mode .dexentry a.subtle:hover {
+  color: #ffffff !important;
 }
 
-.theme-dark .textbox:hover {
-	background: #16253d;
-	border-color: #5f7aa0;
+/* 2) Make the text inside encounter rows readable */
+.dark-mode .utilichart a span,
+.dark-mode .utilichart a small {
+  color: #dedede !important;
 }
 
-.theme-dark .textbox:focus {
-	background: #16253d;
-	border-color: #7ba3d6;
-	box-shadow: inset 0 1px 2px rgba(0,0,0,.35), 0 0 5px rgba(123,163,214,.65);
+/* 3) Move list (Level-up / Moves tabs) – brighten names and details */
+.dark-mode .dexentry table td,
+.dark-mode .dexentry table th,
+.dark-mode .dexentry dt,
+.dark-mode .dexentry dd,
+.dark-mode .dexentry .movetag {
+  color: #e8e8e8 !important;
 }
 
-.theme-dark .textbox::placeholder {
-	color: #a8bddc;
-	opacity: 1;
+/* 4) Selected Route pill/button in Encounters (was light-theme) */
+.dark-mode .utilichart .button.cur,
+.dark-mode .utilichart .button.cur:hover,
+.dark-mode .utilichart .label,
+.dark-mode .utilichart .label:hover {
+  background: #2a2a2a !important;
+  color: #ffffff !important;
+  border: 1px solid #666 !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
 }
 
-.theme-dark .pfx-backbutton {
-	background: #1a253b;
-	border-color: #4b607f;
-	color: #dce6f5;
-	box-shadow: inset 1px 1px 0 rgba(255,255,255,.08), 1px 1px 2px rgba(0,0,0,.25);
+/* Dark mode: fix selected route/location pill (and similar standalone buttons) */
+.dark-mode .pfx-body .button,
+.dark-mode .pfx-panel .button {
+  background: #2a2a2a !important;
+  color: #ffffff !important;
+  border: 1px solid #666 !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
 }
 
-.theme-dark .pfx-backbutton:hover {
-	background: #21324e;
-	border-color: #6b86ae;
-	color: #f2f6ff;
+.dark-mode .pfx-body .button.cur,
+.dark-mode .pfx-panel .button.cur,
+.dark-mode .pfx-body .button:disabled,
+.dark-mode .pfx-panel .button:disabled {
+  background: #3a3a3a !important;
+  color: #e6e6e6 !important;
+  border-color: #777 !important;
 }
 
-.theme-dark .item-location-chart li.resultheader,
-.theme-dark .item-location-chart li.resultheader h3,
-.theme-dark .item-location-chart li.resultheader h3 .itemlocation-headertext {
-	background: #081733 !important;
-	color: #f3f8ff !important;
-	border-color: #2c67cc !important;
-	text-shadow: none !important;
-	text-decoration: none !important;
+/* Keep tabbar/nav buttons unchanged */
+.dark-mode .tabbar .button,
+.dark-mode .nav .button {
+  /* let existing dark styles win; no overrides here */
 }
 
-.theme-dark .item-location-chart .result a,
-.theme-dark .item-location-chart .result a:hover,
-.theme-dark .item-location-chart .result .itemlocation-row,
-.theme-dark .item-location-chart .result .itemlocation-row:hover {
-	background: #081733 !important;
-	border-color: #2c67cc !important;
-	color: #eef4ff !important;
+/* Dark mode: keep the base-stat bars exactly like light mode */
+
+/* Only the table cells go transparent – not the inner spans */
+.dark-mode table.stats { background: transparent !important; }
+.dark-mode table.stats th,
+.dark-mode table.stats td { 
+  background: transparent !important; 
+  color: #e6e6e6 !important; 
+  border-color: #444 !important; 
 }
 
-.theme-dark .item-location-chart .itemlocation-kind {
-	color: #f2f7ff !important;
+/* Dark mode: make standalone buttons readable (incl. Toggle Dark Mode) */
+.dark-mode .button:not(.nav .button):not(.tabbar .button) {
+  background: #2b2b2b !important;
+  color: #ffffff !important;
+  border: 1px solid #777 !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+.dark-mode .button:not(.nav .button):not(.tabbar .button):hover {
+  background: #3a3a3a !important;
+  border-color: #999 !important;
+}
+.dark-mode .button:not(.nav .button):not(.tabbar .button).cur,
+.dark-mode .button:not(.nav .button):not(.tabbar .button):disabled {
+  background: #3a3a3a !important;
+  color: #e6e6e6 !important;
+  border-color: #888 !important;
 }
 
-.theme-dark .item-location-chart .itemlocation-divider {
-	background: #2f6fd9;
+/* Dark mode: fix the white side panels (gutter scrollers) */
+.dark-mode .pfx-go-left,
+.dark-mode .pfx-go-right {
+  background: #121212 !important;   /* kill the white + image */
+  border-left: 1px solid #333 !important;
 }
 
-.theme-dark .item-location-chart .itemlocation-fallback-icon {
-	color: #8db5ff;
+/* Optional: if you want subtle arrows, keep images but darken bg */
+/*
+.dark-mode .pfx-go-left  { background: #1a1a1a url(go-left.png)  no-repeat left 20px center !important; }
+.dark-mode .pfx-go-right { background: #1a1a1a url(go-right.png) no-repeat right 20px center !important; }
+*/
+
+/* Make sure the main surfaces are dark too */
+.dark-mode .pfx-panel,
+.dark-mode .pfx-body {
+  background: #1a1a1a !important;
 }
 
-.theme-dark .item-location-chart .itemlocation-item {
-	color: #ffffff;
+.theme-picker { position: fixed; top: 10px; right: 10px; }
+
+/* Theme dropdown control */
+.theme-picker select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 6px 28px 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  background: #f5f5f5;
+  color: #222;
+  font: inherit;
+}
+.dark-mode .theme-picker select,
+.theme-azure .theme-picker select {
+  background: #2a2a2a;
+  color: #fff;
+  border-color: #666;
+}
+.theme-dex .theme-picker select {
+  background: #111c2f;
+  color: #d7e0ec;
+  border-color: #445b79;
 }
 
-.theme-dark .warning {
-	background: #3a2a1a;
-	border-color: #d38b32;
-	color: #ffe5c4;
+/* =======================
+   Azure (Night Blue) theme
+   ======================= */
+.theme-azure {
+  /* base canvas stays your dark bg from .dark-mode */
 }
 
-.theme-dark .warning a {
-	color: #ffd48c;
+/* Top bar + tabs with blue accent */
+.theme-azure .pfx-topbar {
+  background: #0f172a !important;                /* deep navy */
+  border-bottom-color: #223b78 !important;
+}
+.theme-azure .nav .button,
+.theme-azure .tabbar .button,
+.theme-azure .pfx-topbar .button {
+  background: #111827 !important;
+  border-color: #223b78 !important;
+  color: #e5e9f5 !important;
+}
+.theme-azure .nav .button:hover,
+.theme-azure .tabbar .button:hover,
+.theme-azure .pfx-topbar .button:hover {
+  background: #16223a !important;
+  border-color: #3b82f6 !important;              /* bright blue edge */
+  color: #ffffff !important;
 }
 
-@media (max-width: 720px) {
-	.theme-toggle {
-		right: 8px;
-		top: 11px;
-		padding: 4px 8px;
-	}
+/* Primary accents (links, active labels, small pills) */
+.theme-azure a,
+.theme-azure .pfx-topbar a {
+  color: #8ab4ff !important;                     /* lighter blue */
+}
+.theme-azure a:hover,
+.theme-azure .pfx-topbar a:hover {
+  color: #cde1ff !important;
+}
+
+/* Search box focus, input focus rings */
+.theme-azure .textbox:focus,
+.theme-azure .searchbox:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 2px rgba(59,130,246,.25) !important;
+}
+
+/* Section headers (e.g., Level-up title bar, Encounter headers) */
+.theme-azure .dexentry h2,
+.theme-azure .dexentry .movestitle,
+.theme-azure .utilichart h3,
+.theme-azure .utilichart dt {
+  background: #0b1226 !important;
+  border-color: #274d9b !important;
+  color: #e8f0ff !important;
+}
+
+/* Buttons inside content area (e.g., route pill, standalone buttons) */
+.theme-azure .pfx-body .button,
+.theme-azure .pfx-panel .button,
+.theme-azure .utilichart .button {
+  background: #0f1a33 !important;
+  border-color: #274d9b !important;
+  color: #e8f0ff !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+.theme-azure .pfx-body .button:hover,
+.theme-azure .pfx-panel .button:hover,
+.theme-azure .utilichart .button:hover {
+  background: #132247 !important;
+  border-color: #3b82f6 !important;
+}
+.theme-azure .pfx-body .button.cur,
+.theme-azure .pfx-panel .button.cur,
+.theme-azure .pfx-body .button:disabled,
+.theme-azure .pfx-panel .button:disabled {
+  background: #172a57 !important;
+  color: #cfe1ff !important;
+  border-color: #3b82f6 !important;
+}
+
+/* Encounter rows – subtle blue outline on hover */
+.theme-azure .utilichart a:hover {
+  border-color: #3b82f6 !important;
+}
+
+/* Side gutters (scrollers) */
+.theme-azure .pfx-go-left,
+.theme-azure .pfx-go-right {
+  background: #0b1220 !important;
+  border-left-color: #274d9b !important;
+}
+
+/* ===== Night (Blue) — standalone base ===== */
+.theme-azure {
+  background: #0b1220;           /* page canvas */
+  color: #e8f0ff;
+}
+
+.theme-azure .pfx-panel,
+.theme-azure .pfx-body,
+.theme-azure .utilichart,
+.theme-azure .dexentry,
+.theme-azure .linklist a,
+.theme-azure .textbox {
+  background: #0f172a !important;
+  color: #e8f0ff !important;
+  border-color: #274d9b !important;
+}
+
+/* Topbar & nav */
+.theme-azure .pfx-topbar { background: #0b1226 !important; border-bottom: 1px solid #274d9b !important; }
+.theme-azure .nav .button,
+.theme-azure .tabbar .button,
+.theme-azure .pfx-topbar .button {
+  background: #111827 !important;
+  color: #e5e9f5 !important;
+  border-color: #274d9b !important;
+}
+.theme-azure .nav .button:hover,
+.theme-azure .tabbar .button:hover,
+.theme-azure .pfx-topbar .button:hover {
+  background: #132247 !important;
+  border-color: #3b82f6 !important;
+}
+
+/* Inputs */
+.theme-azure .searchbox,
+.theme-azure .textbox { background: #0f1a33 !important; color: #e8f0ff !important; border-color: #274d9b !important; }
+.theme-azure .searchbox::placeholder { color: #9db5ff !important; }
+.theme-azure .textbox:focus, .theme-azure .searchbox:focus {
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 2px rgba(59,130,246,.25) !important;
+}
+
+/* Section headers / pills */
+.theme-azure .dexentry h2,
+.theme-azure .utilichart h3,
+.theme-azure .utilichart dt {
+  background: #0b1226 !important; color: #e8f0ff !important; border-color: #274d9b !important;
+}
+.theme-azure .pfx-body .button,
+.theme-azure .pfx-panel .button,
+.theme-azure .utilichart .button {
+  background: #0f1a33 !important; color: #e8f0ff !important; border-color: #274d9b !important; text-shadow: none !important; box-shadow: none !important;
+}
+.theme-azure .pfx-body .button:hover,
+.theme-azure .pfx-panel .button:hover,
+.theme-azure .utilichart .button:hover {
+  background: #132247 !important; border-color: #3b82f6 !important;
+}
+
+/* Encounter row hover */
+.theme-azure .utilichart a { background: #0f172a !important; border-color: #274d9b !important; color: #e8f0ff !important; }
+.theme-azure .utilichart a:hover { border-color: #3b82f6 !important; }
+
+/* Side gutters */
+.theme-azure .pfx-go-left, .theme-azure .pfx-go-right {
+  background: #0b1220 !important; border-left-color: #274d9b !important;
+}
+
+/* Keep base-stat bars exactly as light mode (no recolor) */
+.theme-azure .statbar span { box-shadow: inherit; } /* no background override */
+
+/* ===== Azure theme: text visibility fixes ===== */
+
+/* Make all regular text light by default */
+.theme-azure,
+.theme-azure body,
+.theme-azure .pfx-panel,
+.theme-azure .pfx-body {
+  color: #e8f0ff !important;
+}
+
+/* Links used for names (these are black in light theme) */
+.theme-azure a.subtle,
+.theme-azure .utilichart a a,
+.theme-azure .dexentry a.subtle {
+  color: #e8f0ff !important;
+}
+.theme-azure a.subtle:hover,
+.theme-azure .utilichart a a:hover,
+.theme-azure .dexentry a.subtle:hover {
+  color: #ffffff !important;
+}
+
+/* Sort header + column headers in the list */
+.theme-azure .utilichart .content .header,
+.theme-azure .utilichart .content .sort,
+.theme-azure .utilichart table thead th {
+  color: #e8f0ff !important;
+  background: #0b1226 !important;
+  border-color: #274d9b !important;
+}
+
+/* Encounter rows: text inside each row */
+.theme-azure .utilichart a,
+.theme-azure .utilichart a span,
+.theme-azure .utilichart a small {
+  color: #e8f0ff !important;
+}
+
+/* Search input + placeholder */
+.theme-azure .searchbox,
+.theme-azure .textbox {
+  color: #e8f0ff !important;
+}
+.theme-azure .searchbox::placeholder,
+.theme-azure .textbox::placeholder {
+  color: #9db5ff !important;
+}
+
+/* Tabs/pills (ensure their label text is not dark) */
+.theme-azure .tabbar .button,
+.theme-azure .pfx-body .button,
+.theme-azure .pfx-panel .button {
+  color: #e8f0ff !important;
+}
+
+/* =======================
+   Dex theme
+   ======================= */
+.theme-dex {
+  background: #0b1320;
+  color: #d7e0ec;
+  --delta-positive: #7ee5a8;
+  --delta-negative: #ff9d9d;
+}
+
+.theme-dex .pfx-topbar {
+  background: linear-gradient(#1a2439, #121b2d) !important;
+  border-bottom: 1px solid #4b607f !important;
+  text-shadow: none !important;
+  color: #d7e0ec !important;
+}
+
+.theme-dex .pfx-topbar .userbar,
+.theme-dex .pfx-topbar .header {
+  color: #d7e0ec !important;
+}
+
+.theme-dex .pfx-panel,
+.theme-dex .pfx-body,
+.theme-dex .pfx-popup,
+.theme-dex .pfx-loading,
+.theme-dex .utilichart,
+.theme-dex .dexentry,
+.theme-dex .linklist a,
+.theme-dex .footer {
+  background: #0f172a !important;
+  border-color: #445b79 !important;
+  color: #d7e0ec !important;
+  text-shadow: none !important;
+}
+
+.theme-dex .searchbox,
+.theme-dex .textbox {
+  background: #111c2f !important;
+  border-color: #445b79 !important;
+  color: #d7e0ec !important;
+  box-shadow: none !important;
+}
+
+.theme-dex .searchbox::placeholder,
+.theme-dex .textbox::placeholder,
+.theme-dex .linklist a small,
+.theme-dex .minor,
+.theme-dex .bst,
+.theme-dex .dexentry .tier {
+  color: #9ab0d2 !important;
+}
+
+.theme-dex .searchbox:focus,
+.theme-dex .textbox:focus {
+  border-color: #7ba3d6 !important;
+  box-shadow: 0 0 0 2px rgba(123, 163, 214, 0.25) !important;
+}
+
+.theme-dex a,
+.theme-dex .pfx-topbar a,
+.theme-dex a.subtle,
+.theme-dex .utilichart a a,
+.theme-dex .dexentry a.subtle {
+  color: #9ac0ff !important;
+}
+
+.theme-dex a:hover,
+.theme-dex .pfx-topbar a:hover,
+.theme-dex a.subtle:hover,
+.theme-dex .utilichart a a:hover,
+.theme-dex .dexentry a.subtle:hover {
+  color: #c6dbff !important;
+}
+
+.theme-dex .button,
+.theme-dex .nav .button,
+.theme-dex .tabbar .button,
+.theme-dex .pfx-topbar .button,
+.theme-dex .pfx-body .button,
+.theme-dex .pfx-panel .button,
+.theme-dex .utilichart .button {
+  background: linear-gradient(#2a3953, #1f2d44) !important;
+  border-color: #4b607f !important;
+  color: #d7e0ec !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.theme-dex .button:hover,
+.theme-dex .nav .button:hover,
+.theme-dex .tabbar .button:hover,
+.theme-dex .pfx-topbar .button:hover,
+.theme-dex .pfx-body .button:hover,
+.theme-dex .pfx-panel .button:hover,
+.theme-dex .utilichart .button:hover {
+  background: linear-gradient(#334764, #253853) !important;
+  border-color: #6b86ae !important;
+  color: #d7e0ec !important;
+}
+
+.theme-dex .button.cur,
+.theme-dex .button.cur:hover,
+.theme-dex .button:disabled,
+.theme-dex .button:disabled:hover {
+  background: #253853 !important;
+  border-color: #6b86ae !important;
+  color: #9ab0d2 !important;
+}
+
+.theme-dex .utilichart a {
+  background: #0f172a !important;
+  border-color: #445b79 !important;
+  color: #d7e0ec !important;
+  text-shadow: none !important;
+}
+
+.theme-dex .utilichart a.active,
+.theme-dex .utilichart a.active:hover,
+.theme-dex .utilichart.nokbd a:hover {
+  background: #111c2f !important;
+  border-color: #4b607f !important;
+}
+
+.theme-dex .utilichart a.sel,
+.theme-dex .utilichart a.sel:hover,
+.theme-dex .utilichart a.cur,
+.theme-dex .utilichart a.cur:hover {
+  background: #1a2439 !important;
+  border-color: #6b86ae !important;
+}
+
+.theme-dex .utilichart .content .header,
+.theme-dex .utilichart .content .sort,
+.theme-dex .utilichart table thead th,
+.theme-dex .dexentry h2,
+.theme-dex .dexentry .movestitle,
+.theme-dex .utilichart h3,
+.theme-dex .utilichart dt {
+  background: #121b2d !important;
+  border-color: #4b607f !important;
+  color: #d7e0ec !important;
+}
+
+.theme-dex .utilichart a span,
+.theme-dex .utilichart a small {
+  color: #d7e0ec !important;
+}
+
+.theme-dex .warning {
+  color: #2f1a0e !important;
+}
+
+.theme-dex .warning a {
+  color: #5a2b12 !important;
+}
+
+.theme-dex .warning a:hover {
+  color: #7a3a18 !important;
+}
+
+.theme-dex .pfx-go-left,
+.theme-dex .pfx-go-right {
+  background: #0b1320 !important;
+  border-left-color: #445b79 !important;
+}
+
+/* ===== Brighter, crisper text for DARK (not Night/Azure) ===== */
+
+/* Base copy */
+.dark-mode .pfx-body,
+.dark-mode .pfx-panel,
+.dark-mode .dexentry,
+.dark-mode .utilichart,
+.dark-mode .linklist a {
+  color: #e6ecf8 !important;            /* brighter body text */
+}
+
+/* Headings & labels (HP / Attack etc. and dt labels) */
+.dark-mode h1, .dark-mode h2, .dark-mode h3,
+.dark-mode .dexentry dt,
+.dark-mode .utilichart h3,
+.dark-mode .utilichart dt {
+  color: #f1f5ff !important;             /* near-white headings */
+}
+
+/* Links (names, evolution chain, subtle links) */
+.dark-mode a,
+.dark-mode a.subtle,
+.dark-mode .utilichart a a,
+.dark-mode .dexentry a.subtle {
+  color: #9ecbff !important;             /* blue accent like Night */
+}
+.dark-mode a:hover,
+.dark-mode a.subtle:hover,
+.dark-mode .utilichart a a:hover,
+.dark-mode .dexentry a.subtle:hover {
+  color: #cfe1ff !important;
+}
+
+/* Sort header / table headers in list */
+.dark-mode .utilichart .content .header,
+.dark-mode .utilichart .content .sort,
+.dark-mode .utilichart table thead th {
+  color: #eef4ff !important;
+  background: #20283a !important;
+  border-color: #5b6b8a !important;
+}
+
+/* Search input + placeholder */
+.dark-mode .searchbox,
+.dark-mode .textbox {
+  color: #eaf0ff !important;
+}
+.dark-mode .searchbox::placeholder,
+.dark-mode .textbox::placeholder {
+  color: #a8b7d1 !important;
+}
+
+/* Buttons in content (labels/pills) — brighter text only */
+.dark-mode .pfx-body .button,
+.dark-mode .pfx-panel .button {
+  color: #eaf0ff !important;
+}
+
+/* IMPORTANT: keep stat bars untouched */
+.dark-mode .statbar span {
+  /* no background/width/filter overrides here */
+  box-shadow: inherit;                    /* preserve light-mode look */
+}
+
+/* Stat/move delta colors (theme-aware) */
+:root {
+  --delta-positive: #2aa84a;
+  --delta-negative: #cf3c3c;
+}
+
+.dark-mode,
+.theme-dark {
+  --delta-positive: #58d27e;
+  --delta-negative: #ff7b7b;
+}
+
+.theme-azure {
+  --delta-positive: #7ee5a8;
+  --delta-negative: #ff9d9d;
+}
+
+.delta-positive {
+  color: var(--delta-positive) !important;
+  font-weight: 600;
+}
+
+.delta-negative {
+  color: var(--delta-negative) !important;
+  font-weight: 600;
+}
+
+/* Ensure theme small-text overrides do not hide delta colors */
+.dexentry small.delta-positive,
+.dexentry .delta-positive {
+  color: var(--delta-positive) !important;
+}
+
+.dexentry small.delta-negative,
+.dexentry .delta-negative {
+  color: var(--delta-negative) !important;
+}
+
+.encounterlist-launch {
+  margin-top: 10px;
+}
+
+.encounterlist-panel {
+  padding-bottom: 18px;
+}
+
+.encounterlist-controls {
+  padding: 0 10px 10px 10px;
+}
+
+.encounterlist-search-wrap {
+  max-width: 560px;
+  margin: 0 auto 10px auto;
+}
+
+.encounterlist-ability-controls,
+.encounter-ability-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  margin: 0 10px 10px 10px;
+  font-size: 10pt;
+  color: #666;
+}
+
+.encounterlist-ability-controls label,
+.encounter-ability-controls label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.encounterlist-ability-hint {
+  width: 100%;
+  font-size: 9pt;
+}
+
+.encounterlist-note {
+  margin: 0 10px 10px 10px;
+  color: #666;
+  font-size: 10pt;
+}
+
+.encounterlist-dupe-count {
+  display: inline-block;
+  margin-left: 10px;
+  color: #666;
+  font-size: 10pt;
+}
+
+.encounterlist-sync-status {
+  display: inline-block;
+  margin-left: 10px;
+  color: #666;
+  font-size: 10pt;
+}
+
+.encounterlist-sync-status-success {
+  color: #257942;
+}
+
+.encounterlist-sync-status-error {
+  color: #a33;
+}
+
+.encounterlist-rows {
+  list-style: none;
+  margin: 0;
+  padding: 0 10px 8px 10px;
+}
+
+.encounterlist-empty {
+  display: none;
+  margin: 0 10px 10px 10px;
+  color: #666;
+  font-size: 10pt;
+}
+
+.encounterlist-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 3px 0;
+  cursor: pointer;
+}
+
+.encounterlist-row.encounterlist-row-hidden {
+  display: none !important;
+}
+
+.encounterlist-route-link {
+  display: inline-block;
+  min-width: 185px;
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.encounterlist-route-link:hover {
+  text-decoration: underline;
+}
+
+.encounterlist-route-link.encounterlist-route-active {
+  font-weight: 600;
+}
+
+.encounterlist-catch {
+  width: 168px;
+  cursor: pointer;
+}
+
+.encounterlist-catch-controls {
+  display: flex;
+  flex-direction: column;
+  width: 168px;
+}
+
+.encounterlist-picked-icon {
+  display: inline-block;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.encounterlist-picked-icon .picon {
+  vertical-align: top;
+}
+
+.encounterlist-row-dupe .encounterlist-catch {
+  border-color: #d77b7b !important;
+  background: #f6d1d1 !important;
+}
+
+.encounterlist-row-missed .encounterlist-catch {
+  border-color: #ce8b36 !important;
+  background: #ffe8cb !important;
+}
+
+.encounterlist-row-delaying .encounterlist-catch {
+  border-color: #4f96d4 !important;
+  background: #dceeff !important;
+}
+
+.encounterlist-row-locked .encounterlist-route-link {
+  opacity: 0.55;
+}
+
+.encounterlist-row-locked .encounterlist-picked-icon {
+  opacity: 0.5;
+}
+
+.encounterlist-row-locked .encounterlist-catch {
+  border-color: #a9b0bd !important;
+  background: #e6e9ef !important;
+  color: #6f7888 !important;
+}
+
+.utilichart a.encounter-dupe,
+.utilichart a.encounter-dupe:hover {
+  border-color: #d77b7b !important;
+  background: #f6d1d1 !important;
+}
+
+.dark-mode .encounterlist-dupe-count,
+.dark-mode .encounterlist-note,
+.dark-mode .encounterlist-empty,
+.dark-mode .encounterlist-ability-controls,
+.dark-mode .encounter-ability-controls,
+.theme-dark .encounterlist-dupe-count,
+.theme-dark .encounterlist-note,
+.theme-dark .encounterlist-empty,
+.theme-dark .encounterlist-ability-controls,
+.theme-dark .encounter-ability-controls,
+.theme-azure .encounterlist-dupe-count,
+.theme-azure .encounterlist-note,
+.theme-azure .encounterlist-empty,
+.theme-azure .encounterlist-ability-controls,
+.theme-azure .encounter-ability-controls,
+.theme-dex .encounterlist-dupe-count,
+.theme-dex .encounterlist-note,
+.theme-dex .encounterlist-empty,
+.theme-dex .encounterlist-ability-controls,
+.theme-dex .encounter-ability-controls {
+  color: #c9d6f2 !important;
+}
+
+.dark-mode .encounterlist-row-dupe .encounterlist-catch,
+.theme-dark .encounterlist-row-dupe .encounterlist-catch,
+.theme-azure .encounterlist-row-dupe .encounterlist-catch,
+.theme-dex .encounterlist-row-dupe .encounterlist-catch {
+  border-color: #b65d5d !important;
+  background: #4a2727 !important;
+  color: #f6e3e3 !important;
+}
+
+.dark-mode .encounterlist-row-missed .encounterlist-catch,
+.theme-dark .encounterlist-row-missed .encounterlist-catch,
+.theme-azure .encounterlist-row-missed .encounterlist-catch,
+.theme-dex .encounterlist-row-missed .encounterlist-catch {
+  border-color: #bf8f47 !important;
+  background: #4d3720 !important;
+  color: #f5e8d9 !important;
+}
+
+.dark-mode .encounterlist-row-delaying .encounterlist-catch,
+.theme-dark .encounterlist-row-delaying .encounterlist-catch,
+.theme-azure .encounterlist-row-delaying .encounterlist-catch,
+.theme-dex .encounterlist-row-delaying .encounterlist-catch {
+  border-color: #5f99cf !important;
+  background: #25394e !important;
+  color: #e4eef8 !important;
+}
+
+.dark-mode .encounterlist-row-locked .encounterlist-route-link,
+.theme-dark .encounterlist-row-locked .encounterlist-route-link,
+.theme-azure .encounterlist-row-locked .encounterlist-route-link,
+.theme-dex .encounterlist-row-locked .encounterlist-route-link {
+  opacity: 0.5;
+}
+
+.dark-mode .encounterlist-row-locked .encounterlist-picked-icon,
+.theme-dark .encounterlist-row-locked .encounterlist-picked-icon,
+.theme-azure .encounterlist-row-locked .encounterlist-picked-icon,
+.theme-dex .encounterlist-row-locked .encounterlist-picked-icon {
+  opacity: 0.45;
+}
+
+.dark-mode .encounterlist-row-locked .encounterlist-catch,
+.theme-dark .encounterlist-row-locked .encounterlist-catch,
+.theme-azure .encounterlist-row-locked .encounterlist-catch,
+.theme-dex .encounterlist-row-locked .encounterlist-catch {
+  border-color: #4f5b70 !important;
+  background: #1b2538 !important;
+  color: #96a4bf !important;
+}
+
+.dark-mode .utilichart a.encounter-dupe,
+.dark-mode .utilichart a.encounter-dupe:hover,
+.theme-dark .utilichart a.encounter-dupe,
+.theme-dark .utilichart a.encounter-dupe:hover,
+.theme-azure .utilichart a.encounter-dupe,
+.theme-azure .utilichart a.encounter-dupe:hover,
+.theme-dex .utilichart a.encounter-dupe,
+.theme-dex .utilichart a.encounter-dupe:hover {
+  border-color: #b65d5d !important;
+  background: #4a2727 !important;
+}
+
+/* Night (Blue): make in-content action/filter buttons match Dark mode */
+.theme-azure .itemlocationfilterbar .button,
+.theme-azure .utilichart .button,
+.theme-azure .utilichart .label {
+  background: #2a2a2a !important;
+  color: #ffffff !important;
+  border: 1px solid #666 !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.theme-azure .itemlocationfilterbar .button:hover,
+.theme-azure .utilichart .button:hover,
+.theme-azure .utilichart .label:hover {
+  background: #3a3a3a !important;
+  border-color: #999 !important;
+  color: #ffffff !important;
+}
+
+.theme-azure .itemlocationfilterbar .button.cur,
+.theme-azure .itemlocationfilterbar .button:disabled,
+.theme-azure .utilichart .button.cur,
+.theme-azure .utilichart .label.cur,
+.theme-azure .utilichart .button:disabled {
+  background: #3a3a3a !important;
+  color: #e6e6e6 !important;
+  border-color: #888 !important;
+}
+
+/* Keep all top links on one row on desktop (Github -> Google Drive). */
+@media all and (min-width: 900px) {
+  .pfx-topbar .header {
+    max-width: 780px;
+  }
+}
+
+body.patchnotes-open {
+  overflow: hidden;
+}
+
+.patchnotes-launcher {
+  position: fixed;
+  left: 12px;
+  bottom: 12px;
+  z-index: 9999;
+  padding: 7px 12px;
+  border: 1px solid #9da6b8;
+  border-radius: 7px;
+  background: #f8fbff;
+  color: #1f2e45;
+  font-size: 10pt;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.patchnotes-launcher:hover {
+  background: #edf3fc;
+  border-color: #7d8aa1;
+}
+
+.patchnotes-modal[hidden] {
+  display: none !important;
+}
+
+.patchnotes-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+
+.patchnotes-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.66);
+}
+
+.patchnotes-dialog {
+  position: relative;
+  width: min(760px, 100%);
+  max-height: min(82vh, 920px);
+  display: flex;
+  flex-direction: column;
+  background: #fdfefe;
+  color: #1b2534;
+  border: 1px solid #b2bfd3;
+  border-radius: 10px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.patchnotes-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #d1d9e6;
+}
+
+.patchnotes-header h2 {
+  margin: 0;
+  font-size: 15pt;
+}
+
+.patchnotes-close {
+  min-width: 36px;
+  min-height: 30px;
+  border: 1px solid #95a3b9;
+  border-radius: 6px;
+  background: #eef3fb;
+  color: #1c2a40;
+  font-size: 15pt;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.patchnotes-close:hover {
+  background: #dde8f8;
+}
+
+.patchnotes-content {
+  overflow: auto;
+  padding: 14px 16px 16px 16px;
+}
+
+.patchnotes-meta {
+  margin-bottom: 14px;
+}
+
+.patchnotes-entry {
+  border: 1px solid #d1d9e6;
+  border-radius: 8px;
+  background: #f8fbff;
+}
+
+.patchnotes-entry + .patchnotes-entry {
+  margin-top: 10px;
+}
+
+.patchnotes-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  padding: 10px 12px;
+  list-style: none;
+}
+
+.patchnotes-summary::-webkit-details-marker {
+  display: none;
+}
+
+.patchnotes-summary::marker {
+  content: "";
+}
+
+.patchnotes-summary::before {
+  content: "+";
+  font-weight: 700;
+  font-size: 12pt;
+  color: #2a405f;
+  margin-right: 8px;
+}
+
+.patchnotes-entry[open] .patchnotes-summary::before {
+  content: "-";
+}
+
+.patchnotes-summary-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.patchnotes-entry .patchnotes-date {
+  margin: 0;
+  white-space: nowrap;
+  font-size: 10pt;
+}
+
+.patchnotes-entry .patchnotes-meta {
+  margin: 0;
+  padding: 0 12px 12px 12px;
+}
+
+.patchnotes-version {
+  margin: 0;
+  font-size: 13pt;
+  font-weight: 700;
+}
+
+.patchnotes-date {
+  margin: 4px 0 0 0;
+  color: #4c5f7b;
+}
+
+.patchnotes-title {
+  margin: 6px 0 0 0;
+}
+
+.patchnotes-section + .patchnotes-section {
+  margin-top: 12px;
+}
+
+.patchnotes-section h3 {
+  margin: 0 0 6px 0;
+  font-size: 11pt;
+  color: #2a405f;
+}
+
+.patchnotes-section ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.patchnotes-section li {
+  margin: 0 0 6px 0;
+  line-height: 1.35;
+}
+
+.patchnotes-empty {
+  margin: 0;
+  color: #607085;
+}
+
+.patchnotes-update-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 10002;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(8, 12, 20, 0.55);
+}
+
+.patchnotes-update-card {
+  width: min(460px, calc(100% - 24px));
+  background: #fdfefe;
+  color: #1b2534;
+  border: 1px solid #b2bfd3;
+  border-radius: 10px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  padding: 14px 14px 12px 14px;
+}
+
+.patchnotes-update-text {
+  margin: 0;
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+.patchnotes-update-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.dark-mode .patchnotes-launcher,
+.theme-dark .patchnotes-launcher {
+  background: #1d2533;
+  color: #e8f0ff;
+  border-color: #4a5b77;
+}
+
+.dark-mode .patchnotes-launcher:hover,
+.theme-dark .patchnotes-launcher:hover {
+  background: #273247;
+  border-color: #5e7295;
+}
+
+.dark-mode .patchnotes-dialog,
+.theme-dark .patchnotes-dialog {
+  background: #161c28;
+  color: #e8f0ff;
+  border-color: #43516a;
+}
+
+.dark-mode .patchnotes-entry,
+.theme-dark .patchnotes-entry {
+  background: #1a2231;
+  border-color: #334159;
+}
+
+.dark-mode .patchnotes-summary::before,
+.theme-dark .patchnotes-summary::before {
+  color: #cfe0ff;
+}
+
+.dark-mode .patchnotes-header,
+.theme-dark .patchnotes-header {
+  border-bottom-color: #334159;
+}
+
+.dark-mode .patchnotes-close,
+.theme-dark .patchnotes-close {
+  background: #253145;
+  border-color: #4f627f;
+  color: #e8f0ff;
+}
+
+.dark-mode .patchnotes-close:hover,
+.theme-dark .patchnotes-close:hover {
+  background: #30415f;
+}
+
+.dark-mode .patchnotes-date,
+.theme-dark .patchnotes-date,
+.dark-mode .patchnotes-empty,
+.theme-dark .patchnotes-empty {
+  color: #b8cae8;
+}
+
+.dark-mode .patchnotes-section h3,
+.theme-dark .patchnotes-section h3 {
+  color: #cfe0ff;
+}
+
+.dark-mode .patchnotes-update-card,
+.theme-dark .patchnotes-update-card {
+  background: #161c28;
+  color: #e8f0ff;
+  border-color: #43516a;
+}
+
+.theme-azure .patchnotes-launcher {
+  background: #0f1f3f;
+  color: #edf4ff;
+  border-color: #3f69b5;
+}
+
+.theme-azure .patchnotes-launcher:hover {
+  background: #163268;
+  border-color: #5f84cc;
+}
+
+.theme-azure .patchnotes-dialog {
+  background: #0b1326;
+  color: #ebf2ff;
+  border-color: #355ea7;
+}
+
+.theme-azure .patchnotes-entry {
+  background: #111d39;
+  border-color: #284a85;
+}
+
+.theme-azure .patchnotes-summary::before {
+  color: #cddbff;
+}
+
+.theme-azure .patchnotes-header {
+  border-bottom-color: #284a85;
+}
+
+.theme-azure .patchnotes-close {
+  background: #13284f;
+  border-color: #4b6ead;
+  color: #ebf2ff;
+}
+
+.theme-azure .patchnotes-close:hover {
+  background: #1e3a72;
+}
+
+.theme-azure .patchnotes-date,
+.theme-azure .patchnotes-empty {
+  color: #b8cbf6;
+}
+
+.theme-azure .patchnotes-section h3 {
+  color: #cddbff;
+}
+
+.theme-azure .patchnotes-update-card {
+  background: #0b1326;
+  color: #ebf2ff;
+  border-color: #355ea7;
+}
+
+.theme-dex .patchnotes-launcher {
+  background: #ebf4ff;
+  color: #11233b;
+  border-color: #7892b7;
+}
+
+.theme-dex .patchnotes-launcher:hover {
+  background: #d9eaff;
+  border-color: #5f7ea8;
+}
+
+.theme-dex .patchnotes-dialog {
+  background: #f7fbff;
+  color: #11253f;
+  border-color: #8ca4c4;
+}
+
+.theme-dex .patchnotes-header {
+  border-bottom-color: #c8d7ea;
+}
+
+@media all and (max-width: 700px) {
+  .patchnotes-launcher {
+    left: 8px;
+    bottom: 8px;
+    padding: 8px 10px;
+  }
+
+  .patchnotes-dialog {
+    max-height: 90vh;
+  }
 }
