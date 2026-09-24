@@ -12,6 +12,8 @@ SHARED_ITEM_NAMES = {
     'gQuestionMarksItemName': '????????',
 }
 
+_IDENTIFIER = re.compile(r'^[A-Za-z_]\w*$')
+
 _ITEM_DEFINE = re.compile(
     r'^\s*#\s*define\s+((?:ITEM_[A-Z0-9_]+|ITEMS_COUNT))\s+(.+?)\s*$',
     re.MULTILINE,
@@ -42,21 +44,6 @@ def _item_constants(fname: pathlib.Path) -> dict[str, int]:
         if name in resolved:
             return resolved[name]
 
-        def _add_named_tmhm_constants(item_constants: dict[str, int], fname: pathlib.Path) -> None:
-        """Map generated TM/HM item IDs to their numbered item constants.
-
-        Modern pokeemerald-expansion versions build names such as
-        ``ITEM_TM_BODY_PRESS`` from ``FOREACH_TM`` in ``tms_hms.h``.  Those enum
-        members are not available in ``constants/items.h`` itself, but their
-        corresponding numbered constants (``ITEM_TM01``, etc.) are.
-        """
-        text = fname.read_text(encoding='utf-8')
-        for match in _FOREACH_TMHM.finditer(text):
-            machine_type, entries = match.groups()
-            for number, move in enumerate(_FOREACH_ENTRY.findall(entries), start=1):
-                numbered_name = f'ITEM_{machine_type}{number:02d}'
-                if numbered_name in item_constants:
-                    item_constants[f'ITEM_{machine_type}_{move}'] = item_constants[numbered_name]
         if name in resolving:
             return None
 
@@ -91,6 +78,22 @@ def _item_constants(fname: pathlib.Path) -> dict[str, int]:
 
     return resolved
 
+def _add_named_tmhm_constants(item_constants: dict[str, int], fname: pathlib.Path) -> None:
+        """Map generated TM/HM item IDs to their numbered item constants.
+
+        Modern pokeemerald-expansion versions build names such as
+        ``ITEM_TM_BODY_PRESS`` from ``FOREACH_TM`` in ``tms_hms.h``.  Those enum
+        members are not available in ``constants/items.h`` itself, but their
+        corresponding numbered constants (``ITEM_TM01``, etc.) are.
+        """
+        text = fname.read_text(encoding='utf-8')
+        for match in _FOREACH_TMHM.finditer(text):
+            machine_type, entries = match.groups()
+            for number, move in enumerate(_FOREACH_ENTRY.findall(entries), start=1):
+                numbered_name = f'ITEM_{machine_type}{number:02d}'
+                if numbered_name in item_constants:
+                    item_constants[f'ITEM_{machine_type}_{move}'] = item_constants[numbered_name]
+
 def get_item_name(struct_init: NamedInitializer) -> str:
     for field_init in struct_init.expr.exprs:
         if field_init.name[0].name == 'name':
@@ -99,28 +102,20 @@ def get_item_name(struct_init: NamedInitializer) -> str:
                     return SHARED_ITEM_NAMES[field_init.expr.name]
                 raise ValueError(f'unrecognized shared item name ID: {field_init.expr.name}')
             return extract_u8_str(field_init.expr)
-
     print(struct_init.show())
     raise ValueError('no name for item structure')
 
-def all_item_names(items_data, item_constants: dict[str, int] | None=None) -> list[str]:
-    item_constants = item_constants or {}
+def all_item_names(items_data) -> list[str]:
     d_items = {}
     for item in items_data:
-       item_id = item.name[0]
-        try:
-            item_num = extract_int(item_id)
-        except ValueError:
-            if not isinstance(item_id, ID) or item_id.name not in item_constants:
-                raise
-            item_num = item_constants[item_id.name]
-       d_items[item_num] = get_item_name(item)    
-       capacity = max(d_items.keys()) + 1
+        d_items[extract_int(item.name[0])] = get_item_name(item)
+
+    capacity = max(d_items.keys()) + 1
     l_items = [d_items[0]] * capacity
     for i, name in d_items.items():
         l_items[i] = name
 
-   return l_items
+    return l_items
 
 def parse_items(fname: pathlib.Path) -> list[str]:
     items_data: ExprList
@@ -137,4 +132,4 @@ def parse_items(fname: pathlib.Path) -> list[str]:
         item_constants,
         porydex.config.expansion / 'include' / 'constants' / 'tms_hms.h',
     )
-    return all_item_names(items_data, item_constants)
+    return all_item_names(items_data)

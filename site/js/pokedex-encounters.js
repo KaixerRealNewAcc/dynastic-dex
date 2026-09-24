@@ -1,35 +1,15 @@
 
 var PokedexEncountersPanel = PokedexResultPanel.extend({
-	events: {
-		'change input[name=encounter-static-boost]': 'changeStaticBoost',
-		'change input[name=encounter-harvest-boost]': 'changeHarvestBoost',
-		'change input[name=encounter-magnet-pull-boost]': 'changeMagnetPullBoost'
-	},
 	initialize: function(id) {
 		id = toID(id);
 		var location = BattleLocationdex[id];
 		this.id = id;
-		if (!location || !location.name) {
-			this.shortTitle = id || "not found";
-			this.html(
-				'<div class="pfx-body dexentry"><a href="/" class="pfx-backbutton button" data-target="back"><i class="fa fa-chevron-left"></i> Pok&eacute;dex</a><h1>Encounter zone not found</h1><p>No encounter data exists for <code>' +
-				BattleLog.escapeHTML(id) +
-				'</code>.</p></div>'
-			);
-			return;
-		}
 		this.shortTitle = location.name;
-		this.hideRates = !!location.hideRates;
-		this.customEncounterLabel = location.encounterLabel || 'Gift/Static';
-		this.customModeHeaders = !!location.customModeHeaders;
-		this.encounterModeLabels = (location.encounterModeLabels && typeof location.encounterModeLabels === 'object') ? location.encounterModeLabels : {};
-		this.boundHandleScroll = this.handleScroll.bind(this);
 
 		var buf = '<div class="pfx-body dexentry">';
 
-		buf += '<a href="/" class="pfx-backbutton button" data-target="back"><i class="fa fa-chevron-left"></i> Pok&eacute;dex</a>';
-		buf += '<h1><a href="/encounters/'+id+'" data-target="push" class="button subtle">'+location.name+'</a></h1>';
-		buf += this.renderAbilityBoostControls();
+		buf += '<a href="/" class="pfx-backbutton" data-target="back"><i class="fa fa-chevron-left"></i> Pok&eacute;dex</a>';
+		buf += '<h1><a href="/encounters/'+id+'" data-target="push" class="subtle">'+location.name+'</a></h1>';
 
 		// distribution
 		buf += '<ul class="utilichart metricchart nokbd">';
@@ -38,166 +18,23 @@ var PokedexEncountersPanel = PokedexResultPanel.extend({
 		buf += '</div>';
 
 		this.html(buf);
-		this.handleDupeUpdate = this.handleDupeUpdate.bind(this);
-		this.handleAbilityBoostUpdate = this.handleAbilityBoostUpdate.bind(this);
-		$(document).on('encounterlist:dupes-updated.' + this.cid, this.handleDupeUpdate);
-		$(document).on('encounterlist:abilityboost-updated.' + this.cid, this.handleAbilityBoostUpdate);
 
 		setTimeout(this.renderDistribution.bind(this));
 	},
-	remove: function() {
-		$(document).off('encounterlist:dupes-updated.' + this.cid);
-		$(document).off('encounterlist:abilityboost-updated.' + this.cid);
-		if (this.boundHandleScroll) this.$el.off('scroll', this.boundHandleScroll);
-		PokedexResultPanel.prototype.remove.apply(this, arguments);
-	},
-	renderAbilityBoostControls: function () {
-		return '';
-	},
-	syncAbilityBoostControls: function () {
-		if (!window.PokedexEncounterAbilityBoostStore) return;
-		var state = PokedexEncounterAbilityBoostStore.getState();
-		this.$('input[name=encounter-static-boost]').prop('checked', !!state.staticBoost);
-		this.$('input[name=encounter-harvest-boost]').prop('checked', !!state.harvestBoost);
-		this.$('input[name=encounter-magnet-pull-boost]').prop('checked', !!state.magnetPullBoost);
-	},
-	changeStaticBoost: function (e) {
-		if (!window.PokedexEncounterAbilityBoostStore) return;
-		PokedexEncounterAbilityBoostStore.setStaticBoost(!!$(e.currentTarget).prop('checked'));
-	},
-	changeHarvestBoost: function (e) {
-		if (!window.PokedexEncounterAbilityBoostStore) return;
-		PokedexEncounterAbilityBoostStore.setHarvestBoost(!!$(e.currentTarget).prop('checked'));
-	},
-	changeMagnetPullBoost: function (e) {
-		if (!window.PokedexEncounterAbilityBoostStore) return;
-		PokedexEncounterAbilityBoostStore.setMagnetPullBoost(!!$(e.currentTarget).prop('checked'));
-	},
-	handleAbilityBoostUpdate: function () {
-		this.syncAbilityBoostControls();
-		this.renderDistribution();
-	},
-	getRateBoostMultiplier: function (speciesId) {
-		return 1;
-	},
-	formatRateNumber: function (rate) {
-		if (rate === undefined || rate === null || isNaN(rate)) return '';
-		var rounded = Math.round(rate * 10) / 10;
-		return (Math.abs(rounded - Math.round(rounded)) < 0.001 ? String(Math.round(rounded)) : rounded.toFixed(1)) + '%';
-	},
-	parseDistributionRow: function (row) {
-		if (!row || row.length <= 1) return null;
-		var parts = row.substr(1).trim().split(/\s+/);
-		if (parts.length < 2) return null;
-		var parsed = {
-			mode: row.charAt(0),
-			rateText: '',
-			rangeToken: '',
-			speciesId: '',
-			baseRate: null,
-			min: 0,
-			max: 0,
-			levelText: ''
-		};
-		if (parts.length >= 3) {
-			parsed.rateText = parts[0].replace(/z/g, '');
-			parsed.rangeToken = parts[1];
-			parsed.speciesId = toID(parts[2]);
-		} else {
-			parsed.rangeToken = parts[0];
-			parsed.speciesId = toID(parts[1]);
-		}
-		var range = parsed.rangeToken.split('-');
-		parsed.min = parseInt(range[0], 10);
-		parsed.max = parseInt(range[1], 10);
-		if (isNaN(parsed.min)) parsed.min = 0;
-		if (isNaN(parsed.max)) parsed.max = parsed.min;
-		parsed.levelText = (parsed.min === parsed.max) ? ('Lv ' + parsed.min) : ('Lv ' + parsed.min + '-' + parsed.max);
-		if (parsed.rateText) {
-			var baseRate = parseFloat(parsed.rateText.replace('%', ''));
-			parsed.baseRate = isNaN(baseRate) ? null : baseRate;
-		}
-		return parsed;
-	},
-	getDynamicRateContext: function (results) {
-		var context = {byIndex: {}, modeHasDupes: {}};
-		if (this.hideRates) return context;
-		var pools = {};
-		for (var i = 0; i < results.length; i++) {
-			var parsed = this.parseDistributionRow(results[i]);
-			if (!parsed || parsed.baseRate === null || !parsed.speciesId) continue;
-			var mode = parsed.mode;
-			if (!pools[mode]) {
-				pools[mode] = {
-					entries: [],
-					hasDupe: false,
-					totalEligibleRate: 0
-				};
-			}
-			var boostedRate = parsed.baseRate * this.getRateBoostMultiplier(parsed.speciesId);
-			if (isNaN(boostedRate) || boostedRate < 0) boostedRate = 0;
-			var isDupe = this.isDupeSpecies(parsed.speciesId);
-			var eligibleRate = isDupe ? 0 : boostedRate;
-			pools[mode].entries.push({
-				index: i,
-				eligibleRate: eligibleRate
-			});
-			pools[mode].totalEligibleRate += eligibleRate;
-			if (isDupe) pools[mode].hasDupe = true;
-		}
-		for (var mode in pools) {
-			if (!pools.hasOwnProperty(mode)) continue;
-			var pool = pools[mode];
-			context.modeHasDupes[mode] = !!pool.hasDupe;
-			if (!pool.hasDupe) continue;
-			var denominator = pool.totalEligibleRate;
-			for (var j = 0; j < pool.entries.length; j++) {
-				var entry = pool.entries[j];
-				context.byIndex[entry.index] = denominator > 0 ? (entry.eligibleRate / denominator * 100) : 0;
-			}
-		}
-		return context;
-	},
-	getEncounterHeaderLabel: function (mode) {
-		var labels = this.encounterModeLabels || {};
-		switch (mode) {
-		case 'L':
-			return labels.land || 'Land';
-		case 'W':
-			return labels.surf || 'Surfing';
-		case 'R':
-			return labels.rock || 'Rock Smash';
-		case 'O':
-			return labels.fishOld || 'Old Rod';
-		case 'G':
-			return labels.fishGood || 'Good Rod';
-		case 'S':
-			return labels.fishSuper || labels.fish || 'Fishing';
-		case 'E':
-			return this.customEncounterLabel || 'Gift/Static';
-		}
-		return '';
-	},
 	getDistribution: function() {
 		if (this.results) return this.results;
-		if (!window.BattleLocationdex || !BattleLocationdex.rates) return this.results = [];
 
         var landRates = BattleLocationdex['rates']['land']
-		var oldRodRates = BattleLocationdex['rates']['fish']['old']
+        var surfRates = BattleLocationdex['rates']['surf']
+        var rockRates = BattleLocationdex['rates']['rock']
+        var oldRodRates = BattleLocationdex['rates']['fish']['old']
         var goodRodRates = BattleLocationdex['rates']['fish']['good']
         var superRodRates = BattleLocationdex['rates']['fish']['super']
-        var surfRates = BattleLocationdex['rates']['surf']
-        var rockRates = BattleLocationdex['rates']['rock']        
 
 		var location = this.id;
-		var locationData = BattleLocationdex[location];
-		if (!locationData) return this.results = [];
 		var results = [];
-		var hideRates = !!locationData.hideRates;
 
         var formatRate = function(i) {
-            if (hideRates) return '';
-            if (i === undefined || i === null) i = 0;
             return i.toString().padStart(2, 'z') + '% '
         }
 
@@ -205,66 +42,40 @@ var PokedexEncountersPanel = PokedexResultPanel.extend({
             return min.toString().padStart(3, '0') + '-' + max.toString().padStart(3, '0') + ' '
         }
 
-        if (hideRates) {
-            var pushCustomRows = function(prefix, modeData) {
-                if (!modeData || !modeData['encs']) return;
-                for (let i = 0; i < modeData['encs'].length; i++) {
-                    let enc = modeData['encs'][i];
-                    let min = enc.minLvl;
-                    let max = enc.maxLvl;
-                    let mon = enc.species;
-                    results.push(prefix + formatRange(min, max) + mon);
-                }
-            };
-			if (locationData.customModeHeaders) {
-				pushCustomRows('L', locationData['land']);
-				pushCustomRows('W', locationData['surf']);
-				pushCustomRows('R', locationData['rock']);
-				pushCustomRows('S', locationData['fish']);
-			} else {
-				pushCustomRows('E', locationData['land']);
-				pushCustomRows('E', locationData['surf']);
-				pushCustomRows('E', locationData['rock']);
-				pushCustomRows('E', locationData['fish']);
-			}
-        } else {
-        var landRateTable = (locationData['land'] && locationData['land']['rates'] && locationData['land']['rates'].length) ? locationData['land']['rates'] : landRates;
-        if (locationData['land'] && locationData['land']['encs'] !== undefined) {
-            for (let i = 0; i < locationData['land']['encs'].length; i++) {
-                let enc = locationData['land']['encs'][i];
+        if (BattleLocationdex[location]['land']['encs'] !== undefined) {
+            for (let i = 0; i < BattleLocationdex[location]['land']['encs'].length; i++) {
+                let enc = BattleLocationdex[location]['land']['encs'][i];
                 let min = enc.minLvl;
                 let max = enc.maxLvl;
                 let mon = enc.species;
-                results.push('L' + formatRate(landRateTable[i]) + formatRange(min, max) + mon);
+                results.push('L' + formatRate(landRates[i]) + formatRange(min, max) + mon);
             }
         }
 
-        var surfRateTable = (locationData['surf'] && locationData['surf']['rates'] && locationData['surf']['rates'].length) ? locationData['surf']['rates'] : surfRates;
-        if (locationData['surf'] && locationData['surf']['encs'] !== undefined) {
-            for (let i = 0; i < locationData['surf']['encs'].length; i++) {
-                let enc = locationData['surf']['encs'][i];
+        if (BattleLocationdex[location]['surf']['encs'] !== undefined) {
+            for (let i = 0; i < BattleLocationdex[location]['surf']['encs'].length; i++) {
+                let enc = BattleLocationdex[location]['surf']['encs'][i];
                 let min = enc.minLvl;
                 let max = enc.maxLvl;
                 let mon = enc.species;
-                results.push('W' + formatRate(surfRateTable[i]) + formatRange(min, max) + mon);
+                results.push('W' + formatRate(surfRates[i]) + formatRange(min, max) + mon);
             }
         }
 
-        var rockRateTable = (locationData['rock'] && locationData['rock']['rates'] && locationData['rock']['rates'].length) ? locationData['rock']['rates'] : rockRates;
-        if (locationData['rock'] && locationData['rock']['encs'] !== undefined) {
-            for (let i = 0; i < locationData['rock']['encs'].length; i++) {
-                let enc = locationData['rock']['encs'][i];
+        if (BattleLocationdex[location]['rock']['encs'] !== undefined) {
+            for (let i = 0; i < BattleLocationdex[location]['rock']['encs'].length; i++) {
+                let enc = BattleLocationdex[location]['rock']['encs'][i];
                 let min = enc.minLvl;
                 let max = enc.maxLvl;
                 let mon = enc.species;
-                results.push('R' + formatRate(rockRateTable[i]) + formatRange(min, max) + mon);
+                results.push('R' + formatRate(rockRates[i]) + formatRange(min, max) + mon);
             }
         }
 
-        if (locationData['fish'] && locationData['fish']['encs'] !== undefined) {
+        if (BattleLocationdex[location]['fish']['encs'] !== undefined) {
             var oldStart = 0;
             for (let i = 0; i < oldRodRates.length; i++) {
-                let enc = locationData['fish']['encs'][i + oldStart];
+                let enc = BattleLocationdex[location]['fish']['encs'][i + oldStart];
                 let min = enc.minLvl;
                 let max = enc.maxLvl;
                 let mon = enc.species;
@@ -273,7 +84,7 @@ var PokedexEncountersPanel = PokedexResultPanel.extend({
 
             var goodStart = oldRodRates.length + oldStart;
             for (let i = 0; i < goodRodRates.length; i++) {
-                let enc = locationData['fish']['encs'][i + goodStart];
+                let enc = BattleLocationdex[location]['fish']['encs'][i + goodStart];
                 let min = enc.minLvl;
                 let max = enc.maxLvl;
                 let mon = enc.species;
@@ -282,13 +93,12 @@ var PokedexEncountersPanel = PokedexResultPanel.extend({
 
             var superStart = goodRodRates.length + goodStart;
             for (let i = 0; i < superRodRates.length; i++) {
-                let enc = locationData['fish']['encs'][i + superStart];
+                let enc = BattleLocationdex[location]['fish']['encs'][i + superStart];
                 let min = enc.minLvl;
                 let max = enc.maxLvl;
                 let mon = enc.species;
                 results.push('S' + formatRate(superRodRates[i]) + formatRange(min, max) + mon);
             }
-        }
         }
 
 		var last = '';
@@ -304,14 +114,10 @@ var PokedexEncountersPanel = PokedexResultPanel.extend({
 	renderDistribution: function() {
 		var results = this.getDistribution();
 		this.$chart = this.$('.utilichart');
-		this.syncAbilityBoostControls();
-		this.dynamicRateContext = this.getDynamicRateContext(results);
 
 		if (results.length > 1600/33) {
-			if (!this.streamLoading) {
-				this.streamLoading = true;
-				this.$el.on('scroll', this.boundHandleScroll);
-			}
+			this.streamLoading = true;
+			this.$el.on('scroll', this.handleScroll.bind(this));
 
 			var panelTop = this.$el.children().offset().top;
 			var panelHeight = this.$el.outerHeight();
@@ -331,92 +137,39 @@ var PokedexEncountersPanel = PokedexResultPanel.extend({
 			}
 			this.$chart.html(buf);
 		} else {
-			if (this.streamLoading) {
-				this.streamLoading = false;
-				this.$el.off('scroll', this.boundHandleScroll);
-			}
 			var buf = '';
 			for (var i=0, len=results.length; i<len; i++) {
 				buf += '<li class="result">'+this.renderRow(i)+'</li>';
 			}
 			this.$chart.html(buf);
 		}
-		this.updateDupeHighlightClasses();
 	},
 	renderRow: function(i, offscreen) {
 		var results = this.results;
-		var row = results[i];
-		var id = '';
-		var rateText = '';
-		var levelText = '';
-		var parsed = this.parseDistributionRow(row);
-
-		// Header rows are single-letter mode markers inserted in getDistribution.
-		if (parsed) {
-			rateText = parsed.rateText;
-			id = parsed.speciesId;
-			levelText = parsed.levelText;
-		}
-
+		var id = results[i].substr(13);
 		var template = id ? BattlePokedex[id] : undefined;
 		if (!template) {
-			var headerLabel = this.getEncounterHeaderLabel(row.charAt(0));
-			if (headerLabel) return '<h3>' + Dex.escapeHTML(headerLabel) + '</h3>';
+			switch (results[i].charAt(0)) {
+			case 'L':
+				return '<h3>Land</h3>';
+			case 'W':
+				return '<h3>Surfing</h3>';
+			case 'R':
+				return '<h3>Rock Smash</h3>';
+            case 'O':
+				return '<h3>Old Rod</h3>';
+            case 'G':
+				return '<h3>Good Rod</h3>';
+            case 'S':
+				return '<h3>Super Rod</h3>';
+			}
 			return '<pre>error: "'+results[i]+'"</pre>';
 		} else if (offscreen) {
 			return ''+template.name+' '+template.abilities['0']+' '+(template.abilities['1']||'')+' '+(template.abilities['H']||'')+'';
 		} else {
-			if (!this.hideRates && rateText) {
-				var displayRate;
-				var mode = row.charAt(0);
-				var hasDupeInMode = !!(this.dynamicRateContext && this.dynamicRateContext.modeHasDupes && this.dynamicRateContext.modeHasDupes[mode]);
-				if (hasDupeInMode && this.dynamicRateContext.byIndex && this.dynamicRateContext.byIndex.hasOwnProperty(i)) {
-					displayRate = this.dynamicRateContext.byIndex[i];
-				} else {
-					var baseRate = parsed && parsed.baseRate !== null ? parsed.baseRate : parseFloat(rateText.replace('%', ''));
-					if (!isNaN(baseRate)) {
-						displayRate = baseRate * this.getRateBoostMultiplier(id);
-					}
-				}
-				if (displayRate !== undefined) {
-					rateText = this.formatRateNumber(displayRate);
-				}
-			}
-			var desc = '';
-			if (!this.hideRates && rateText) {
-				desc += rateText + ' ';
-			}
-			desc += levelText;
-			var rowHtml = BattleSearch.renderTaggedLocationRowInner(template, desc, undefined, id);
-			return this.decorateDupeEncounterRow(rowHtml, id);
+			var desc = results[i].substr(1,3).replace("z", "")
+			return BattleSearch.renderTaggedLocationRowInner(template, desc);
 		}
-	},
-	decorateDupeEncounterRow: function(rowHtml, speciesId) {
-		var cleanId = toID(speciesId);
-		if (!cleanId) return rowHtml;
-		var decorated = rowHtml.replace(/^<a\b/, '<a data-encounter-species="' + BattleLog.escapeHTML(cleanId) + '"');
-		if (this.isDupeSpecies(cleanId)) {
-			decorated = decorated.replace(/^<a\b/, '<a class="encounter-dupe"');
-		}
-		return decorated;
-	},
-	isDupeSpecies: function(speciesId) {
-		return !!(window.PokedexEncounterDupeStore &&
-			PokedexEncounterDupeStore.isDupe &&
-			PokedexEncounterDupeStore.isDupe(speciesId));
-	},
-	handleDupeUpdate: function() {
-		this.renderDistribution();
-	},
-	updateDupeHighlightClasses: function() {
-		if (!this.$chart || !this.$chart.length) this.$chart = this.$('.utilichart');
-		if (!this.$chart || !this.$chart.length) return;
-		var self = this;
-		this.$chart.find('a[data-encounter-species]').each(function() {
-			var $row = $(this);
-			var speciesId = toID($row.attr('data-encounter-species'));
-			$row.toggleClass('encounter-dupe', self.isDupeSpecies(speciesId));
-		});
 	},
 	handleScroll: function() {
 		var scrollLoc = this.$el.scrollTop();
@@ -430,7 +183,6 @@ var PokedexEncountersPanel = PokedexResultPanel.extend({
 			clearTimeout(this.debouncedPurgeTimer);
 			this.debouncedPurgeTimer = null;
 		}
-		if (!this.dynamicRateContext) this.dynamicRateContext = this.getDynamicRateContext(this.results || []);
 
 		var panelTop = this.$el.children().offset().top;
 		var panelHeight = this.$el.outerHeight();
