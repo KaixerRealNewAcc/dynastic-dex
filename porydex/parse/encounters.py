@@ -143,9 +143,7 @@ def parse_encounter_def(entry: InitList, species_names: list[str]) -> Encounter:
         print(f'{len(species_names)=}')
         raise e
 
-def parse_encounters_data(exts, jd: dict, species_names: list[str],
-                     json_fname: pathlib.Path | None = None,
-                     extra_includes: list[str] | None = None) -> dict[str, dict[str, EncounterRate] | dict[str, dict]]:
+def parse_encounters_data(exts, jd: dict, species_names: list[str]) -> dict[str, dict[str, EncounterRate] | dict[str, dict]]:
     headers = []
     info_sections = {}
     encounter_defs = {}
@@ -230,7 +228,9 @@ def load_json(fname: pathlib.Path) -> dict:
         return json.load(j)
 
 def parse_encounters(fname: pathlib.Path,
-                     species_names: list[str]) -> dict[str, dict[str, EncounterRate] | dict[str, dict]]:
+                     species_names: list[str],
+                     json_fname: pathlib.Path | None = None,
+                     extra_includes: list[str] | None = None) -> dict[str, dict[str, EncounterRate] | dict[str, dict]]:
     encounters: ExprList
     with yaspin(text=f'Loading encounter tables: {fname}', color='cyan') as spinner:
         encounters = load_data(

@@ -393,7 +393,7 @@ var id=toID(nameOrSpecies);
 var formid=id;
 if(!window.BattlePokedexAltForms)window.BattlePokedexAltForms={};
 if(formid in window.BattlePokedexAltForms)return window.BattlePokedexAltForms[formid];
-if(window.BattleAliases&&id in BattleAliases&&(!window.BattlePokedex||!(id in BattlePokedex))){
+if(window.BattleAliases&&id in BattleAliases){
 name=BattleAliases[id];
 id=toID(name);
 }else if(window.BattlePokedex&&!(id in BattlePokedex)&&window.BattleBaseSpeciesChart){for(var _i2=0,_BattleBaseSpeciesCha2=
@@ -2606,7 +2606,7 @@ Move=
 
 
 
-function Move(id,name,data){var _this$maxMove;this.effectType='Move';this.id=void 0;this.name=void 0;this.gen=void 0;this.exists=void 0;this.basePower=void 0;this.accuracy=void 0;this.pp=void 0;this.type=void 0;this.category=void 0;this.priority=void 0;this.target=void 0;this.pressureTarget=void 0;this.flags=void 0;this.critRatio=void 0;this.desc=void 0;this.shortDesc=void 0;this.isNonstandard=void 0;this.isZ=void 0;this.zMove=void 0;this.isMax=void 0;this.maxMove=void 0;this.ohko=void 0;this.recoil=void 0;this.heal=void 0;this.multihit=void 0;this.hasCrashDamage=void 0;this.basePowerCallback=void 0;this.noPPBoosts=void 0;this.status=void 0;this.secondaries=void 0;this.noSketch=void 0;this.moveDelta=void 0;this.num=void 0;
+function Move(id,name,data){var _this$maxMove;this.effectType='Move';this.id=void 0;this.name=void 0;this.gen=void 0;this.exists=void 0;this.basePower=void 0;this.accuracy=void 0;this.pp=void 0;this.type=void 0;this.category=void 0;this.priority=void 0;this.target=void 0;this.pressureTarget=void 0;this.flags=void 0;this.critRatio=void 0;this.desc=void 0;this.shortDesc=void 0;this.isNonstandard=void 0;this.isZ=void 0;this.zMove=void 0;this.isMax=void 0;this.maxMove=void 0;this.ohko=void 0;this.recoil=void 0;this.heal=void 0;this.multihit=void 0;this.hasCrashDamage=void 0;this.basePowerCallback=void 0;this.noPPBoosts=void 0;this.status=void 0;this.secondaries=void 0;this.noSketch=void 0;this.num=void 0;
 if(!data||typeof data!=='object')data={};
 if(data.name)name=data.name;
 this.name=Dex.sanitizeName(name);
@@ -2641,7 +2641,6 @@ this.noPPBoosts=data.noPPBoosts||false;
 this.status=data.status||'';
 this.secondaries=data.secondaries||(data.secondary?[data.secondary]:null);
 this.noSketch=!!data.noSketch;
-this.moveDelta=data.moveDelta||null;
 
 this.isMax=data.isMax||false;
 this.maxMove=data.maxMove||{basePower:0};
@@ -2862,7 +2861,7 @@ Species=
 
 
 
-function Species(id,name,data){this.effectType='Species';this.id=void 0;this.name=void 0;this.gen=void 0;this.exists=void 0;this.baseSpecies=void 0;this.forme=void 0;this.formeid=void 0;this.spriteid=void 0;this.baseForme=void 0;this.num=void 0;this.types=void 0;this.abilities=void 0;this.baseStats=void 0;this.baseStatsDelta=void 0;this.bst=void 0;this.weightkg=void 0;this.heightm=void 0;this.gender=void 0;this.color=void 0;this.genderRatio=void 0;this.items=void 0;this.eggGroups=void 0;this.tags=void 0;this.otherFormes=void 0;this.cosmeticFormes=void 0;this.evos=void 0;this.prevo=void 0;this.evoType=void 0;this.evoLevel=void 0;this.evoMove=void 0;this.evoItem=void 0;this.evoCondition=void 0;this.requiredItems=void 0;this.tier=void 0;this.perfectIVCount=void 0;this.isTotem=void 0;this.isMega=void 0;this.isPrimal=void 0;this.canGigantamax=void 0;this.cannotDynamax=void 0;this.forceTeraType=void 0;this.battleOnly=void 0;this.isNonstandard=void 0;this.unreleasedHidden=void 0;this.changesFrom=void 0;
+function Species(id,name,data){this.effectType='Species';this.id=void 0;this.name=void 0;this.gen=void 0;this.exists=void 0;this.baseSpecies=void 0;this.forme=void 0;this.formeid=void 0;this.spriteid=void 0;this.baseForme=void 0;this.num=void 0;this.types=void 0;this.abilities=void 0;this.baseStats=void 0;this.bst=void 0;this.weightkg=void 0;this.heightm=void 0;this.gender=void 0;this.color=void 0;this.genderRatio=void 0;this.eggGroups=void 0;this.tags=void 0;this.otherFormes=void 0;this.cosmeticFormes=void 0;this.evos=void 0;this.prevo=void 0;this.evoType=void 0;this.evoLevel=void 0;this.evoMove=void 0;this.evoItem=void 0;this.evoCondition=void 0;this.requiredItems=void 0;this.tier=void 0;this.isTotem=void 0;this.isMega=void 0;this.isPrimal=void 0;this.canGigantamax=void 0;this.cannotDynamax=void 0;this.forceTeraType=void 0;this.battleOnly=void 0;this.isNonstandard=void 0;this.unreleasedHidden=void 0;this.changesFrom=void 0;
 if(!data||typeof data!=='object')data={};
 if(data.name)name=data.name;
 this.name=Dex.sanitizeName(name);
@@ -2883,7 +2882,6 @@ this.num=data.num||0;
 this.types=data.types||['???'];
 this.abilities=data.abilities||{0:"No Ability"};
 this.baseStats=data.baseStats||{hp:0,atk:0,def:0,spa:0,spd:0,spe:0};
-this.baseStatsDelta=data.baseStatsDelta||null;
 this.bst=this.baseStats.hp+this.baseStats.atk+this.baseStats.def+
 this.baseStats.spa+this.baseStats.spd+this.baseStats.spe;
 this.weightkg=data.weightkg||0;
@@ -2892,7 +2890,6 @@ this.heightm=data.heightm||0;
 this.gender=data.gender||'';
 this.color=data.color||'';
 this.genderRatio=data.genderRatio||null;
-this.items=data.items||null;
 this.eggGroups=data.eggGroups||[];
 this.tags=data.tags||[];
 
@@ -2909,7 +2906,6 @@ this.evoSpecies=data.evoSpecies||'';
 this.evoCondition=data.evoCondition||'';
 this.requiredItems=data.requiredItems||(data.requiredItem?[data.requiredItem]:[]);
 this.tier=data.tier||'';
-this.perfectIVCount=data.perfectIVCount||0;
 
 this.isTotem=false;
 this.isMega=!!(this.forme&&['-mega','-megax','-megay'].includes(this.formeid));

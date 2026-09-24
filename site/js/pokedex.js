@@ -10,36 +10,6 @@ var Topbar = Panels.Topbar.extend({
 	height: 51
 });
 
-function normalizePokedexMainTabFragment(fragment) {
-	fragment = String(fragment || '');
-	var questionIndex = fragment.indexOf('?');
-	if (questionIndex >= 0) fragment = fragment.slice(0, questionIndex);
-	if (fragment === 'moves') return 'moves/';
-	if (fragment === 'pokemon') return 'pokemon/';
-	if (fragment === 'encounters') return 'encounters/';
-	if (fragment === 'itemlocations') return 'itemlocations/';
-	return fragment;
-}
-
-function renderPokedexMainTabBar(activeFragment) {
-	activeFragment = normalizePokedexMainTabFragment(activeFragment);
-	var tabs = [
-		{label: 'Search', value: '', edgeClass: ' nav-first'},
-		{label: 'Pok&eacute;mon', value: 'pokemon/'},
-		{label: 'Encounters', value: 'encounters/'},
-		{label: 'Item Locations', value: 'itemlocations/'},
-		{label: 'Moves', value: 'moves/', edgeClass: ' nav-last'}
-	];
-	var buf = '<ul class="tabbar centered" style="margin-bottom: 18px">';
-	for (var i = 0; i < tabs.length; i++) {
-		var tab = tabs[i];
-		var isActive = activeFragment === tab.value;
-		buf += '<li><button class="button' + (tab.edgeClass || '') + (isActive ? ' cur' : '') + '" value="' + tab.value + '">' + tab.label + '</button></li>';
-	}
-	buf += '</ul>';
-	return buf;
-}
-
 var PokedexResultPanel = Panels.Panel.extend({
 	minWidth: 639,
 	maxWidth: 639,
@@ -139,7 +109,7 @@ var PokedexAbilityPanel = PokedexResultPanel.extend({
             if (!template.abilities) continue;
 			// if (template.isNonstandard && !ability.isNonstandard) continue;
 			if (template.abilities['0'] === ability.name || template.abilities['1'] === ability.name || template.abilities['H'] === ability.name) {
-				buf += BattleSearch.renderPokemonRow(template, undefined, undefined, undefined, undefined, pokemonid);
+				buf += BattleSearch.renderPokemonRow(template);
 			}
 		}
 		this.$('.utilichart').html(buf);
@@ -289,7 +259,7 @@ var PokedexTypePanel = PokedexResultPanel.extend({
 		for (var templateid in BattlePokedex) {
 			var template = BattlePokedex[templateid];
 			if (template.types[0] === type && !template.types[1]) {
-				pureBuf += BattleSearch.renderPokemonRow(template, undefined, undefined, undefined, undefined, templateid);
+				pureBuf += BattleSearch.renderPokemonRow(template);
 			}
 		}
 		this.$('.utilichart').html(pureBuf)
@@ -305,10 +275,10 @@ var PokedexTypePanel = PokedexResultPanel.extend({
 			var template = BattlePokedex[templateid];
 			if (template.types[0] === type) {
 				if (template.types[1]) {
-					primaryBuf += BattleSearch.renderPokemonRow(template, undefined, undefined, undefined, undefined, templateid);
+					primaryBuf += BattleSearch.renderPokemonRow(template);
 				}
 			} else if (template.types[1] === type) {
-				secondaryBuf += BattleSearch.renderPokemonRow(template, undefined, undefined, undefined, undefined, templateid);
+				secondaryBuf += BattleSearch.renderPokemonRow(template);
 			}
 		}
 		this.$('.utilichart').append(primaryBuf + secondaryBuf);
@@ -336,11 +306,6 @@ var PokedexTagPanel = PokedexResultPanel.extend({
 			name: 'Fist',
 			tag: 'punch',
 			desc: 'Boosted 1.2x by <a href="/abilities/ironfist" data-target="push">Iron Fist</a>.'
-		},
-		kicking: {
-			name: 'Kicking',
-			tag: 'kick',
-			desc: 'Boosted 1.2x by <a href="/abilities/striker" data-target="push">Striker</a>.'
 		},
 		pulse: {
 			name: 'Pulse',
@@ -738,7 +703,7 @@ var PokedexEggGroupPanel = PokedexResultPanel.extend({
 		if (offscreen) {
 			return ''+template.species+' '+template.abilities['0']+' '+(template.abilities['1']||'')+' '+(template.abilities['H']||'')+'';
 		} else {
-			return BattleSearch.renderTaggedPokemonRowInner(template, '<span class="picon" style="margin-top:-12px;'+Dex.getPokemonIcon('egg')+'"></span>', undefined, results[i]);
+			return BattleSearch.renderTaggedPokemonRowInner(template, '<span class="picon" style="margin-top:-12px;'+Dex.getPokemonIcon('egg')+'"></span>');
 		}
 	},
 	handleScroll: function() {
@@ -889,7 +854,7 @@ var PokedexTierPanel = PokedexResultPanel.extend({
 		for (var pokemonid in BattlePokedex) {
 			var template = BattlePokedex[pokemonid];
 			if (template.tier === tierName || template.tier === tierName2) {
-				buf += BattleSearch.renderPokemonRow(template, undefined, undefined, undefined, undefined, pokemonid);
+				buf += BattleSearch.renderPokemonRow(template);
 			}
 		}
 		this.$('.utilichart').html(buf);

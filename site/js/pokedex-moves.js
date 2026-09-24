@@ -1,30 +1,5 @@
-function movePanelLearnsetSourceType(source) {
-	if (typeof source !== 'string') return '';
-	var normalized = source.trim().toUpperCase();
-	if (!normalized) return '';
-
-	if (/^[0-9]*L/.test(normalized)) return 'L';
-	if (/^[0-9]*(M|TM|HM|TR)/.test(normalized)) return 'M';
-	if (/^[0-9]*(T|TUTOR)/.test(normalized)) return 'T';
-	if (/^[0-9]*(E|EGG)/.test(normalized)) return 'E';
-	if (/^[0-9]*(S|EVENT)/.test(normalized)) return 'S';
-
-	var directMatch = normalized.match(/^[0-9]*([A-Z])/);
-	var sourceType = directMatch ? directMatch[1] : normalized.charAt(0);
-	if (sourceType === 'H') return 'M'; // HM
-	if (sourceType === 'R') return 'M'; // TR
-
-	return sourceType;
-}
-
-function movePanelLearnsetSourceLevel(source) {
-	if (typeof source !== 'string') return '';
-	var levelMatch = source.toUpperCase().match(/L([0-9]+)/);
-	return levelMatch ? levelMatch[1] : '';
-}
-
 function sourcePad(source) {
-	var level = movePanelLearnsetSourceLevel(source) || '0';
+	var level = source.slice(1);
 	if (level.length < 3) level = '0' + level;
 	if (level.length < 3) level = '0' + level;
 	return level.length > 3 ? level : level+' ';
@@ -79,32 +54,13 @@ var PokedexMovePanel = PokedexResultPanel.extend({
 		buf += '<dt>Type:</dt> <dd>';
 		buf += '<a class="type '+toID(move.type)+'" href="/types/'+toID(move.type)+'" data-target="push">'+move.type+'</a> ';
 		buf += '<a class="type '+toID(move.category)+'" href="/categories/'+toID(move.category)+'" data-target="push">'+move.category+'</a>';
-		if (move.moveDelta && (move.moveDelta.type || move.moveDelta.category)) {
-			buf += '<br /><small>';
-			if (move.moveDelta.type) {
-				buf += 'Type: ' + Dex.escapeHTML(move.moveDelta.type.from || '?') + ' -> ' + Dex.escapeHTML(move.moveDelta.type.to || '?');
-			}
-			if (move.moveDelta.category) {
-				if (move.moveDelta.type) buf += ' | ';
-				buf += 'Category: ' + Dex.escapeHTML(move.moveDelta.category.from || '?') + ' -> ' + Dex.escapeHTML(move.moveDelta.category.to || '?');
-			}
-			buf += '</small>';
-		}
 		buf += '</dd></dl>';
 
-		var deltaTag = function (val) {
-			if (!val) return '';
-			var sign = val > 0 ? '+' : '';
-			var cls = val > 0 ? 'delta-positive' : 'delta-negative';
-			return '<br /><small class="' + cls + '">' + sign + val + '</small>';
-		};
-		var moveDelta = move.moveDelta || {};
-
 		if (move.category !== 'Status') {
-			buf += '<dl class="powerentry"><dt>Base power:</dt> <dd><strong>'+(move.basePower||'&mdash;')+'</strong>' + deltaTag(moveDelta.basePower) + '</dd></dl>';
+			buf += '<dl class="powerentry"><dt>Base power:</dt> <dd><strong>'+(move.basePower||'&mdash;')+'</strong></dd></dl>';
 		}
-		buf += '<dl class="accuracyentry"><dt>Accuracy:</dt> <dd>'+(move.accuracy && move.accuracy!==true?move.accuracy+'%':'&mdash;') + deltaTag(moveDelta.accuracy) + '</dd></dl>';
-		buf += '<dl class="ppentry"><dt>PP:</dt> <dd>'+(move.pp)+(move.pp>1 ? ' <small class="minor">(max: '+(8/5*move.pp)+')</small>' : '') + deltaTag(moveDelta.pp) + '</dd>';
+		buf += '<dl class="accuracyentry"><dt>Accuracy:</dt> <dd>'+(move.accuracy && move.accuracy!==true?move.accuracy+'%':'&mdash;')+'</dd></dl>';
+		buf += '<dl class="ppentry"><dt>PP:</dt> <dd>'+(move.pp)+(move.pp>1 ? ' <small class="minor">(max: '+(8/5*move.pp)+')</small>' : '')+'</dd>';
 		buf += '</dl><div style="clear:left;padding-top:1px"></div>';
 
 		if (move.isZ) {
@@ -136,7 +92,6 @@ var PokedexMovePanel = PokedexResultPanel.extend({
 		}
 
 		buf += '<p>'+Dex.escapeHTML(move.desc||move.shortDesc)+'</p>';
-
 
 		if ('defrost' in move.flags) {
 			buf += '<p><a class="subtle" href="/tags/defrost" data-target="push">The user thaws out</a> if it is frozen.</p>';
@@ -184,14 +139,11 @@ var PokedexMovePanel = PokedexResultPanel.extend({
 		if ('wind' in move.flags) {
 			buf += '<p class="movetag"><a href="/tags/wind" data-target="push">&#x2713; Wind</a> <small>(interacts with <a class="subtle" href="/abilities/windpower" data-target="push">Wind Power</a> and <a class="subtle" href="/abilities/windrider" data-target="push">Wind Rider</a>)</small></p>';
 		}
-		if ('kick' in move.flags) {
-			buf += '<p class="movetag"><a href="/tags/kicking" data-target="push">&#x2713; Kicking</a> <small>(boosted by <a class="subtle" href="/abilities/striker" data-target="push">Striker</a>)</small></p>';
-		}
 
 		if (move.target === 'allAdjacent') {
 			buf += '<p class="movetag"><small>In Doubles, hits all adjacent Pokémon (including allies)</small></p>';
 		} else if (move.target === 'allAdjacentFoes') {
-			buf += '<p class="movetag">&#x2713; allAdjacentFoes <small>(In Doubles, hits all adjacent foes)</small></p>';
+			buf += '<p class="movetag"><small>In Doubles, hits all adjacent foes</small></p>';
 		} else if (move.target === 'randomNormal') {
 			buf += '<p class="movetag"><small>In Doubles, hits a random foe (you can\'t choose its target)</small></p>';
 		} else if (move.target === 'adjacentAllyOrSelf') {
@@ -364,74 +316,72 @@ var PokedexMovePanel = PokedexResultPanel.extend({
 		var leftPanel = this.app.panels[this.app.panels.length - 2];
 		if (leftPanel && leftPanel.fragment.slice(0, 8) === 'pokemon/') {
 			var pokemon = Dex.species.get(leftPanel.id);
-			if (pokemon.tier !== 'unobtainable') {
-				var learnset = BattleLearnsets[pokemon.id] && BattleLearnsets[pokemon.id].learnset;
-				if (!learnset) learnset = BattleLearnsets[toID(pokemon.baseSpecies)].learnset;
-				var eg1 = pokemon.eggGroups[0];
-				var eg2 = pokemon.eggGroups[2];
-				var sources = learnset[id];
-				var template = null;
-				var atLeastOne = false;
-				while (true) {
-					if (!template) {
-						template = pokemon;
-					} else {
-						if (!template.prevo) break;
-						template = Dex.species.get(template.prevo);
-						sources = BattleLearnsets[template.id].learnset[id];
-					}
-
-					if (!sources) continue;
-
-					if (!atLeastOne) {
-						buf += '<h3>Getting it on ' + pokemon.name + '</h3><ul>';
-						atLeastOne = true;
-					}
-
-					if (template.id !== pokemon.id) {
-						buf += '</ul><p>From ' + template.name + ':</p><ul>';
-					}
-
-					if (!sources.length) buf += '<li>(Past gen only)</li>';
-
-					if (typeof sources === 'string') sources = [sources];
-					for (var i=0, len=sources.length, gen=''+Dex.gen; i<len; i++) {
-						var source = sources[i];
-						var sourceType = source.charAt(0);
-	                    switch (sourceType) {
-	                    case 'L':
-	                        buf += '<li>Level ' + parseInt(source.slice(1, 4), 10) + '</li>';
-	                        break;
-	                    case 'M':
-	                        buf += '<li>TM/HM</li>';
-	                        break;
-	                    case 'T':
-	                        buf += '<li>Tutor</li>';
-	                        break;
-	                    case 'E':
-	                        buf += '<li>Egg move: breed with ';
-	                        var hasBreeders = false;
-	                        for (var breederid in BattleLearnsets) {
-	                            if (!BattleLearnsets[breederid].learnset || !BattleLearnsets[breederid].learnset[id]) continue;
-	                            var breeder = BattlePokedex[breederid];
-	                            if (breeder.isNonstandard || breeder.tier === 'unobtainable') continue;
-	                            if (breeder.gender && breeder.gender !== 'M') continue;
-	                            if (breederid === pokemon.id || breederid === template.id || breederid === pokemon.prevo) continue;
-	                            if (eg1 === breeder.eggGroups[0] || eg1 === breeder.eggGroups[1] ||
-	                                (eg2 && (eg2 === breeder.eggGroups[0] || eg2 === breeder.eggGroups[1]))) {
-	                                if (hasBreeders) buf += ', ';
-	                                buf += '<a href="/pokemon/' + breederid + '" data-target="push">' + breeder.name + '</a>';
-	                                hasBreeders = true;
-	                            }
-	                        }
-	                        if (!hasBreeders) buf += 'itself';
-	                        buf += '</li>';
-	                        break;
-	                    }
-					}
+			var learnset = BattleLearnsets[pokemon.id] && BattleLearnsets[pokemon.id].learnset;
+			if (!learnset) learnset = BattleLearnsets[toID(pokemon.baseSpecies)].learnset;
+			var eg1 = pokemon.eggGroups[0];
+			var eg2 = pokemon.eggGroups[2];
+			var sources = learnset[id];
+			var template = null;
+			var atLeastOne = false;
+			while (true) {
+				if (!template) {
+					template = pokemon;
+				} else {
+					if (!template.prevo) break;
+					template = Dex.species.get(template.prevo);
+					sources = BattleLearnsets[template.id].learnset[id];
 				}
-				if (atLeastOne) buf += '</ul>';
+
+				if (!sources) continue;
+
+				if (!atLeastOne) {
+					buf += '<h3>Getting it on ' + pokemon.name + '</h3><ul>';
+					atLeastOne = true;
+				}
+
+				if (template.id !== pokemon.id) {
+					buf += '</ul><p>From ' + template.name + ':</p><ul>';
+				}
+
+				if (!sources.length) buf += '<li>(Past gen only)</li>';
+
+				if (typeof sources === 'string') sources = [sources];
+				for (var i=0, len=sources.length, gen=''+Dex.gen; i<len; i++) {
+					var source = sources[i];
+					var sourceType = source.charAt(0);
+                    switch (sourceType) {
+                    case 'L':
+                        buf += '<li>Level ' + parseInt(source.slice(1, 4), 10) + '</li>';
+                        break;
+                    case 'M':
+                        buf += '<li>TM/HM</li>';
+                        break;
+                    case 'T':
+                        buf += '<li>Tutor</li>';
+                        break;
+                    case 'E':
+                        buf += '<li>Egg move: breed with ';
+                        var hasBreeders = false;
+                        for (var breederid in BattleLearnsets) {
+                            if (!BattleLearnsets[breederid].learnset || !BattleLearnsets[breederid].learnset[id]) continue;
+                            var breeder = BattlePokedex[breederid];
+                            if (breeder.isNonstandard) continue;
+                            if (breeder.gender && breeder.gender !== 'M') continue;
+                            if (breederid === pokemon.id || breederid === template.id || breederid === pokemon.prevo) continue;
+                            if (eg1 === breeder.eggGroups[0] || eg1 === breeder.eggGroups[1] ||
+                                (eg2 && (eg2 === breeder.eggGroups[0] || eg2 === breeder.eggGroups[1]))) {
+                                if (hasBreeders) buf += ', ';
+                                buf += '<a href="/pokemon/' + breederid + '" data-target="push">' + breeder.name + '</a>';
+                                hasBreeders = true;
+                            }
+                        }
+                        if (!hasBreeders) buf += 'itself';
+                        buf += '</li>';
+                        break;
+                    }
+				}
 			}
+			if (atLeastOne) buf += '</ul>';
 		}
 
 		// distribution
@@ -450,7 +400,7 @@ var PokedexMovePanel = PokedexResultPanel.extend({
 		var results = [];
 		for (var pokemonid in BattleLearnsets) {
 			if (!BattlePokedex[pokemonid] || !BattleLearnsets[pokemonid]) continue;
-			if (BattlePokedex[pokemonid].isNonstandard || BattlePokedex[pokemonid].tier === 'unobtainable' || !BattleLearnsets[pokemonid].learnset) continue;
+			if (BattlePokedex[pokemonid].isNonstandard || !BattleLearnsets[pokemonid].learnset) continue;
 			var sources = BattleLearnsets[pokemonid].learnset[moveid];
 			if (!sources) continue;
 			if (typeof sources === 'string') sources = [sources];
@@ -577,7 +527,7 @@ var PokedexMovePanel = PokedexResultPanel.extend({
 				desc = '...';
 				break;
 			}
-			return BattleSearch.renderTaggedPokemonRowInner(template, desc, undefined, id);
+			return BattleSearch.renderTaggedPokemonRowInner(template, desc);
 		}
 	},
 	handleScroll: function() {
@@ -641,4 +591,3 @@ var PokedexMovePanel = PokedexResultPanel.extend({
 		}
 	}
 });
-

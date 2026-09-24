@@ -113,7 +113,7 @@ def parse_move(struct_init: NamedInitializer) -> dict:
                 | 'powderMove' \
                 | 'pulseMove' \
                 | 'punchingMove' \
-                | 'kickingMove' \   
+                | 'kickingMove' \
                 | 'magicCoatAffected' \
                 | 'slicingMove' \
                 | 'snatchAffected' \

@@ -8,6 +8,8 @@ Amaura
 Ambipom
 Ampharos
 Anorith
+Appletun
+Applin
 Arbok
 Arboliva
 Arcanine
@@ -103,6 +105,7 @@ Dedenne
 Delphox
 Dewott
 Diglett-Alola
+Dipplin
 Ditto
 Dodrio
 Doduo
@@ -110,10 +113,13 @@ Dolliv
 Donphan
 Dottler
 Dragalge
+Dragapult
+Drakloak
 Drapion
 Drednaw
 Drilbur
 Drowzee
+Druddigon
 Ducklett
 Dudunsparce
 Dudunsparce-Three-Segment
@@ -137,6 +143,7 @@ Electrode
 Electrode-Hisui
 Elekid
 Elgyem
+Emboar
 Emolga
 Escavalier
 Espathra
@@ -155,6 +162,7 @@ Ferroseed
 Ferrothorn
 Flaaffy
 Flamigo
+Flapple
 Flareon
 Fletchinder
 Fletchling
@@ -176,7 +184,10 @@ Gastly
 Gengar
 Geodude
 Geodude-Alola
+Gholdengo
 Gigalith
+Gimmighoul
+Gimmighoul-Roaming
 Girafarig
 Glaceon
 Glalie
@@ -205,7 +216,6 @@ Grapploct
 Graveler
 Graveler-Alola
 Greninja
-Grimer
 Groudon
 Grovyle
 Growlithe
@@ -237,6 +247,7 @@ Horsea
 Houndoom
 Houndour
 Huntail
+Hydrapple
 Hypno
 Illumise
 Indeedee
@@ -258,7 +269,7 @@ Kirlia
 Klawf
 Kleavor
 Klefki
-Koffing
+Klinklang
 Komala
 Krabby
 Krokorok
@@ -267,6 +278,7 @@ Kyogre
 Lairon
 Lampent
 Lanturn
+Larvesta
 Larvitar
 Leafeon
 Leavanny
@@ -286,6 +298,7 @@ Lotad
 Loudred
 Lucario
 Ludicolo
+Lunatone
 Luvdisc
 Luxio
 Luxray
@@ -337,11 +350,11 @@ Mismagius
 Morelull
 Morpeko
 Mudkip
-Muk
 Munchlax
 Munna
 Murkrow
 Musharna
+Naganadel
 Natu
 Nickit
 Nincada
@@ -383,12 +396,14 @@ Perrserker
 Petilil
 Phanpy
 Pichu
+Pignite
 Pikachu
 Pikipek
 Piloswine
 Pineco
 Pinsir
 Plusle
+Poipole
 Ponyta
 Ponyta-Galar
 Poochyena
@@ -412,6 +427,7 @@ Raichu-Alola
 Ralts
 Rapidash
 Rapidash-Galar
+Raticate-Alola
 Rayquaza
 Regice
 Regirock
@@ -541,6 +557,7 @@ Tauros-Paldea-Blaze
 Teddiursa
 Tentacool
 Tentacruel
+Tepig
 Thievul
 Throh
 Timburr
@@ -563,6 +580,7 @@ Tropius
 Trubbish
 Trumbeak
 Tsareena
+Turtonator
 Tympole
 Tynamo
 Typhlosion
@@ -584,6 +602,7 @@ Vikavolt
 Vileplume
 Vivillon
 Volbeat
+Volcarona
 Voltorb
 Voltorb-Hisui
 Vullaby
@@ -596,7 +615,6 @@ Wartortle
 Weavile
 Weedle
 Weepinbell
-Weezing
 Whirlipede
 Whiscash
 Whismur
@@ -612,8 +630,6 @@ Zangoose
 Zigzagoon
 Zigzagoon-Galar
 Zoroark
+Zoroark-Hisui
 Zorua
 Zubat
-Chimchar
-Monferno
-Infernape

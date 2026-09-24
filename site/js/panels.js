@@ -78,7 +78,8 @@ if (!Function.prototype.bind) {
 
 			initialize.apply(this, arguments);
 
-			Backbone.history.start({root: this.root, pushState: true, hashChange: false});
+			var usePushState = location.protocol !== 'file:';
+			Backbone.history.start({root: this.root, pushState: usePushState, hashChange: !usePushState});
 			this.fragment = Backbone.history.fragment;
 			$(window).resize(function(){
 				this.resize();
@@ -107,6 +108,12 @@ if (!Function.prototype.bind) {
 		// routing functions
 
 		go: function(fragment, loc, replace, source, instant) {
+			if (fragment && fragment.charAt(0) === '#') {
+				fragment = fragment.slice(1);
+			}
+			if (fragment && fragment.charAt(0) === '/') {
+				fragment = fragment.slice(1);
+			}
 			if (fragment && fragment.substr(0,this.root.length) === this.root) {
 				fragment = fragment.substr(this.root.length);
 			}
@@ -191,17 +198,9 @@ if (!Function.prototype.bind) {
 			} else {
 				// insert at loc
 				var $el = $('<div class="pfx-panel"></div>');
-				var lastPanel = this.lastPanel();
-				if (lastPanel && lastPanel.el) {
-					$el.insertAfter(lastPanel.el);
-				} else if ($('.pfx-panel').length) {
-					$el.insertAfter($('.pfx-panel').last());
-				} else {
-					$('body').append($el);
-				}
+				$el.insertAfter(this.lastPanel().el);
 				while (this.panels.length > loc) {
 					var panel = this.panels.pop();
-					if (!panel) continue;
 					left = panel.left;
 					panel.remove();
 				}
@@ -233,9 +232,7 @@ if (!Function.prototype.bind) {
 			this.updateURL(!isInternal);
 		},
 		updateURL: function(noPush) {
-			var curPanel = this.panels[this.i];
-			if (!curPanel) return;
-			var fragment = curPanel.fragment;
+			var fragment = this.panels[this.i].fragment;
 			if (fragment === this.fragment) return;
 			this.fragment = fragment;
 			if (root.ga) {
@@ -421,22 +418,7 @@ if (!Function.prototype.bind) {
 
 			panelType = this.getPanelType(panelType);
 			options.app = this;
-			try {
-				return this.panels[index] = new panelType(options);
-			} catch (err) {
-				if (window.console && console.error) console.error(err);
-				var fallbackOptions = $.extend({}, options, {loaded: true});
-				var fallbackPanel = new Panels.Panel(fallbackOptions);
-				fallbackPanel.shortTitle = 'error';
-				fallbackPanel.html(
-					'<div class="pfx-body dexentry">' +
-					'<a href="/" class="pfx-backbutton button" data-target="back"><i class="fa fa-chevron-left"></i> Pok&eacute;dex</a>' +
-					'<h1>Panel failed to load</h1>' +
-					'<p>This view hit an error while rendering. Check the browser console for details.</p>' +
-					'</div>'
-				);
-				return this.panels[index] = fallbackPanel;
-			}
+			return this.panels[index] = new panelType(options);
 		},
 		/**
 		 * Initialize the entire app: Set up all the views.
@@ -673,10 +655,10 @@ if (!Function.prototype.bind) {
 				}.bind(this));
 			}
 			var buffer = '';
-			if (this.targetLeftGap && this.panels[this.j-1]) {
+			if (this.targetLeftGap) {
 				buffer += '<a class="pfx-go-left" style="width:'+(this.targetLeftGap+this.goLeftWidthOffset)+'px" href="'+this.root+this.panels[this.j-1].fragment+'"></a>';
 			}
-			if (this.targetRightGap && this.panels[this.i+1]) {
+			if (this.targetRightGap) {
 				buffer += '<a class="pfx-go-right" style="width:'+(this.targetRightGap+this.goRightWidthOffset)+'px" href="'+this.root+this.panels[this.i+1].fragment+'"></a>';
 			}
 			if (buffer) {
