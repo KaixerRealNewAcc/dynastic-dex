@@ -133,7 +133,6 @@ def parse_items(fname: pathlib.Path) -> list[str]:
     item_constants = _item_constants(
         porydex.config.expansion / 'include' / 'constants' / 'items.h'
     )
-
     _add_named_tmhm_constants(
         item_constants,
         porydex.config.expansion / 'include' / 'constants' / 'tms_hms.h',

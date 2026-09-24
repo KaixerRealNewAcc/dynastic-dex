@@ -614,3 +614,6 @@ Zigzagoon-Galar
 Zoroark
 Zorua
 Zubat
+Chimchar
+Monferno
+Infernape
