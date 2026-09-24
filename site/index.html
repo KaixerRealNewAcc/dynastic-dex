@@ -1,76 +1,176 @@
 <!DOCTYPE html>
-<html><head>
+<html>
+<head>
+  <!-- Apply saved theme ASAP to avoid flash -->
+  <script>
+(() => {
+  const saved = localStorage.getItem('porydex-theme') || 'dark';
+  const root = document.documentElement;
+  root.classList.remove('dark-mode', 'theme-azure', 'theme-dex', 'theme-dark', 'theme-light');
+  if (saved === 'dark') {
+    root.classList.add('dark-mode');
+  } else if (saved === 'azure') {
+    root.classList.add('dark-mode', 'theme-azure');
+  } else if (saved === 'dex') {
+    root.classList.add('theme-dex');
+  } // light = no classes
+})();
+</script>
 
-	<meta charset="utf-8" />
 
-	<title>Dynastic Dex</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <!--<link rel="icon" type="image/ico" href="favicon.ico">-->
+  <link rel="icon" type="image/gif" href="grookey.gif"  >
+  <title>Dynastic Dex</title>
 
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE8" />
-	<link rel="stylesheet" href="https://play.pokemonshowdown.com/style/font-awesome.css" />
-	<link rel="stylesheet" href="theme/panels.css?b1" />
-	<link rel="stylesheet" href="theme/main.css?b7" />
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<link rel="stylesheet" href="https://play.pokemonshowdown.com/style/utilichart.css?b359" />
-	<link rel="stylesheet" href="theme/pokedex.css?b364" />
-	<script>
-		(function () {
-			var mode = null;
-			try {
-				mode = window.localStorage.getItem('porydex-theme');
-			} catch (e) {}
-			if (!mode && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-				mode = 'dark';
-			}
-			if (mode === 'dark') {
-				document.documentElement.classList.add('theme-dark');
-			}
-		})();
-	</script>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE8" />
+  <link rel="stylesheet" href="https://play.pokemonshowdown.com/style/font-awesome.css" />
+  <link rel="stylesheet" href="/theme/panels.css?b1" />
+  <link rel="stylesheet" href="/theme/main.css?b5" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://play.pokemonshowdown.com/style/utilichart.css?b359" />
+  <link rel="stylesheet" href="/theme/pokedex.css?b402" />
 
-	<!-- Workarounds for IE bugs to display trees correctly. -->
-	<!--[if lte IE 6]><style> li.tree { height: 1px; } </style><![endif]-->
-	<!--[if IE 7]><style> li.tree { zoom: 1; } </style><![endif]-->
+  <!-- Optional: tiny bit of layout for the picker -->
+  <style>
+    .theme-picker { position: fixed; top: 10px; right: 10px; z-index: 9999; }
+    .theme-picker label { margin-right: 6px; font-size: 12px; opacity: .85; }
+  </style>
+</head>
+<body>
 
-</head><body>
+  <!-- Theme picker (replaces old Toggle button) -->
+  <div class="theme-picker">
+    <label for="themeSelect">Theme</label>
+    <select id="themeSelect" aria-label="Theme">
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+    </select>
+  </div>
 
-	<div class="pfx-panel"><div class="pfx-body">
-		<noscript><p>
-			<strong>Requires JavaScript!</strong>
-		</p></noscript>
-		<p>
-			Loading...
-		</p>
-	</div></div>
-	<script src="js/lib/jquery-1.12.4.min.js"></script>
-	<script src="js/lib/lodash.min.js"></script>
-	<script src="js/lib/backbone-min.js"></script>
-	<script src="js/panels.js"></script>
+  <div class="pfx-panel">
+    <div class="pfx-body">
+      <noscript><p><strong>Requires JavaScript!</strong></p></noscript>
+      <p>Loading...</p>
+    </div>
+  </div>
 
-    <!-- Dependencies from the original Showdown dex; these are very explicitly unmodified for compatibility -->
-	<script src="config/config.js?v0.9xy31"></script>
-	<script src="js/battledata.js?v0.9xy31"></script>
-	<script src="data/search-index.js?v0.9xy31"></script> <!-- This guy needs to be generated using the client repo -->
-	<script src="https://play.pokemonshowdown.com/data/teambuilder-tables.js?v0.9xy31"></script>
-	<script src="data/typechart.js?v0.9xy31"></script>
-	<script src="https://play.pokemonshowdown.com/data/aliases.js?v0.9xy31"></script>
-	<script src="js/battle-dex-search.js?v0.9xy31"></script>
-	<script src="js/search.js?v0.9xy32"></script>
+  <button type="button" id="patchNotesOpen" class="patchnotes-launcher" aria-controls="patchNotesModal" aria-haspopup="dialog">
+    Patch Notes
+  </button>
 
-    <!-- Custom data files pulled from porydex extraction -->
-    <script src="data/species.js?v0.9xy31"></script>
-    <script src="data/learnsets.js?v0.9xy31"></script>
-    <script src="data/encounters.js?v0.9xy31"></script>
-    <script src="data/moves.js?v0.9xy31"></script>
-    <script src="data/abilities.js?v0.9xy31"></script>
-    <script src="data/items.js?v0.9xy31"></script>
+  <div id="patchNotesModal" class="patchnotes-modal" hidden aria-hidden="true">
+    <div class="patchnotes-backdrop" data-patchnotes-close></div>
+    <div class="patchnotes-dialog" role="dialog" aria-modal="true" aria-labelledby="patchNotesTitle">
+      <div class="patchnotes-header">
+        <h2 id="patchNotesTitle">Patch Notes</h2>
+        <button type="button" id="patchNotesClose" class="patchnotes-close" aria-label="Close patch notes">
+          &times;
+        </button>
+      </div>
+      <div id="patchNotesContent" class="patchnotes-content"></div>
+    </div>
+  </div>
 
-	<script src="js/pokedex.js?b359"></script>
-	<script src="js/pokedex-pokemon.js?b363"></script>
-	<script src="js/pokedex-encounters_list.js"></script>
-	<script src="js/pokedex-encounters.js?b360"></script>
-	<script src="js/pokedex-moves.js?b359"></script>
-	<script src="js/pokedex-search.js?b362"></script>
-	<script src="js/theme-toggle.js?b360"></script>
-	<script src="js/router.js?b360"></script>
+  <!-- Libraries -->
+  <script src="/js/lib/jquery-1.12.4.min.js"></script>
+  <script src="/js/lib/lodash.min.js"></script>
+  <script src="/js/lib/backbone-min.js"></script>
+  <script src="/js/panels.js?b400"></script>
 
-</body></html>
+  <!-- Showdown dex deps (kept as-is) -->
+  <script src="/config/config.js?v0.9xy39"></script>
+  <script src="/js/battledata.js?v0.9xy39-furfrou1"></script>
+  <script src="/data/search-index.js?v0.9xy39-furfrou1"></script>
+  <script src="https://play.pokemonshowdown.com/data/teambuilder-tables.js?v0.9xy39"></script>
+  <script src="/data/typechart.js?v0.9xy39"></script>
+  <script src="https://play.pokemonshowdown.com/data/aliases.js?v0.9xy39"></script>
+  <script src="/js/battle-dex-search.js?v0.9xy39-furfrou1"></script>
+  <script src="/js/search.js?v0.9xy39"></script>
+
+  <!-- Porydex data -->
+  <script src="/data/species.js?v0.9xy39-furfrou1"></script>
+  <script src="/data/learnsets.js?v0.9xy39-furfrou1"></script>
+  <script src="/data/encounters.js?v0.9xy39"></script>
+  <script src="/data/item-locations.js?v0.9xy39"></script>
+  <script src="/data/item-location-notes.js?b1"></script>
+  <script src="/data/moves.js?v0.9xy39"></script>
+  <script src="/data/abilities.js?v0.9xy39"></script>
+  <script src="/data/items.js?v0.9xy39"></script>
+  <script src="/js/patch-notes-data.js?b407"></script>
+
+  <!-- App -->
+  <script src="/js/pokedex.js?b400"></script>
+  <script src="/js/pokedex-pokemon.js?b401"></script>
+  <script src="/js/pokedex-moves.js?b400"></script>
+  <script src="/js/pokedex-encounter-list.js?b403"></script>
+  <script src="/js/pokedex-encounters.js?b400"></script>
+  <script src="/js/pokedex-item-locations.js?b406"></script>
+  <script src="/js/pokedex-search.js?b400"></script>
+  <script src="/js/router.js?b400"></script>
+  <script src="/js/patch-notes.js?b410"></script>
+
+  <!-- Theme logic -->
+  <script>
+(function () {
+  const el = document.getElementById('themeSelect');
+  init();
+  el.addEventListener('change', () => setTheme(el.value));
+
+  function init() {
+    const saved = localStorage.getItem('porydex-theme') || 'dark';
+    setTheme(saved);
+    el.value = saved;
+  }
+
+  function setTheme(name) {
+    const root = document.documentElement;
+    root.classList.remove('dark-mode', 'theme-light', 'theme-azure', 'theme-dark', 'theme-dex');
+
+    if (name === 'light') {
+      root.classList.add('theme-light');
+    } else if (name === 'azure') {
+      root.classList.add('dark-mode', 'theme-azure');
+    } else if (name === 'dex') {
+      root.classList.add('theme-dex');
+    } else {
+      root.classList.add('theme-dark');
+    }
+    try { localStorage.setItem('porydex-theme', name); } catch {}
+  }
+})();
+</script>
+</body>
+<script>
+(() => {
+  const select = document.getElementById('themeSelect');
+  const root = document.documentElement;
+
+  // initialize dropdown from saved value
+  const saved = localStorage.getItem('porydex-theme') || 'dark';
+  select.value = saved;
+  apply(saved);
+
+  select.addEventListener('change', () => {
+    const val = select.value;
+    apply(val);
+    localStorage.setItem('porydex-theme', val);
+  });
+
+  function apply(mode) {
+    root.classList.remove('dark-mode', 'theme-azure', 'theme-dex', 'theme-dark', 'theme-light');
+    if (mode === 'dark') {
+      root.classList.add('dark-mode');
+    } else if (mode === 'azure') {
+      root.classList.add('dark-mode', 'theme-azure');
+    } else if (mode === 'dex') {
+      root.classList.add('theme-dex');
+    }
+    // light: no classes
+  }
+})();
+</script>
+</html>

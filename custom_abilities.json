@@ -1,0 +1,11 @@
+{
+  "psychicmind": {
+    "isNonstandard": "Past",
+    "flags": {},
+    "name": "Psychic Mind",
+    "rating": 0.1,
+    "num": 0,
+    "desc": "Boosts the power of Psychic-type moves by 1.2x.",
+    "shortDesc": "Boosts Psychic-type moves by 1.2x."
+  }
+}
