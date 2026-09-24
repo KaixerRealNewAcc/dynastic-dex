@@ -10,14 +10,11 @@ var Pokedex = Panels.App.extend({
 		'types/:type': PokedexTypePanel,
 		'egggroups/:egggroup': PokedexEggGroupPanel,
 		'encounters/:location': PokedexEncountersPanel,
-		'encounterlist/': PokedexEncounterListPanel,
 		'itemlocations/': PokedexItemLocationsPanel,
 
 		'': PokedexSearchPanel,
 		'pokemon/': PokedexSearchPanel,
 		'moves/': PokedexSearchPanel,
-		'encounters/': PokedexSearchPanel,
-		':q': PokedexSearchPanel
 	},
 	initialize: function() {
 		this.routePanel('*path', PokedexSearchPanel); // catch-all default
