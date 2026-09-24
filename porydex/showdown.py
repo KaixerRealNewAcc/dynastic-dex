@@ -33,14 +33,14 @@ def index(moves: dict, species: dict, learnsets: dict, encounters: dict):
         if key.startswith('gmax') or (key.startswith('hiddenpower') and len(key) > 11) or vanilla.get('isNonstandard', '') == 'CAP':
             continue
 
-    expansion_key = VANILLA_MOVE_KEY_ALIASES.get(key, key)
+        expansion_key = VANILLA_MOVE_KEY_ALIASES.get(key, key)
         if expansion_key not in moves:
             # An expansion can intentionally omit a move from its configured
             # move table; it should not prevent exporting the moves it has.
             continue
         moves[expansion_key]['desc'] = vanilla['desc']
         moves[expansion_key]['shortDesc'] = vanilla['shortDesc']
-        
+
     index = []
     index.extend(list(map(lambda s: s + ' pokemon', species.keys())))
     index.extend(list(map(lambda s: s + ' move', moves.keys())))
@@ -314,4 +314,3 @@ def index(moves: dict, species: dict, learnsets: dict, encounters: dict):
     with open(porydex.config.output / 'typechart.js', 'w+', encoding='utf-8') as outf:
         outf.write('exports.BattleTypeChart = ')
         json.dump(typechart, outf, indent=4, ensure_ascii=False)
-
