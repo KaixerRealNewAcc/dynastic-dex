@@ -24,8 +24,7 @@ var PokedexSearchPanel = Panels.Panel.extend({
 		if (fragment === 'encounters') fragment = 'encounters/';
 		if (questionIndex >= 0) fragment = fragment.slice(0, questionIndex);
 		var buf = '<div class="pfx-body"><form class="pokedex">';
-		buf += '<h1><a href="/" data-target="replace">Pok&eacute;dex</a></h1>';
-        buf += '<h4>Modified from <a href="https://dex.pokemonshowdown.com/">Pok&eacute;mon Showdown Dex</a> for Porydex</h4>';
+		buf += '<h1><a href="https://github.com/KaixerRealNewAcc/dynastic-dex">Dynastic Dex</a></h1>';
 		buf += '<ul class="tabbar centered" style="margin-bottom: 18px"><li><button class="button nav-first' + (fragment === '' ? ' cur' : '') + '" value="">Search</button></li>';
 		buf += '<li><button class="button' + (fragment === 'pokemon/' ? ' cur' : '') + '" value="pokemon/">Pok&eacute;mon</button></li>';
 		buf += '<li><button class="button' + (fragment === 'encounters/' ? ' cur' : '') + '" value="encounters/">Encounters</button></li>';
