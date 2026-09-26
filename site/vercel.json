@@ -5,15 +5,8 @@
     { "source": "/moves/(.*)", "destination": "/index.html" },
     { "source": "/items/(.*)", "destination": "/index.html" },
     { "source": "/encounters/(.*)", "destination": "/index.html" },
-<<<<<<< HEAD
-    { "source": "/itemlocations/(.*)", "destination": "/index.html" },
-    { "source": "/egggroups/(.*)", "destination": "/index.html" }
-  ]
-}
-=======
     { "source": "/encounterlist/(.*)", "destination": "/index.html" },
     { "source": "/itemlocations/(.*)", "destination": "/index.html" },
     { "source": "/egggroups/(.*)", "destination": "/index.html" }
   ]
 }
->>>>>>> c3af0bf1e2e1d82b9c0e37116e8d53200f126e87
