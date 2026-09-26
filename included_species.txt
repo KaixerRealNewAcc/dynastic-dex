@@ -230,10 +230,6 @@ Hatenna
 Hatterene
 Hattrem
 Haunter
-<<<<<<< HEAD
-Hawlucha
-=======
->>>>>>> c3af0bf1e2e1d82b9c0e37116e8d53200f126e87
 Haxorus
 Heliolisk
 Helioptile
