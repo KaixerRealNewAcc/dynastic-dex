@@ -515,7 +515,7 @@ var PokedexMovePanel = PokedexResultPanel.extend({
 				desc = '<img src="//' + Config.routes.client + '/sprites/itemicons/tm-normal.png" style="margin-top:-3px;opacity:.7" width="24" height="24" alt="M" />';
 				break;
 			case 'c': // tutor
-				desc = '<img src="//' + Config.routes.client + '/sprites/tutor.png" style="margin-top:-4px;opacity:.7" width="27" height="26" alt="T" />';
+				desc = '<img src="./sprites/people/scientist_tutor.png" style="margin-top:-4px;opacity:.7" width="27" height="26" alt="T" />';
 				break;
 			case 'd': // egg move
 				desc = '<span class="picon" style="margin-top:-12px;'+Dex.getPokemonIcon('egg')+'"></span>';

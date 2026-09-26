@@ -23,7 +23,7 @@ var PokedexPokemonPanel = PokedexResultPanel.extend({
             buf += '<div class="warning"><strong>Note:</strong> This Pok&eacute;mon cannot be obtained.</div>';
 		}
 
-		buf += '<img src="sprites/' + pokemon.spriteid.replace("-", "_").toUpperCase() + '.png" alt="" width="96" height="96" class="sprite" />';
+		buf += '<img src="sprites/pokemon/' + pokemon.spriteid.replace("-", "_").replace("hisui","h").replace("alola","a").replace("galar","g").toUpperCase() + '.png" alt="" width="96" height="96" class="sprite" />';
 
 		buf += '<dl class="typeentry">';
 		buf += '<dt>Types:</dt> <dd>';
@@ -448,7 +448,7 @@ var PokedexPokemonPanel = PokedexResultPanel.extend({
 					break;
 				case 'e': // tutor
 					if (lastChanged) buf += '<li class="resultheader"><h3>Tutor</h3></li>';
-					desc = '<img src="//' + Config.routes.client + '/sprites/tutor.png" style="margin-top:-4px;opacity:.7" width="27" height="26" alt="T" />';
+					desc = '<img src="./sprites/people/scientist_tutor.png" style="margin-top:-4px;opacity:.7" width="27" height="26" alt="T" />';
 					break;
 				case 'f': // egg move
 					if (lastChanged) buf += '<li class="resultheader"><h3>Egg</h3></li>';
