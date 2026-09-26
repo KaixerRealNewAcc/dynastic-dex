@@ -354,8 +354,8 @@ var PokedexEncountersPanel = PokedexResultPanel.extend({
 		// Header rows are single-letter mode markers inserted in getDistribution.
 		if (parsed) {
 			rateText = parsed.rateText;
-			id = parsed.speciesId;
 			levelText = parsed.levelText;
+			id = parsed.speciesId;
 		}
 
 		var template = id ? BattlePokedex[id] : undefined;

@@ -406,7 +406,6 @@ Pinsir
 Plusle
 Poipole
 Ponyta
-Ponyta-Galar
 Poochyena
 Popplio
 Porygon
@@ -427,7 +426,6 @@ Raichu
 Raichu-Alola
 Ralts
 Rapidash
-Rapidash-Galar
 Raticate-Alola
 Rayquaza
 Regice
