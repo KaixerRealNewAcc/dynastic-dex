@@ -11,6 +11,7 @@ var Pokedex = Panels.App.extend({
 		'encounters/:location': PokedexEncountersPanel,
 
 		'pokemon/': PokedexSearchPanel,
+		'encounters/': PokedexSearchPanel,
 		'moves/': PokedexSearchPanel,
 	},
 	initialize: function() {
