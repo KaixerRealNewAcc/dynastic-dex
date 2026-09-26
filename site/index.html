@@ -41,6 +41,29 @@
 			Loading...
 		</p>
 	</div></div>
+  <button type="button" id="patchNotesOpen" class="patchnotes-launcher" aria-controls="patchNotesModal" aria-haspopup="dialog">
+    Patch Notes
+  </button>
+
+  <div id="patchNotesModal" class="patchnotes-modal" hidden aria-hidden="true">
+    <div class="patchnotes-backdrop" data-patchnotes-close></div>
+    <div class="patchnotes-dialog" role="dialog" aria-modal="true" aria-labelledby="patchNotesTitle">
+      <div class="patchnotes-header">
+        <h2 id="patchNotesTitle">Patch Notes</h2>
+        <button type="button" id="patchNotesClose" class="patchnotes-close" aria-label="Close patch notes">
+          &times;
+        </button>
+      </div>
+      <div id="patchNotesContent" class="patchnotes-content"></div>
+    </div>
+  </div>
+
+	<!-- Workarounds for IE bugs to display trees correctly. -->
+	<!--[if lte IE 6]><style> li.tree { height: 1px; } </style><![endif]-->
+	<!--[if IE 7]><style> li.tree { zoom: 1; } </style><![endif]-->
+
+</head><body>
+
 	<script src="js/lib/jquery-1.12.4.min.js"></script>
 	<script src="js/lib/lodash.min.js"></script>
 	<script src="js/lib/backbone-min.js"></script>
@@ -63,6 +86,7 @@
     <script src="data/moves.js?v0.9xy31"></script>
     <script src="data/abilities.js?v0.9xy31"></script>
     <script src="data/items.js?v0.9xy31"></script>
+	<script src="/js/patch-notes-data.js?b407"></script>
 
 	<script src="js/pokedex.js?b359"></script>
 	<script src="js/pokedex-pokemon.js?b363"></script>
