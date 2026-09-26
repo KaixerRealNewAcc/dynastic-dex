@@ -3064,13 +3064,28 @@ exports.BattleAbilities = {
         "desc": "On switch-in, this Pokemon avoids all Rock-type attacks and Stealth Rock.",
         "shortDesc": "On switch-in, this Pokemon avoids all Rock-type attacks and Stealth Rock."
     },
-    "psychicmind": {
-        "isNonstandard": "Past",
-        "flags": {},
-        "name": "Psychic Mind",
-        "rating": 0,
+    "rebound": {
+        "isNonstandard": "CAP",
+        "onTryHitPriority": 1,
+        "condition": {
+            "duration": 1
+        },
+        "flags": {
+            "breakable": 1
+        },
+        "name": "Rebound",
+        "rating": 3,
         "num": -3,
-        "desc": "Boosts the power of Psychic-type moves by 1.2x.",
-        "shortDesc": "Boosts Psychic-type moves by 1.2x."
+        "desc": "On switch-in, this Pokemon blocks certain status moves and instead uses the move against the original user.",
+        "shortDesc": "On switch-in, blocks certain status moves and bounces them back to the user."
+    },
+    "persistent": {
+        "isNonstandard": "CAP",
+        "flags": {},
+        "name": "Persistent",
+        "rating": 3,
+        "num": -4,
+        "desc": "The duration of Gravity, Heal Block, Magic Room, Safeguard, Tailwind, Trick Room, and Wonder Room is increased by 2 turns if the effect is started by this Pokemon.",
+        "shortDesc": "When used, Gravity/Heal Block/Safeguard/Tailwind/Room effects last 2 more turns."
     }
 }
