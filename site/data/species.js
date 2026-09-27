@@ -4644,9 +4644,9 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Water Absorb",
-            "1": "Damp",
-            "H": "Swift Swim"
+            "0": "Damp",
+            "1": "Swift Swim",
+            "H": "Cloud Nine"
         },
         "color": "Blue",
         "name": "Poliwag",
@@ -4686,9 +4686,9 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Water Absorb",
-            "1": "Iron Fist",
-            "H": "Swift Swim"
+            "0": "Unseen Fist",
+            "1": "Swift Swim",
+            "H": "Iron Fist"
         },
         "color": "Blue",
         "name": "Poliwhirl",
@@ -4734,9 +4734,9 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Water Absorb",
-            "1": "Iron Fist",
-            "H": "Unseen Fist"
+            "0": "Unseen Fist",
+            "1": "Swift Swim",
+            "H": "Iron Fist"
         },
         "color": "Blue",
         "name": "Poliwrath",
@@ -4759,8 +4759,7 @@ exports.BattlePokedex = {
             "spd": 100
         },
         "types": [
-            "Water",
-            "Fairy"
+            "Water"
         ],
         "evYields": {
             "spd": 3
@@ -4778,8 +4777,7 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Water Absorb",
-            "1": "Damp",
+            "0": "Liquid Voice",
             "H": "Drizzle"
         },
         "color": "Green",
@@ -4821,6 +4819,7 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Synchronize",
+            "1": "Inner Focus",
             "H": "Magic Guard"
         },
         "color": "Brown",
@@ -4862,6 +4861,7 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Synchronize",
+            "1": "Inner Focus",
             "H": "Magic Guard"
         },
         "color": "Brown",
@@ -4907,6 +4907,7 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Synchronize",
+            "1": "Inner Focus",
             "H": "Magic Guard"
         },
         "color": "Brown",
@@ -4954,7 +4955,8 @@ exports.BattlePokedex = {
             "F": 0.25
         },
         "abilities": {
-            "0": "Trace"
+            "0": "Levitate",
+            "H": "Trace"
         },
         "color": "Brown",
         "name": "Alakazam-Mega",
@@ -5057,10 +5059,10 @@ exports.BattlePokedex = {
         "baseStats": {
             "hp": 90,
             "atk": 130,
-            "def": 80,
+            "def": 85,
             "spe": 55,
-            "spa": 65,
-            "spd": 85
+            "spa": 55,
+            "spd": 90
         },
         "types": [
             "Fighting"
@@ -5183,6 +5185,47 @@ exports.BattlePokedex = {
         "baseStats": {
             "hp": 80,
             "atk": 105,
+            "def": 65,
+            "spe": 70,
+            "spa": 100,
+            "spd": 70
+        },
+        "types": [
+            "Grass",
+            "Poison"
+        ],
+        "evYields": {
+            "atk": 3
+        },
+        "items": {},
+        "eggGroups": [
+            "Grass"
+        ],
+        "catchRate": 45,
+        "expYield": 245,
+        "genderRatio": {
+            "M": 0.5,
+            "F": 0.5
+        },
+        "abilities": {
+            "0": "Chlorophyll",
+            "H": "Gluttony"
+        },
+        "color": "Green",
+        "name": "Victreebel",
+        "heightm": 1.7,
+        "weightkg": 15.5,
+        "prevo": "Weepinbell",
+        "evoItem": "Leaf Stone",
+        "evoType": "useItem",
+        "evoCondition": "",
+        "tier": "obtainable"
+    },
+    "victreebelmega": {
+        "num": 71,
+        "baseStats": {
+            "hp": 80,
+            "atk": 105,
             "def": 95,
             "spe": 70,
             "spa": 135,
@@ -5210,10 +5253,12 @@ exports.BattlePokedex = {
             "H": "Gluttony"
         },
         "color": "Green",
-        "name": "Victreebel",
+        "name": "Victreebel-Mega",
         "heightm": 4.5,
         "weightkg": 125.5,
-        "tier": "obtainable"
+        "baseSpecies": "Victreebel",
+        "forme": "Mega",
+        "tier": "unobtainable"
     },
     "tentacool": {
         "num": 72,
@@ -5262,10 +5307,10 @@ exports.BattlePokedex = {
         "num": 73,
         "baseStats": {
             "hp": 80,
-            "atk": 70,
+            "atk": 60,
             "def": 65,
             "spe": 100,
-            "spa": 80,
+            "spa": 91,
             "spd": 120
         },
         "types": [
@@ -5332,7 +5377,7 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Sand Veil",
+            "0": "Rock Head",
             "1": "Sturdy",
             "H": "Loose Rocks"
         },
@@ -5384,7 +5429,7 @@ exports.BattlePokedex = {
         "abilities": {
             "0": "Rock Head",
             "1": "Sturdy",
-            "H": "Sand Veil"
+            "H": "Loose Rocks"
         },
         "color": "Brown",
         "name": "Graveler",
@@ -5438,7 +5483,7 @@ exports.BattlePokedex = {
         "abilities": {
             "0": "Rock Head",
             "1": "Sturdy",
-            "H": "Sand Veil"
+            "H": "Loose Rocks"
         },
         "color": "Brown",
         "name": "Golem",
@@ -5452,7 +5497,8 @@ exports.BattlePokedex = {
             "Golem-Alola"
         ],
         "prevo": "Graveler",
-        "evoType": "trade",
+        "evoItem": "Linking Cord",
+        "evoType": "useItem",
         "evoCondition": "",
         "tier": "obtainable"
     },
@@ -5589,7 +5635,8 @@ exports.BattlePokedex = {
         "baseSpecies": "Golem",
         "forme": "Alola",
         "prevo": "Graveler-Alola",
-        "evoType": "trade",
+        "evoItem": "Linking Cord",
+        "evoType": "useItem",
         "evoCondition": "",
         "tier": "obtainable"
     },
@@ -5620,9 +5667,9 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Run Away",
-            "1": "Flash Fire",
-            "H": "Flame Body"
+            "0": "Turboblaze",
+            "1": "Reckless",
+            "H": "Flash Fire"
         },
         "color": "Yellow",
         "name": "Ponyta",
@@ -5644,10 +5691,10 @@ exports.BattlePokedex = {
         "num": 78,
         "baseStats": {
             "hp": 65,
-            "atk": 100,
-            "def": 70,
-            "spe": 105,
-            "spa": 80,
+            "atk": 115,
+            "def": 80,
+            "spe": 125,
+            "spa": 70,
             "spd": 80
         },
         "types": [
@@ -5667,9 +5714,9 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Run Away",
-            "1": "Flash Fire",
-            "H": "Flame Body"
+            "0": "Turboblaze",
+            "1": "Reckless",
+            "H": "Flash Fire"
         },
         "color": "Yellow",
         "name": "Rapidash",
@@ -5699,7 +5746,8 @@ exports.BattlePokedex = {
             "spd": 65
         },
         "types": [
-            "Psychic"
+            "Psychic",
+            "Fairy"
         ],
         "evYields": {
             "spe": 1
@@ -5715,8 +5763,8 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Run Away",
-            "1": "Pastel Veil",
+            "0": "Pastel Veil",
+            "1": "Reckless",
             "H": "Anticipation"
         },
         "color": "White",
@@ -5734,10 +5782,10 @@ exports.BattlePokedex = {
         "num": 78,
         "baseStats": {
             "hp": 65,
-            "atk": 100,
-            "def": 70,
-            "spe": 105,
-            "spa": 80,
+            "atk": 115,
+            "def": 80,
+            "spe": 125,
+            "spa": 70,
             "spd": 80
         },
         "types": [
@@ -5758,8 +5806,8 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Run Away",
-            "1": "Pastel Veil",
+            "0": "Pastel Veil",
+            "1": "Reckless",
             "H": "Anticipation"
         },
         "color": "White",
@@ -5805,7 +5853,7 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Oblivious",
+            "0": "Shell Armor",
             "1": "Own Tempo",
             "H": "Regenerator"
         },
@@ -5857,7 +5905,7 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Oblivious",
+            "0": "Armor Tail",
             "1": "Own Tempo",
             "H": "Regenerator"
         },
@@ -5911,7 +5959,7 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Oblivious",
+            "0": "Shell Armor",
             "1": "Own Tempo",
             "H": "Regenerator"
         },
@@ -5962,8 +6010,8 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Shell Armor",
-            "1": "Regenerator",
+            "0": "Armor Tail",
+            "1": "Shell Armor",
             "H": "Regenerator"
         },
         "color": "Pink",
@@ -6049,9 +6097,8 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Quick Draw",
-            "1": "Own Tempo",
-            "H": "Regenerator"
+            "0": "Regenerator",
+            "H": "Quick Draw"
         },
         "color": "Pink",
         "name": "Slowbro-Galar",
@@ -6094,9 +6141,8 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Curious Medicine",
-            "1": "Own Tempo",
-            "H": "Regenerator"
+            "0": "Regenerator",
+            "H": "Curious Medicine"
         },
         "color": "Pink",
         "name": "Slowking-Galar",
@@ -6138,7 +6184,7 @@ exports.BattlePokedex = {
         "gender": "N",
         "abilities": {
             "0": "Magnet Pull",
-            "1": "Sturdy",
+            "1": "Analytic",
             "H": "Levitate"
         },
         "color": "Gray",
@@ -6178,7 +6224,7 @@ exports.BattlePokedex = {
         "gender": "N",
         "abilities": {
             "0": "Magnet Pull",
-            "1": "Sturdy",
+            "1": "Analytic",
             "H": "Levitate"
         },
         "color": "Gray",
@@ -6222,7 +6268,7 @@ exports.BattlePokedex = {
         "gender": "N",
         "abilities": {
             "0": "Magnet Pull",
-            "1": "Sturdy",
+            "1": "Analytic",
             "H": "Levitate"
         },
         "color": "Gray",
@@ -6230,8 +6276,8 @@ exports.BattlePokedex = {
         "heightm": 1.2,
         "weightkg": 180.0,
         "prevo": "Magneton",
-        "evoLevel": 0,
-        "evoType": "level",
+        "evoItem": "Thunder Stone",
+        "evoType": "useItem",
         "evoCondition": "",
         "tier": "obtainable"
     },
@@ -6311,7 +6357,7 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Steadfast",
+            "0": "Inner Focus",
             "H": "Scrappy"
         },
         "color": "Brown",
@@ -6331,8 +6377,8 @@ exports.BattlePokedex = {
             "hp": 62,
             "atk": 135,
             "def": 95,
-            "spe": 65,
-            "spa": 68,
+            "spe": 75,
+            "spa": 58,
             "spd": 82
         },
         "types": [
@@ -6355,7 +6401,7 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Steadfast",
+            "0": "Inner Focus",
             "H": "Scrappy"
         },
         "color": "White",
@@ -6378,7 +6424,7 @@ exports.BattlePokedex = {
             "spd": 35
         },
         "types": [
-            "Normal",
+            "Ground",
             "Flying"
         ],
         "evYields": {
@@ -6397,7 +6443,7 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Run Away",
+            "0": "Rock Head",
             "1": "Early Bird",
             "H": "Tangled Feet"
         },
@@ -6416,12 +6462,12 @@ exports.BattlePokedex = {
             "hp": 60,
             "atk": 110,
             "def": 70,
-            "spe": 110,
+            "spe": 120,
             "spa": 60,
             "spd": 60
         },
         "types": [
-            "Normal",
+            "Ground",
             "Flying"
         ],
         "evYields": {
@@ -6440,7 +6486,7 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Run Away",
+            "0": "Rock Head",
             "1": "Early Bird",
             "H": "Tangled Feet"
         },
@@ -6483,7 +6529,7 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Thick Fat",
-            "1": "Hydration",
+            "1": "Swift Swim",
             "H": "Ice Body"
         },
         "color": "White",
@@ -6499,10 +6545,10 @@ exports.BattlePokedex = {
         "num": 87,
         "baseStats": {
             "hp": 90,
-            "atk": 70,
+            "atk": 95,
             "def": 80,
-            "spe": 70,
-            "spa": 70,
+            "spe": 80,
+            "spa": 95,
             "spd": 95
         },
         "types": [
@@ -6525,7 +6571,7 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Thick Fat",
-            "1": "Hydration",
+            "1": "Swift Swim",
             "H": "Ice Body"
         },
         "color": "White",
@@ -6567,9 +6613,8 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Stench",
-            "1": "Sticky Hold",
-            "H": "Poison Touch"
+            "0": "Poison Touch",
+            "H": "Sticky Hold"
         },
         "color": "Purple",
         "name": "Grimer",
@@ -6617,9 +6662,9 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Stench",
-            "1": "Sticky Hold",
-            "H": "Regenerator"
+            "0": "Poison Touch",
+            "1": "Regenerator",
+            "H": "Sticky Hold"
         },
         "color": "Purple",
         "name": "Muk",
@@ -6669,7 +6714,6 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Poison Touch",
-            "1": "Gluttony",
             "H": "Power Of Alchemy"
         },
         "color": "Green",
@@ -6715,7 +6759,6 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Poison Touch",
-            "1": "Gluttony",
             "H": "Power Of Alchemy"
         },
         "color": "Green",
@@ -6779,7 +6822,7 @@ exports.BattlePokedex = {
             "atk": 95,
             "def": 180,
             "spe": 70,
-            "spa": 85,
+            "spa": 95,
             "spd": 45
         },
         "types": [
@@ -6844,7 +6887,7 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Cursed Body",
+            "0": "Levitate",
             "H": "Shadow Tag"
         },
         "color": "Purple",
@@ -6884,7 +6927,7 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Cursed Body",
+            "0": "Levitate",
             "H": "Shadow Tag"
         },
         "color": "Purple",
@@ -6928,8 +6971,8 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Cursed Body",
-            "H": "Mean Glare"
+            "0": "Levitate",
+            "H": "Shadow Tag"
         },
         "color": "Purple",
         "name": "Gengar",
@@ -6975,7 +7018,7 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Mean Glare"
+            "0": "Shadow Tag"
         },
         "color": "Purple",
         "name": "Gengar-Mega",
@@ -6989,7 +7032,7 @@ exports.BattlePokedex = {
         "num": 95,
         "baseStats": {
             "hp": 35,
-            "atk": 65,
+            "atk": 85,
             "def": 160,
             "spe": 70,
             "spa": 30,
@@ -7015,7 +7058,7 @@ exports.BattlePokedex = {
         "abilities": {
             "0": "Rock Head",
             "1": "Solid Rock",
-            "H": "Weak Armor"
+            "H": "Sturdy"
         },
         "color": "Gray",
         "name": "Onix",
@@ -7030,11 +7073,11 @@ exports.BattlePokedex = {
         "num": 208,
         "baseStats": {
             "hp": 75,
-            "atk": 85,
+            "atk": 105,
             "def": 200,
             "spe": 30,
-            "spa": 55,
-            "spd": 65
+            "spa": 45,
+            "spd": 75
         },
         "types": [
             "Steel",
@@ -7044,7 +7087,7 @@ exports.BattlePokedex = {
             "def": 2
         },
         "items": {
-            "R": "Metal Coat"
+            "R": "Metal Alloy"
         },
         "eggGroups": [
             "Mineral"
@@ -7057,8 +7100,8 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Rock Head",
-            "1": "Sturdy",
-            "H": "Sheer Force"
+            "1": "Sand Force",
+            "H": "Filter"
         },
         "color": "Gray",
         "name": "Steelix",
@@ -7072,7 +7115,8 @@ exports.BattlePokedex = {
             "Steelix-Mega"
         ],
         "prevo": "Onix",
-        "evoType": "trade",
+        "evoItem": "Metal Alloy",
+        "evoType": "useItem",
         "evoCondition": "",
         "tier": "obtainable"
     },
@@ -7080,11 +7124,11 @@ exports.BattlePokedex = {
         "num": 208,
         "baseStats": {
             "hp": 75,
-            "atk": 125,
+            "atk": 135,
             "def": 230,
             "spe": 30,
-            "spa": 55,
-            "spd": 95
+            "spa": 45,
+            "spd": 105
         },
         "types": [
             "Steel",
@@ -7106,7 +7150,8 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Sand Force"
+            "0": "Heatproof",
+            "H": "Filter"
         },
         "color": "Gray",
         "name": "Steelix-Mega",
@@ -7144,7 +7189,7 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Insomnia",
-            "1": "Forewarn",
+            "1": "Bad Dreams",
             "H": "Inner Focus"
         },
         "color": "Yellow",
@@ -7159,15 +7204,16 @@ exports.BattlePokedex = {
     "hypno": {
         "num": 97,
         "baseStats": {
-            "hp": 85,
-            "atk": 73,
-            "def": 70,
-            "spe": 67,
-            "spa": 73,
+            "hp": 88,
+            "atk": 93,
+            "def": 83,
+            "spe": 87,
+            "spa": 93,
             "spd": 115
         },
         "types": [
-            "Psychic"
+            "Psychic",
+            "Dark"
         ],
         "evYields": {
             "spd": 2
@@ -7184,7 +7230,7 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Insomnia",
-            "1": "Forewarn",
+            "1": "Bad Dreams",
             "H": "Inner Focus"
         },
         "color": "Yellow",
@@ -7243,9 +7289,9 @@ exports.BattlePokedex = {
             "hp": 55,
             "atk": 130,
             "def": 115,
-            "spe": 75,
-            "spa": 50,
-            "spd": 50
+            "spe": 85,
+            "spa": 40,
+            "spd": 65
         },
         "types": [
             "Water"
@@ -7285,7 +7331,7 @@ exports.BattlePokedex = {
             "atk": 30,
             "def": 50,
             "spe": 100,
-            "spa": 55,
+            "spa": 75,
             "spd": 55
         },
         "types": [
@@ -7304,7 +7350,7 @@ exports.BattlePokedex = {
         "abilities": {
             "0": "Soundproof",
             "1": "Static",
-            "H": "Aftermath"
+            "H": "Reckless"
         },
         "color": "Red",
         "name": "Voltorb",
@@ -7326,10 +7372,10 @@ exports.BattlePokedex = {
         "num": 101,
         "baseStats": {
             "hp": 60,
-            "atk": 50,
+            "atk": 55,
             "def": 70,
             "spe": 150,
-            "spa": 80,
+            "spa": 95,
             "spd": 80
         },
         "types": [
@@ -7348,7 +7394,7 @@ exports.BattlePokedex = {
         "abilities": {
             "0": "Soundproof",
             "1": "Static",
-            "H": "Aftermath"
+            "H": "Reckless"
         },
         "color": "Red",
         "name": "Electrode",
@@ -7374,7 +7420,7 @@ exports.BattlePokedex = {
             "atk": 30,
             "def": 50,
             "spe": 100,
-            "spa": 55,
+            "spa": 75,
             "spd": 55
         },
         "types": [
@@ -7394,7 +7440,7 @@ exports.BattlePokedex = {
         "abilities": {
             "0": "Soundproof",
             "1": "Static",
-            "H": "Aftermath"
+            "H": "Reckless"
         },
         "color": "Red",
         "name": "Voltorb-Hisui",
@@ -7411,10 +7457,10 @@ exports.BattlePokedex = {
         "num": 101,
         "baseStats": {
             "hp": 60,
-            "atk": 50,
+            "atk": 55,
             "def": 70,
             "spe": 150,
-            "spa": 80,
+            "spa": 95,
             "spd": 80
         },
         "types": [
@@ -7434,7 +7480,7 @@ exports.BattlePokedex = {
         "abilities": {
             "0": "Soundproof",
             "1": "Static",
-            "H": "Aftermath"
+            "H": "Reckless"
         },
         "color": "Red",
         "name": "Electrode-Hisui",
@@ -7465,9 +7511,7 @@ exports.BattlePokedex = {
         "evYields": {
             "def": 1
         },
-        "items": {
-            "R": "Psychic Seed"
-        },
+        "items": {},
         "eggGroups": [
             "Grass"
         ],
@@ -7519,7 +7563,8 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Chlorophyll",
-            "H": "Harvest"
+            "1": "Harvest",
+            "H": "Solar Power"
         },
         "color": "Yellow",
         "name": "Exeggutor",
@@ -7542,9 +7587,9 @@ exports.BattlePokedex = {
         "num": 103,
         "baseStats": {
             "hp": 95,
-            "atk": 105,
+            "atk": 115,
             "def": 85,
-            "spe": 45,
+            "spe": 35,
             "spa": 125,
             "spd": 75
         },
@@ -7566,8 +7611,9 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Frisk",
-            "H": "Harvest"
+            "0": "Chlorophyll",
+            "1": "Harvest",
+            "H": "Solar Power"
         },
         "color": "Yellow",
         "name": "Exeggutor-Alola",
@@ -7607,8 +7653,8 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Rock Head",
-            "1": "Lightning Rod",
-            "H": "Battle Armor"
+            "1": "Battle Armor",
+            "H": "Lightning Rod"
         },
         "color": "Brown",
         "name": "Cubone",
@@ -7649,8 +7695,8 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Rock Head",
-            "1": "Lightning Rod",
-            "H": "Battle Armor"
+            "1": "Battle Armor",
+            "H": "Lightning Rod"
         },
         "color": "Brown",
         "name": "Marowak",
@@ -7702,8 +7748,8 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Cursed Body",
-            "1": "Lightning Rod",
-            "H": "Rock Head"
+            "1": "Rock Head",
+            "H": "Lightning Rod"
         },
         "color": "Purple",
         "name": "Marowak-Alola",
@@ -7781,7 +7827,6 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Guts",
-            "1": "Steadfast",
             "H": "Vital Spirit"
         },
         "color": "Purple",
@@ -7822,8 +7867,7 @@ exports.BattlePokedex = {
             "F": 0.0
         },
         "abilities": {
-            "0": "Limber",
-            "1": "Reckless",
+            "0": "Reckless",
             "H": "Unburden"
         },
         "color": "Brown",
@@ -7863,8 +7907,7 @@ exports.BattlePokedex = {
             "F": 0.0
         },
         "abilities": {
-            "0": "Keen Eye",
-            "1": "Iron Fist",
+            "0": "Iron Fist",
             "H": "Inner Focus"
         },
         "color": "Brown",
@@ -7905,8 +7948,7 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Intimidate",
-            "1": "Technician",
-            "H": "Steadfast"
+            "H": "Technician"
         },
         "color": "Brown",
         "name": "Hitmontop",
@@ -7963,7 +8005,7 @@ exports.BattlePokedex = {
     "lickilicky": {
         "num": 463,
         "baseStats": {
-            "hp": 110,
+            "hp": 120,
             "atk": 85,
             "def": 95,
             "spe": 50,
@@ -8033,8 +8075,7 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Levitate",
-            "1": "Neutralizing Gas",
-            "H": "Stench"
+            "H": "Neutralizing Gas"
         },
         "color": "Purple",
         "name": "Koffing",
@@ -8048,7 +8089,7 @@ exports.BattlePokedex = {
     "weezing": {
         "num": 110,
         "baseStats": {
-            "hp": 65,
+            "hp": 75,
             "atk": 90,
             "def": 120,
             "spe": 60,
@@ -8074,9 +8115,8 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "White Smoke",
-            "1": "Neutralizing Gas",
-            "H": "Stench"
+            "0": "Levitate",
+            "H": "Neutralizing Gas"
         },
         "color": "Purple",
         "name": "Weezing",
@@ -8098,7 +8138,7 @@ exports.BattlePokedex = {
     "weezinggalar": {
         "num": 110,
         "baseStats": {
-            "hp": 65,
+            "hp": 75,
             "atk": 90,
             "def": 120,
             "spe": 60,
@@ -8126,8 +8166,7 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Levitate",
-            "1": "Neutralizing Gas",
-            "H": "Misty Surge"
+            "H": "Neutralizing Gas"
         },
         "color": "Gray",
         "name": "Weezing-Galar",
@@ -8166,9 +8205,9 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Lightning Rod",
-            "1": "Rock Head",
-            "H": "Reckless"
+            "0": "Battle Armor",
+            "1": "Solid Rock",
+            "H": "Lightning Rod"
         },
         "color": "Gray",
         "name": "Rhyhorn",
@@ -8208,9 +8247,9 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Lightning Rod",
-            "1": "Rock Head",
-            "H": "Reckless"
+            "0": "Battle Armor",
+            "1": "Solid Rock",
+            "H": "Lightning Rod"
         },
         "color": "Gray",
         "name": "Rhydon",
@@ -8232,8 +8271,8 @@ exports.BattlePokedex = {
             "atk": 140,
             "def": 130,
             "spe": 40,
-            "spa": 55,
-            "spd": 55
+            "spa": 45,
+            "spd": 65
         },
         "types": [
             "Ground",
@@ -8254,16 +8293,17 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Lightning Rod",
+            "0": "Battle Armor",
             "1": "Solid Rock",
-            "H": "Reckless"
+            "H": "Lightning Rod"
         },
         "color": "Gray",
         "name": "Rhyperior",
         "heightm": 2.4,
         "weightkg": 282.8,
         "prevo": "Rhydon",
-        "evoType": "trade",
+        "evoItem": "Protector",
+        "evoType": "useItem",
         "evoCondition": "",
         "tier": "obtainable"
     },
@@ -8343,8 +8383,8 @@ exports.BattlePokedex = {
         "heightm": 1.1,
         "weightkg": 34.6,
         "prevo": "Happiny",
-        "evoLevel": 0,
-        "evoType": "level",
+        "evoItem": "Oval Stone",
+        "evoType": "useItem",
         "evoCondition": "",
         "evos": [
             "Blissey"
@@ -8355,11 +8395,11 @@ exports.BattlePokedex = {
         "num": 242,
         "baseStats": {
             "hp": 255,
-            "atk": 10,
-            "def": 10,
+            "atk": 30,
+            "def": 30,
             "spe": 55,
-            "spa": 75,
-            "spd": 135
+            "spa": 85,
+            "spd": 125
         },
         "types": [
             "Normal"
@@ -8502,9 +8542,9 @@ exports.BattlePokedex = {
             "F": 1.0
         },
         "abilities": {
-            "0": "Early Bird",
+            "0": "Inner Focus",
             "1": "Scrappy",
-            "H": "Inner Focus"
+            "H": "Early Bird"
         },
         "color": "Brown",
         "name": "Kangaskhan",
@@ -8689,7 +8729,8 @@ exports.BattlePokedex = {
         "heightm": 1.8,
         "weightkg": 152.0,
         "prevo": "Seadra",
-        "evoType": "trade",
+        "evoItem": "Dragon Scale",
+        "evoType": "useItem",
         "evoCondition": "",
         "tier": "obtainable"
     },
@@ -8723,8 +8764,8 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Swift Swim",
-            "1": "Water Veil",
-            "H": "Lightning Rod"
+            "1": "Lightning Rod",
+            "H": "Water Veil"
         },
         "color": "Red",
         "name": "Goldeen",
@@ -8741,12 +8782,13 @@ exports.BattlePokedex = {
             "hp": 80,
             "atk": 92,
             "def": 65,
-            "spe": 68,
-            "spa": 65,
+            "spe": 74,
+            "spa": 92,
             "spd": 80
         },
         "types": [
-            "Water"
+            "Water",
+            "Electric"
         ],
         "evYields": {
             "atk": 2
@@ -8765,8 +8807,8 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Swift Swim",
-            "1": "Water Veil",
-            "H": "Lightning Rod"
+            "1": "Lightning Rod",
+            "H": "Water Veil"
         },
         "color": "Red",
         "name": "Seaking",
@@ -8881,15 +8923,15 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Soundproof",
-            "1": "Filter",
-            "H": "Technician"
+            "H": "Misty Surge"
         },
         "color": "Pink",
         "name": "Mime Jr.",
         "heightm": 0.6,
         "weightkg": 13.0,
         "evos": [
-            "Mr. Mime"
+            "Mr. Mime",
+            "Mr. Mime-Galar"
         ],
         "tier": "unobtainable"
     },
@@ -8922,8 +8964,7 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Soundproof",
-            "1": "Filter",
-            "H": "Technician"
+            "H": "Misty Surge"
         },
         "color": "Pink",
         "name": "Mr. Mime",
@@ -8970,9 +9011,9 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Vital Spirit",
-            "1": "Screen Cleaner",
-            "H": "Ice Body"
+            "0": "Screen Cleaner",
+            "1": "Ice Body",
+            "H": "Vital Spirit"
         },
         "color": "White",
         "name": "Mr. Mime-Galar",
@@ -8980,6 +9021,10 @@ exports.BattlePokedex = {
         "weightkg": 56.8,
         "baseSpecies": "Mr. Mime",
         "forme": "Galar",
+        "prevo": "Mime Jr.",
+        "evoLevel": 0,
+        "evoType": "level",
+        "evoCondition": "",
         "evos": [
             "Mr. Rime"
         ],
@@ -8989,9 +9034,9 @@ exports.BattlePokedex = {
         "num": 866,
         "baseStats": {
             "hp": 80,
-            "atk": 85,
+            "atk": 65,
             "def": 75,
-            "spe": 70,
+            "spe": 91,
             "spa": 110,
             "spd": 100
         },
@@ -9013,16 +9058,16 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Tangled Feet",
-            "1": "Screen Cleaner",
-            "H": "Ice Body"
+            "0": "Screen Cleaner",
+            "1": "Ice Body",
+            "H": "Tangled Feet"
         },
         "color": "Purple",
         "name": "Mr. Rime",
         "heightm": 1.5,
         "weightkg": 58.2,
         "prevo": "Mr. Mime-Galar",
-        "evoLevel": 42,
+        "evoLevel": 34,
         "evoType": "level",
         "evoCondition": "",
         "tier": "unobtainable"
@@ -9055,9 +9100,8 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Swarm",
-            "1": "Technician",
-            "H": "Steadfast"
+            "0": "Technician",
+            "H": "Sharpness"
         },
         "color": "Green",
         "name": "Scyther",
@@ -9097,8 +9141,8 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Swarm",
-            "1": "Sniper",
+            "0": "Sniper",
+            "1": "Technician",
             "H": "Light Metal"
         },
         "color": "Red",
@@ -9113,7 +9157,8 @@ exports.BattlePokedex = {
             "Scizor-Mega"
         ],
         "prevo": "Scyther",
-        "evoType": "trade",
+        "evoItem": "Metal Alloy",
+        "evoType": "useItem",
         "evoCondition": "",
         "tier": "obtainable"
     },
@@ -9145,7 +9190,9 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Sniper"
+            "0": "Sniper",
+            "1": "Technician",
+            "H": "Heavy Metal"
         },
         "color": "Red",
         "name": "Scizor-Mega",
@@ -9183,9 +9230,9 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Swarm",
-            "1": "Sheer Force",
-            "H": "Sharpness"
+            "0": "Sniper",
+            "1": "Sharpness",
+            "H": "Sheer Force"
         },
         "color": "Brown",
         "name": "Kleavor",
@@ -9227,7 +9274,7 @@ exports.BattlePokedex = {
         "abilities": {
             "0": "Oblivious",
             "1": "Forewarn",
-            "H": "Hydration"
+            "H": "Dry Skin"
         },
         "color": "Pink",
         "name": "Smoochum",
@@ -9267,7 +9314,7 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Dancer",
-            "1": "Forewarn",
+            "1": "Freezing Melody",
             "H": "Dry Skin"
         },
         "color": "Red",
@@ -9395,15 +9442,16 @@ exports.BattlePokedex = {
             "F": 0.25
         },
         "abilities": {
-            "0": "Vital Spirit",
-            "H": "Iron Fist"
+            "0": "Iron Fist",
+            "H": "Vital Spirit"
         },
         "color": "Yellow",
         "name": "Electivire",
         "heightm": 1.8,
         "weightkg": 138.6,
         "prevo": "Electabuzz",
-        "evoType": "trade",
+        "evoItem": "Electirizer",
+        "evoType": "useItem",
         "evoCondition": "",
         "tier": "obtainable"
     },
@@ -9497,9 +9545,9 @@ exports.BattlePokedex = {
         "num": 467,
         "baseStats": {
             "hp": 75,
-            "atk": 95,
+            "atk": 85,
             "def": 67,
-            "spe": 102,
+            "spe": 93,
             "spa": 125,
             "spd": 95
         },
@@ -9523,16 +9571,16 @@ exports.BattlePokedex = {
             "F": 0.25
         },
         "abilities": {
-            "0": "Flame Body",
-            "1": "Quick Draw",
-            "H": "Mega Launcher"
+            "0": "Mega Launcher",
+            "H": "Quick Draw"
         },
         "color": "Red",
         "name": "Magmortar",
         "heightm": 1.6,
         "weightkg": 68.0,
         "prevo": "Magmar",
-        "evoType": "trade",
+        "evoItem": "Magmarizer",
+        "evoType": "useItem",
         "evoCondition": "",
         "tier": "obtainable"
     },
@@ -9646,7 +9694,7 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Intimidate",
-            "1": "Anger Point",
+            "1": "Rock Head",
             "H": "Sheer Force"
         },
         "color": "Brown",
@@ -9694,7 +9742,6 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Intimidate",
-            "1": "Anger Point",
             "H": "Sheer Force"
         },
         "color": "Black",
@@ -9734,7 +9781,6 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Intimidate",
-            "1": "Sheer Force",
             "H": "Blaze"
         },
         "color": "Black",
@@ -9774,7 +9820,6 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Intimidate",
-            "1": "Torrent",
             "H": "Sheer Force"
         },
         "color": "Black",
@@ -9837,7 +9882,7 @@ exports.BattlePokedex = {
         },
         "types": [
             "Water",
-            "Dragon"
+            "Flying"
         ],
         "evYields": {
             "atk": 2
@@ -9854,7 +9899,7 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Strong Jaw",
+            "0": "Intimidate",
             "H": "Moxie"
         },
         "color": "Blue",
@@ -9879,14 +9924,14 @@ exports.BattlePokedex = {
         "baseStats": {
             "hp": 95,
             "atk": 155,
-            "def": 99,
+            "def": 109,
             "spe": 81,
-            "spa": 80,
+            "spa": 70,
             "spd": 130
         },
         "types": [
             "Water",
-            "Dragon"
+            "Dark"
         ],
         "evYields": {
             "atk": 2
@@ -9944,9 +9989,8 @@ exports.BattlePokedex = {
             "F": 0.5
         },
         "abilities": {
-            "0": "Water Absorb",
-            "1": "Shell Armor",
-            "H": "Soundproof"
+            "0": "Shell Armor",
+            "H": "Water Absorb"
         },
         "color": "Blue",
         "name": "Lapras",
@@ -9957,12 +10001,12 @@ exports.BattlePokedex = {
     "ditto": {
         "num": 132,
         "baseStats": {
-            "hp": 48,
-            "atk": 48,
-            "def": 48,
-            "spe": 48,
-            "spa": 48,
-            "spd": 48
+            "hp": 78,
+            "atk": 78,
+            "def": 78,
+            "spe": 78,
+            "spa": 78,
+            "spd": 78
         },
         "types": [
             "Normal"
@@ -10109,7 +10153,7 @@ exports.BattlePokedex = {
             "F": 0.125
         },
         "abilities": {
-            "0": "Water Absorb",
+            "0": "Swift Swim",
             "H": "Drizzle"
         },
         "color": "Blue",
@@ -10149,7 +10193,8 @@ exports.BattlePokedex = {
             "F": 0.125
         },
         "abilities": {
-            "0": "Volt Absorb",
+            "0": "Inner Focus",
+            "1": "Quick Feet",
             "H": "Electric Surge"
         },
         "color": "Yellow",
@@ -10189,7 +10234,7 @@ exports.BattlePokedex = {
             "F": 0.125
         },
         "abilities": {
-            "0": "Flash Fire",
+            "0": "Toxic Boost",
             "H": "Drought"
         },
         "color": "Red",
@@ -10229,8 +10274,8 @@ exports.BattlePokedex = {
             "F": 0.125
         },
         "abilities": {
-            "0": "Magic Bounce",
-            "H": "Psychic Surge"
+            "0": "Synchronize",
+            "H": "Magic Bounce"
         },
         "color": "Purple",
         "name": "Espeon",
@@ -10269,8 +10314,8 @@ exports.BattlePokedex = {
             "F": 0.125
         },
         "abilities": {
-            "0": "Inner Focus",
-            "H": "Poison Touch"
+            "0": "Poison Touch",
+            "H": "Dark Aura"
         },
         "color": "Black",
         "name": "Umbreon",
@@ -10310,6 +10355,7 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Chlorophyll",
+            "1": "Sharpness",
             "H": "Grassy Surge"
         },
         "color": "Green",
@@ -10317,8 +10363,8 @@ exports.BattlePokedex = {
         "heightm": 1.0,
         "weightkg": 25.5,
         "prevo": "Eevee",
-        "evoLevel": 0,
-        "evoType": "level",
+        "evoItem": "Leaf Stone",
+        "evoType": "useItem",
         "evoCondition": "",
         "tier": "obtainable"
     },
@@ -10350,6 +10396,7 @@ exports.BattlePokedex = {
         },
         "abilities": {
             "0": "Slush Rush",
+            "1": "Ice Body",
             "H": "Snow Warning"
         },
         "color": "Blue",
@@ -10357,8 +10404,8 @@ exports.BattlePokedex = {
         "heightm": 0.8,
         "weightkg": 25.9,
         "prevo": "Eevee",
-        "evoLevel": 0,
-        "evoType": "level",
+        "evoItem": "Ice Stone",
+        "evoType": "useItem",
         "evoCondition": "",
         "tier": "obtainable"
     },
@@ -10389,8 +10436,9 @@ exports.BattlePokedex = {
             "F": 0.125
         },
         "abilities": {
-            "0": "Cute Charm",
-            "H": "Pixilate"
+            "0": "Serene Grace",
+            "1": "Pixilate",
+            "H": "Cute Charm"
         },
         "color": "Pink",
         "name": "Sylveon",

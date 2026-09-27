@@ -16964,6 +16964,145 @@ exports.BattleLearnsets = {
             ]
         }
     },
+    "victreebelmega": {
+        "learnset": {
+            "leaftornado": [
+                "L0",
+                "L1"
+            ],
+            "stockpile": [
+                "L1"
+            ],
+            "swallow": [
+                "L1"
+            ],
+            "spitup": [
+                "L1"
+            ],
+            "vinewhip": [
+                "L1"
+            ],
+            "sleeppowder": [
+                "L1"
+            ],
+            "sweetscent": [
+                "L1"
+            ],
+            "razorleaf": [
+                "L1"
+            ],
+            "growth": [
+                "L1"
+            ],
+            "wrap": [
+                "L1"
+            ],
+            "poisonpowder": [
+                "L1"
+            ],
+            "stunspore": [
+                "L1"
+            ],
+            "acid": [
+                "L1"
+            ],
+            "knockoff": [
+                "L1",
+                "M"
+            ],
+            "gastroacid": [
+                "L1"
+            ],
+            "poisonjab": [
+                "L1",
+                "L47"
+            ],
+            "slam": [
+                "L1"
+            ],
+            "leafblade": [
+                "L22"
+            ],
+            "barbbarrage": [
+                "L32"
+            ],
+            "leafstorm": [
+                "L44"
+            ],
+            "snaptrap": [
+                "L56"
+            ],
+            "bulletseed": [
+                "M"
+            ],
+            "cut": [
+                "M"
+            ],
+            "energyball": [
+                "M"
+            ],
+            "facade": [
+                "M"
+            ],
+            "flash": [
+                "M"
+            ],
+            "gigadrain": [
+                "M"
+            ],
+            "grassyglide": [
+                "M"
+            ],
+            "leechlife": [
+                "M"
+            ],
+            "powerwhip": [
+                "M"
+            ],
+            "protect": [
+                "M"
+            ],
+            "reflect": [
+                "M"
+            ],
+            "sludgebomb": [
+                "M"
+            ],
+            "swordsdance": [
+                "M"
+            ],
+            "thief": [
+                "M"
+            ],
+            "toxic": [
+                "M"
+            ],
+            "weatherball": [
+                "M"
+            ],
+            "bodyslam": [
+                "T"
+            ],
+            "doubleedge": [
+                "T"
+            ],
+            "endure": [
+                "T"
+            ],
+            "sleeptalk": [
+                "T"
+            ],
+            "snore": [
+                "T"
+            ],
+            "swagger": [
+                "T"
+            ],
+            "swift": [
+                "T"
+            ]
+        }
+    },
     "tentacool": {
         "learnset": {
             "poisonsting": [
