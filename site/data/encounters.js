@@ -528,29 +528,29 @@ exports.BattleLocationdex = {
             "baseRate": 4,
             "encs": [
                 {
-                    "species": "missingno",
-                    "minLvl": 5,
-                    "maxLvl": 5
+                    "species": "alomomola",
+                    "minLvl": 34,
+                    "maxLvl": 34
                 },
                 {
-                    "species": "missingno",
-                    "minLvl": 5,
-                    "maxLvl": 5
+                    "species": "alomomola",
+                    "minLvl": 34,
+                    "maxLvl": 34
                 },
                 {
-                    "species": "missingno",
-                    "minLvl": 5,
-                    "maxLvl": 5
+                    "species": "alomomola",
+                    "minLvl": 34,
+                    "maxLvl": 34
                 },
                 {
-                    "species": "missingno",
-                    "minLvl": 5,
-                    "maxLvl": 5
+                    "species": "alomomola",
+                    "minLvl": 34,
+                    "maxLvl": 34
                 },
                 {
-                    "species": "missingno",
-                    "minLvl": 5,
-                    "maxLvl": 5
+                    "species": "alomomola",
+                    "minLvl": 34,
+                    "maxLvl": 34
                 }
             ]
         },
@@ -559,52 +559,52 @@ exports.BattleLocationdex = {
             "baseRate": 30,
             "encs": [
                 {
-                    "species": "missingno",
+                    "species": "clamperl",
                     "minLvl": 5,
                     "maxLvl": 5
                 },
                 {
-                    "species": "missingno",
+                    "species": "seel",
                     "minLvl": 5,
                     "maxLvl": 5
                 },
                 {
-                    "species": "missingno",
+                    "species": "slowpoke",
                     "minLvl": 5,
                     "maxLvl": 5
                 },
                 {
-                    "species": "missingno",
+                    "species": "slowpokegalar",
                     "minLvl": 5,
                     "maxLvl": 5
                 },
                 {
-                    "species": "missingno",
+                    "species": "magikarp",
                     "minLvl": 5,
                     "maxLvl": 5
                 },
                 {
-                    "species": "missingno",
+                    "species": "feebas",
                     "minLvl": 5,
                     "maxLvl": 5
                 },
                 {
-                    "species": "missingno",
+                    "species": "rookidee",
                     "minLvl": 5,
                     "maxLvl": 5
                 },
                 {
-                    "species": "missingno",
+                    "species": "oshawott",
                     "minLvl": 5,
                     "maxLvl": 5
                 },
                 {
-                    "species": "missingno",
+                    "species": "oshawott",
                     "minLvl": 5,
                     "maxLvl": 5
                 },
                 {
-                    "species": "missingno",
+                    "species": "oshawott",
                     "minLvl": 5,
                     "maxLvl": 5
                 }
@@ -1427,63 +1427,63 @@ exports.BattleLocationdex = {
             "encs": [
                 {
                     "species": "swablu",
-                    "minLvl": 16,
-                    "maxLvl": 16
+                    "minLvl": 34,
+                    "maxLvl": 34
                 },
                 {
                     "species": "lotad",
-                    "minLvl": 16,
-                    "maxLvl": 16
+                    "minLvl": 34,
+                    "maxLvl": 34
                 },
                 {
                     "species": "swablu",
-                    "minLvl": 17,
-                    "maxLvl": 17
+                    "minLvl": 34,
+                    "maxLvl": 34
                 },
                 {
                     "species": "swablu",
-                    "minLvl": 15,
-                    "maxLvl": 15
+                    "minLvl": 34,
+                    "maxLvl": 34
                 },
                 {
                     "species": "lotad",
-                    "minLvl": 15,
-                    "maxLvl": 15
+                    "minLvl": 34,
+                    "maxLvl": 34
                 },
                 {
                     "species": "lombre",
-                    "minLvl": 16,
-                    "maxLvl": 16
+                    "minLvl": 34,
+                    "maxLvl": 34
                 },
                 {
                     "species": "lombre",
-                    "minLvl": 16,
-                    "maxLvl": 16
+                    "minLvl": 34,
+                    "maxLvl": 34
                 },
                 {
                     "species": "lombre",
-                    "minLvl": 18,
-                    "maxLvl": 18
+                    "minLvl": 34,
+                    "maxLvl": 34
                 },
                 {
                     "species": "seviper",
-                    "minLvl": 17,
-                    "maxLvl": 17
+                    "minLvl": 34,
+                    "maxLvl": 34
                 },
                 {
                     "species": "seviper",
-                    "minLvl": 15,
-                    "maxLvl": 15
+                    "minLvl": 34,
+                    "maxLvl": 34
                 },
                 {
                     "species": "seviper",
-                    "minLvl": 17,
-                    "maxLvl": 17
+                    "minLvl": 34,
+                    "maxLvl": 34
                 },
                 {
                     "species": "nuzleaf",
-                    "minLvl": 15,
-                    "maxLvl": 15
+                    "minLvl": 34,
+                    "maxLvl": 34
                 }
             ]
         },
