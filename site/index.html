@@ -137,9 +137,7 @@
       root.classList.add('dark-mode', 'theme-azure');
     } else if (name === 'dex') {
       root.classList.add('theme-dex');
-    } else {
-      root.classList.add('theme-dark');
-    }
+	}
     try { localStorage.setItem('porydex-theme', name); } catch {}
   }
 })();
