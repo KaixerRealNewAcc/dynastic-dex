@@ -8,6 +8,8 @@ window.OoushiiDexPatchNotes = [
       {
         heading: "Overview",
         items: [
+          "Custom AI Will be Added soon. AI doc is being worked on.",
+          "Credit: @Midnight on Discord (report AI questions/bugs to him)."
         ]
       },
       {
