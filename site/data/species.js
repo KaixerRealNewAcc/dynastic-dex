@@ -128,12 +128,10 @@ exports.BattlePokedex = {
         "weightkg": 100.0,
         "formeOrder": [
             "Venusaur",
-            "Venusaur-Mega",
-            "Venusaur-Gmax"
+            "Venusaur-Mega"
         ],
         "otherFormes": [
-            "Venusaur-Mega",
-            "Venusaur-Gmax"
+            "Venusaur-Mega"
         ],
         "prevo": "Ivysaur",
         "evoLevel": 36,
@@ -309,13 +307,11 @@ exports.BattlePokedex = {
         "formeOrder": [
             "Charizard",
             "Charizard-Mega-X",
-            "Charizard-Mega-Y",
-            "Charizard-Gmax"
+            "Charizard-Mega-Y"
         ],
         "otherFormes": [
             "Charizard-Mega-X",
-            "Charizard-Mega-Y",
-            "Charizard-Gmax"
+            "Charizard-Mega-Y"
         ],
         "prevo": "Charmeleon",
         "evoLevel": 36,
@@ -525,12 +521,10 @@ exports.BattlePokedex = {
         "weightkg": 85.5,
         "formeOrder": [
             "Blastoise",
-            "Blastoise-Mega",
-            "Blastoise-Gmax"
+            "Blastoise-Mega"
         ],
         "otherFormes": [
-            "Blastoise-Mega",
-            "Blastoise-Gmax"
+            "Blastoise-Mega"
         ],
         "prevo": "Wartortle",
         "evoLevel": 36,
@@ -696,13 +690,6 @@ exports.BattlePokedex = {
         "name": "Butterfree",
         "heightm": 1.1,
         "weightkg": 32.0,
-        "formeOrder": [
-            "Butterfree",
-            "Butterfree-Gmax"
-        ],
-        "otherFormes": [
-            "Butterfree-Gmax"
-        ],
         "prevo": "Metapod",
         "evoLevel": 10,
         "evoType": "level",
@@ -1590,7 +1577,6 @@ exports.BattlePokedex = {
             "Pikachu-Alola",
             "Pikachu-Partner",
             "Pikachu-World",
-            "Pikachu-Gmax",
             "Pikachu-Starter"
         ],
         "otherFormes": [
@@ -1608,7 +1594,6 @@ exports.BattlePokedex = {
             "Pikachu-Alola",
             "Pikachu-Partner",
             "Pikachu-World",
-            "Pikachu-Gmax",
             "Pikachu-Starter"
         ],
         "prevo": "Pichu",
@@ -4010,13 +3995,11 @@ exports.BattlePokedex = {
         "formeOrder": [
             "Meowth",
             "Meowth-Alola",
-            "Meowth-Galar",
-            "Meowth-Gmax"
+            "Meowth-Galar"
         ],
         "otherFormes": [
             "Meowth-Alola",
-            "Meowth-Galar",
-            "Meowth-Gmax"
+            "Meowth-Galar"
         ],
         "evos": [
             "Persian"
@@ -5106,13 +5089,6 @@ exports.BattlePokedex = {
         "name": "Machamp",
         "heightm": 1.6,
         "weightkg": 130.0,
-        "formeOrder": [
-            "Machamp",
-            "Machamp-Gmax"
-        ],
-        "otherFormes": [
-            "Machamp-Gmax"
-        ],
         "prevo": "Machoke",
         "evoType": "trade",
         "evoCondition": "",
@@ -6961,12 +6937,10 @@ exports.BattlePokedex = {
         "weightkg": 40.5,
         "formeOrder": [
             "Gengar",
-            "Gengar-Mega",
-            "Gengar-Gmax"
+            "Gengar-Mega"
         ],
         "otherFormes": [
-            "Gengar-Mega",
-            "Gengar-Gmax"
+            "Gengar-Mega"
         ],
         "prevo": "Haunter",
         "evoType": "trade",
@@ -7298,13 +7272,6 @@ exports.BattlePokedex = {
         "name": "Kingler",
         "heightm": 1.3,
         "weightkg": 60.0,
-        "formeOrder": [
-            "Kingler",
-            "Kingler-Gmax"
-        ],
-        "otherFormes": [
-            "Kingler-Gmax"
-        ],
         "prevo": "Krabby",
         "evoLevel": 28,
         "evoType": "level",
@@ -9985,13 +9952,6 @@ exports.BattlePokedex = {
         "name": "Lapras",
         "heightm": 2.5,
         "weightkg": 220.0,
-        "formeOrder": [
-            "Lapras",
-            "Lapras-Gmax"
-        ],
-        "otherFormes": [
-            "Lapras-Gmax"
-        ],
         "tier": "obtainable"
     },
     "ditto": {
@@ -10066,11 +10026,9 @@ exports.BattlePokedex = {
         "weightkg": 6.5,
         "formeOrder": [
             "Eevee",
-            "Eevee-Gmax",
             "Eevee-Starter"
         ],
         "otherFormes": [
-            "Eevee-Gmax",
             "Eevee-Starter"
         ],
         "evos": [
@@ -10890,13 +10848,6 @@ exports.BattlePokedex = {
         "name": "Snorlax",
         "heightm": 2.1,
         "weightkg": 460.0,
-        "formeOrder": [
-            "Snorlax",
-            "Snorlax-Gmax"
-        ],
-        "otherFormes": [
-            "Snorlax-Gmax"
-        ],
         "prevo": "Munchlax",
         "evoLevel": 0,
         "evoType": "level",
@@ -31674,59 +31625,11 @@ exports.BattlePokedex = {
         "name": "Garbodor",
         "heightm": 1.9,
         "weightkg": 107.3,
-        "formeOrder": [
-            "Garbodor",
-            "Garbodor-Gmax"
-        ],
-        "otherFormes": [
-            "Garbodor-Gmax"
-        ],
         "prevo": "Trubbish",
         "evoLevel": 36,
         "evoType": "level",
         "evoCondition": "",
         "tier": "obtainable"
-    },
-    "garbodorgmax": {
-        "num": 569,
-        "baseStats": {
-            "hp": 80,
-            "atk": 95,
-            "def": 82,
-            "spe": 75,
-            "spa": 60,
-            "spd": 82
-        },
-        "types": [
-            "Poison"
-        ],
-        "evYields": {
-            "atk": 2
-        },
-        "items": {
-            "R": "Black Sludge"
-        },
-        "eggGroups": [
-            "Mineral"
-        ],
-        "catchRate": 60,
-        "expYield": 166,
-        "genderRatio": {
-            "M": 0.5,
-            "F": 0.5
-        },
-        "abilities": {
-            "0": "Stench",
-            "1": "Weak Armor",
-            "H": "Aftermath"
-        },
-        "color": "Green",
-        "name": "Garbodor-Gmax",
-        "heightm": 21.0,
-        "weightkg": 0.0,
-        "baseSpecies": "Garbodor",
-        "forme": "Gmax",
-        "tier": "unobtainable"
     },
     "zorua": {
         "num": 570,
@@ -44731,47 +44634,6 @@ exports.BattlePokedex = {
         "name": "Melmetal",
         "heightm": 2.5,
         "weightkg": 800.0,
-        "formeOrder": [
-            "Melmetal",
-            "Melmetal-Gmax"
-        ],
-        "otherFormes": [
-            "Melmetal-Gmax"
-        ],
-        "tier": "unobtainable"
-    },
-    "melmetalgmax": {
-        "num": 809,
-        "baseStats": {
-            "hp": 135,
-            "atk": 143,
-            "def": 143,
-            "spe": 34,
-            "spa": 80,
-            "spd": 65
-        },
-        "types": [
-            "Steel"
-        ],
-        "evYields": {
-            "atk": 3
-        },
-        "items": {},
-        "eggGroups": [
-            "Undiscovered"
-        ],
-        "catchRate": 3,
-        "expYield": 300,
-        "gender": "N",
-        "abilities": {
-            "0": "Iron Fist"
-        },
-        "color": "Gray",
-        "name": "Melmetal-Gmax",
-        "heightm": 25.0,
-        "weightkg": 0.0,
-        "baseSpecies": "Melmetal",
-        "forme": "Gmax",
         "tier": "unobtainable"
     },
     "grookey": {
@@ -44895,56 +44757,10 @@ exports.BattlePokedex = {
         "name": "Rillaboom",
         "heightm": 2.1,
         "weightkg": 90.0,
-        "formeOrder": [
-            "Rillaboom",
-            "Rillaboom-Gmax"
-        ],
-        "otherFormes": [
-            "Rillaboom-Gmax"
-        ],
         "prevo": "Thwackey",
         "evoLevel": 35,
         "evoType": "level",
         "evoCondition": "",
-        "tier": "unobtainable"
-    },
-    "rillaboomgmax": {
-        "num": 812,
-        "baseStats": {
-            "hp": 100,
-            "atk": 125,
-            "def": 90,
-            "spe": 85,
-            "spa": 60,
-            "spd": 70
-        },
-        "types": [
-            "Grass"
-        ],
-        "evYields": {
-            "atk": 3
-        },
-        "items": {},
-        "eggGroups": [
-            "Field",
-            "Grass"
-        ],
-        "catchRate": 45,
-        "expYield": 265,
-        "genderRatio": {
-            "M": 0.875,
-            "F": 0.125
-        },
-        "abilities": {
-            "0": "Overgrow",
-            "H": "Grassy Surge"
-        },
-        "color": "Green",
-        "name": "Rillaboom-Gmax",
-        "heightm": 28.0,
-        "weightkg": 0.0,
-        "baseSpecies": "Rillaboom",
-        "forme": "Gmax",
         "tier": "unobtainable"
     },
     "scorbunny": {
@@ -45066,56 +44882,10 @@ exports.BattlePokedex = {
         "name": "Cinderace",
         "heightm": 1.4,
         "weightkg": 33.0,
-        "formeOrder": [
-            "Cinderace",
-            "Cinderace-Gmax"
-        ],
-        "otherFormes": [
-            "Cinderace-Gmax"
-        ],
         "prevo": "Raboot",
         "evoLevel": 35,
         "evoType": "level",
         "evoCondition": "",
-        "tier": "unobtainable"
-    },
-    "cinderacegmax": {
-        "num": 815,
-        "baseStats": {
-            "hp": 80,
-            "atk": 116,
-            "def": 75,
-            "spe": 119,
-            "spa": 65,
-            "spd": 75
-        },
-        "types": [
-            "Fire"
-        ],
-        "evYields": {
-            "spe": 3
-        },
-        "items": {},
-        "eggGroups": [
-            "Field",
-            "Human-Like"
-        ],
-        "catchRate": 45,
-        "expYield": 265,
-        "genderRatio": {
-            "M": 0.875,
-            "F": 0.125
-        },
-        "abilities": {
-            "0": "Limber",
-            "H": "Libero"
-        },
-        "color": "White",
-        "name": "Cinderace-Gmax",
-        "heightm": 27.0,
-        "weightkg": 0.0,
-        "baseSpecies": "Cinderace",
-        "forme": "Gmax",
         "tier": "unobtainable"
     },
     "sobble": {
@@ -45238,56 +45008,10 @@ exports.BattlePokedex = {
         "name": "Inteleon",
         "heightm": 1.9,
         "weightkg": 45.2,
-        "formeOrder": [
-            "Inteleon",
-            "Inteleon-Gmax"
-        ],
-        "otherFormes": [
-            "Inteleon-Gmax"
-        ],
         "prevo": "Drizzile",
         "evoLevel": 35,
         "evoType": "level",
         "evoCondition": "",
-        "tier": "unobtainable"
-    },
-    "inteleongmax": {
-        "num": 818,
-        "baseStats": {
-            "hp": 70,
-            "atk": 85,
-            "def": 65,
-            "spe": 120,
-            "spa": 125,
-            "spd": 65
-        },
-        "types": [
-            "Water"
-        ],
-        "evYields": {
-            "spe": 3
-        },
-        "items": {},
-        "eggGroups": [
-            "Water 1",
-            "Field"
-        ],
-        "catchRate": 45,
-        "expYield": 265,
-        "genderRatio": {
-            "M": 0.875,
-            "F": 0.125
-        },
-        "abilities": {
-            "0": "Torrent",
-            "H": "Sniper"
-        },
-        "color": "Blue",
-        "name": "Inteleon-Gmax",
-        "heightm": 40.0,
-        "weightkg": 0.0,
-        "baseSpecies": "Inteleon",
-        "forme": "Gmax",
         "tier": "unobtainable"
     },
     "skwovet": {
@@ -45493,58 +45217,11 @@ exports.BattlePokedex = {
         "name": "Corviknight",
         "heightm": 2.2,
         "weightkg": 75.0,
-        "formeOrder": [
-            "Corviknight",
-            "Corviknight-Gmax"
-        ],
-        "otherFormes": [
-            "Corviknight-Gmax"
-        ],
         "prevo": "Corvisquire",
         "evoLevel": 38,
         "evoType": "level",
         "evoCondition": "",
         "tier": "obtainable"
-    },
-    "corviknightgmax": {
-        "num": 823,
-        "baseStats": {
-            "hp": 98,
-            "atk": 87,
-            "def": 105,
-            "spe": 67,
-            "spa": 53,
-            "spd": 85
-        },
-        "types": [
-            "Flying",
-            "Steel"
-        ],
-        "evYields": {
-            "def": 3
-        },
-        "items": {},
-        "eggGroups": [
-            "Flying"
-        ],
-        "catchRate": 45,
-        "expYield": 248,
-        "genderRatio": {
-            "M": 0.5,
-            "F": 0.5
-        },
-        "abilities": {
-            "0": "Pressure",
-            "1": "Unnerve",
-            "H": "Flock"
-        },
-        "color": "Purple",
-        "name": "Corviknight-Gmax",
-        "heightm": 14.0,
-        "weightkg": 0.0,
-        "baseSpecies": "Corviknight",
-        "forme": "Gmax",
-        "tier": "unobtainable"
     },
     "blipbug": {
         "num": 824,
@@ -45671,60 +45348,11 @@ exports.BattlePokedex = {
         "name": "Orbeetle",
         "heightm": 0.4,
         "weightkg": 40.8,
-        "formeOrder": [
-            "Orbeetle",
-            "Orbeetle-Gmax"
-        ],
-        "otherFormes": [
-            "Orbeetle-Gmax"
-        ],
         "prevo": "Dottler",
         "evoLevel": 24,
         "evoType": "level",
         "evoCondition": "",
         "tier": "obtainable"
-    },
-    "orbeetlegmax": {
-        "num": 826,
-        "baseStats": {
-            "hp": 60,
-            "atk": 45,
-            "def": 110,
-            "spe": 90,
-            "spa": 80,
-            "spd": 120
-        },
-        "types": [
-            "Bug",
-            "Psychic"
-        ],
-        "evYields": {
-            "spd": 3
-        },
-        "items": {
-            "R": "Psychic Seed"
-        },
-        "eggGroups": [
-            "Bug"
-        ],
-        "catchRate": 45,
-        "expYield": 253,
-        "genderRatio": {
-            "M": 0.5,
-            "F": 0.5
-        },
-        "abilities": {
-            "0": "Swarm",
-            "1": "Frisk",
-            "H": "Telepathy"
-        },
-        "color": "Red",
-        "name": "Orbeetle-Gmax",
-        "heightm": 14.0,
-        "weightkg": 0.0,
-        "baseSpecies": "Orbeetle",
-        "forme": "Gmax",
-        "tier": "unobtainable"
     },
     "nickit": {
         "num": 827,
@@ -46045,59 +45673,11 @@ exports.BattlePokedex = {
         "name": "Drednaw",
         "heightm": 1.0,
         "weightkg": 115.5,
-        "formeOrder": [
-            "Drednaw",
-            "Drednaw-Gmax"
-        ],
-        "otherFormes": [
-            "Drednaw-Gmax"
-        ],
         "prevo": "Chewtle",
         "evoLevel": 22,
         "evoType": "level",
         "evoCondition": "",
         "tier": "obtainable"
-    },
-    "drednawgmax": {
-        "num": 834,
-        "baseStats": {
-            "hp": 90,
-            "atk": 115,
-            "def": 90,
-            "spe": 74,
-            "spa": 48,
-            "spd": 68
-        },
-        "types": [
-            "Water",
-            "Rock"
-        ],
-        "evYields": {
-            "atk": 2
-        },
-        "items": {},
-        "eggGroups": [
-            "Monster",
-            "Water 1"
-        ],
-        "catchRate": 75,
-        "expYield": 170,
-        "genderRatio": {
-            "M": 0.5,
-            "F": 0.5
-        },
-        "abilities": {
-            "0": "Strong Jaw",
-            "1": "Shell Armor",
-            "H": "Swift Swim"
-        },
-        "color": "Green",
-        "name": "Drednaw-Gmax",
-        "heightm": 24.0,
-        "weightkg": 0.0,
-        "baseSpecies": "Drednaw",
-        "forme": "Gmax",
-        "tier": "unobtainable"
     },
     "yamper": {
         "num": 835,
@@ -46301,11 +45881,9 @@ exports.BattlePokedex = {
         "weightkg": 310.5,
         "formeOrder": [
             "Coalossal",
-            "Coalossal-Gmax",
             "Coalossal-Mega"
         ],
         "otherFormes": [
-            "Coalossal-Gmax",
             "Coalossal-Mega"
         ],
         "prevo": "Carkol",
@@ -46313,46 +45891,6 @@ exports.BattlePokedex = {
         "evoType": "level",
         "evoCondition": "",
         "tier": "obtainable"
-    },
-    "coalossalgmax": {
-        "num": 839,
-        "baseStats": {
-            "hp": 110,
-            "atk": 80,
-            "def": 120,
-            "spe": 30,
-            "spa": 80,
-            "spd": 90
-        },
-        "types": [
-            "Rock",
-            "Fire"
-        ],
-        "evYields": {
-            "def": 3
-        },
-        "items": {},
-        "eggGroups": [
-            "Mineral"
-        ],
-        "catchRate": 45,
-        "expYield": 255,
-        "genderRatio": {
-            "M": 0.5,
-            "F": 0.5
-        },
-        "abilities": {
-            "0": "Steam Engine",
-            "1": "Flame Body",
-            "H": "Flash Fire"
-        },
-        "color": "Black",
-        "name": "Coalossal-Gmax",
-        "heightm": 42.0,
-        "weightkg": 0.0,
-        "baseSpecies": "Coalossal",
-        "forme": "Gmax",
-        "tier": "unobtainable"
     },
     "coalossalmega": {
         "num": 839,
@@ -46473,59 +46011,11 @@ exports.BattlePokedex = {
         "name": "Flapple",
         "heightm": 0.3,
         "weightkg": 1.0,
-        "formeOrder": [
-            "Flapple",
-            "Flapple-Gmax"
-        ],
-        "otherFormes": [
-            "Flapple-Gmax"
-        ],
         "prevo": "Applin",
         "evoItem": "Tart Apple",
         "evoType": "useItem",
         "evoCondition": "",
         "tier": "obtainable"
-    },
-    "flapplegmax": {
-        "num": 841,
-        "baseStats": {
-            "hp": 70,
-            "atk": 110,
-            "def": 80,
-            "spe": 70,
-            "spa": 95,
-            "spd": 60
-        },
-        "types": [
-            "Grass",
-            "Dragon"
-        ],
-        "evYields": {
-            "atk": 2
-        },
-        "items": {},
-        "eggGroups": [
-            "Grass",
-            "Dragon"
-        ],
-        "catchRate": 45,
-        "expYield": 170,
-        "genderRatio": {
-            "M": 0.5,
-            "F": 0.5
-        },
-        "abilities": {
-            "0": "Ripen",
-            "1": "Gluttony",
-            "H": "Hustle"
-        },
-        "color": "Green",
-        "name": "Flapple-Gmax",
-        "heightm": 24.0,
-        "weightkg": 0.0,
-        "baseSpecies": "Flapple",
-        "forme": "Gmax",
-        "tier": "unobtainable"
     },
     "appletun": {
         "num": 842,
@@ -46564,59 +46054,11 @@ exports.BattlePokedex = {
         "name": "Appletun",
         "heightm": 0.4,
         "weightkg": 13.0,
-        "formeOrder": [
-            "Appletun",
-            "Appletun-Gmax"
-        ],
-        "otherFormes": [
-            "Appletun-Gmax"
-        ],
         "prevo": "Applin",
         "evoItem": "Sweet Apple",
         "evoType": "useItem",
         "evoCondition": "",
         "tier": "obtainable"
-    },
-    "appletungmax": {
-        "num": 842,
-        "baseStats": {
-            "hp": 110,
-            "atk": 85,
-            "def": 80,
-            "spe": 30,
-            "spa": 100,
-            "spd": 80
-        },
-        "types": [
-            "Grass",
-            "Dragon"
-        ],
-        "evYields": {
-            "hp": 2
-        },
-        "items": {},
-        "eggGroups": [
-            "Grass",
-            "Dragon"
-        ],
-        "catchRate": 45,
-        "expYield": 170,
-        "genderRatio": {
-            "M": 0.5,
-            "F": 0.5
-        },
-        "abilities": {
-            "0": "Ripen",
-            "1": "Gluttony",
-            "H": "Thick Fat"
-        },
-        "color": "Green",
-        "name": "Appletun-Gmax",
-        "heightm": 24.0,
-        "weightkg": 0.0,
-        "baseSpecies": "Appletun",
-        "forme": "Gmax",
-        "tier": "unobtainable"
     },
     "dipplin": {
         "num": 1011,
@@ -46784,58 +46226,11 @@ exports.BattlePokedex = {
         "name": "Sandaconda",
         "heightm": 3.8,
         "weightkg": 65.5,
-        "formeOrder": [
-            "Sandaconda",
-            "Sandaconda-Gmax"
-        ],
-        "otherFormes": [
-            "Sandaconda-Gmax"
-        ],
         "prevo": "Silicobra",
         "evoLevel": 36,
         "evoType": "level",
         "evoCondition": "",
         "tier": "obtainable"
-    },
-    "sandacondagmax": {
-        "num": 844,
-        "baseStats": {
-            "hp": 72,
-            "atk": 107,
-            "def": 125,
-            "spe": 71,
-            "spa": 65,
-            "spd": 70
-        },
-        "types": [
-            "Ground"
-        ],
-        "evYields": {
-            "def": 2
-        },
-        "items": {},
-        "eggGroups": [
-            "Field",
-            "Dragon"
-        ],
-        "catchRate": 120,
-        "expYield": 179,
-        "genderRatio": {
-            "M": 0.5,
-            "F": 0.5
-        },
-        "abilities": {
-            "0": "Sand Spit",
-            "1": "Shed Skin",
-            "H": "Sand Veil"
-        },
-        "color": "Green",
-        "name": "Sandaconda-Gmax",
-        "heightm": 22.0,
-        "weightkg": 0.0,
-        "baseSpecies": "Sandaconda",
-        "forme": "Gmax",
-        "tier": "unobtainable"
     },
     "cramorant": {
         "num": 845,
@@ -47124,60 +46519,16 @@ exports.BattlePokedex = {
         "baseForme": "Amped",
         "formeOrder": [
             "Toxtricity",
-            "Toxtricity-Low-Key",
-            "Toxtricity-Gmax",
-            "Toxtricity-Low-Key-Gmax"
+            "Toxtricity-Low-Key"
         ],
         "otherFormes": [
-            "Toxtricity-Low-Key",
-            "Toxtricity-Gmax",
-            "Toxtricity-Low-Key-Gmax"
+            "Toxtricity-Low-Key"
         ],
         "prevo": "Toxel",
         "evoLevel": 30,
         "evoType": "level",
         "evoCondition": "",
         "tier": "obtainable"
-    },
-    "toxtricitygmax": {
-        "num": 849,
-        "baseStats": {
-            "hp": 75,
-            "atk": 98,
-            "def": 70,
-            "spe": 75,
-            "spa": 114,
-            "spd": 70
-        },
-        "types": [
-            "Electric",
-            "Poison"
-        ],
-        "evYields": {
-            "spa": 2
-        },
-        "items": {},
-        "eggGroups": [
-            "Human-Like"
-        ],
-        "catchRate": 45,
-        "expYield": 176,
-        "genderRatio": {
-            "M": 0.5,
-            "F": 0.5
-        },
-        "abilities": {
-            "0": "Punk Rock",
-            "1": "Plus",
-            "H": "Technician"
-        },
-        "color": "Purple",
-        "name": "Toxtricity-Gmax",
-        "heightm": 24.0,
-        "weightkg": 0.0,
-        "baseSpecies": "Toxtricity",
-        "forme": "Gmax",
-        "tier": "unobtainable"
     },
     "toxtricitylowkey": {
         "num": 849,
@@ -47222,46 +46573,6 @@ exports.BattlePokedex = {
         "evoType": "level",
         "evoCondition": "",
         "tier": "obtainable"
-    },
-    "toxtricitylowkeygmax": {
-        "num": 849,
-        "baseStats": {
-            "hp": 75,
-            "atk": 98,
-            "def": 70,
-            "spe": 75,
-            "spa": 114,
-            "spd": 70
-        },
-        "types": [
-            "Electric",
-            "Poison"
-        ],
-        "evYields": {
-            "spa": 2
-        },
-        "items": {},
-        "eggGroups": [
-            "Human-Like"
-        ],
-        "catchRate": 45,
-        "expYield": 176,
-        "genderRatio": {
-            "M": 0.5,
-            "F": 0.5
-        },
-        "abilities": {
-            "0": "Punk Rock",
-            "1": "Minus",
-            "H": "Technician"
-        },
-        "color": "Purple",
-        "name": "Toxtricity-Low-Key-Gmax",
-        "heightm": 24.0,
-        "weightkg": 0.0,
-        "baseSpecies": "Toxtricity",
-        "forme": "Low-Key-Gmax",
-        "tier": "unobtainable"
     },
     "sizzlipede": {
         "num": 850,
@@ -47340,58 +46651,11 @@ exports.BattlePokedex = {
         "name": "Centiskorch",
         "heightm": 3.0,
         "weightkg": 120.0,
-        "formeOrder": [
-            "Centiskorch",
-            "Centiskorch-Gmax"
-        ],
-        "otherFormes": [
-            "Centiskorch-Gmax"
-        ],
         "prevo": "Sizzlipede",
         "evoLevel": 28,
         "evoType": "level",
         "evoCondition": "",
         "tier": "obtainable"
-    },
-    "centiskorchgmax": {
-        "num": 851,
-        "baseStats": {
-            "hp": 100,
-            "atk": 115,
-            "def": 65,
-            "spe": 65,
-            "spa": 90,
-            "spd": 90
-        },
-        "types": [
-            "Fire",
-            "Bug"
-        ],
-        "evYields": {
-            "atk": 2
-        },
-        "items": {},
-        "eggGroups": [
-            "Bug"
-        ],
-        "catchRate": 75,
-        "expYield": 184,
-        "genderRatio": {
-            "M": 0.5,
-            "F": 0.5
-        },
-        "abilities": {
-            "0": "Flash Fire",
-            "1": "White Smoke",
-            "H": "Flame Body"
-        },
-        "color": "Red",
-        "name": "Centiskorch-Gmax",
-        "heightm": 75.0,
-        "weightkg": 0.0,
-        "baseSpecies": "Centiskorch",
-        "forme": "Gmax",
-        "tier": "unobtainable"
     },
     "clobbopus": {
         "num": 852,
@@ -47764,58 +47028,11 @@ exports.BattlePokedex = {
         "name": "Hatterene",
         "heightm": 2.1,
         "weightkg": 5.1,
-        "formeOrder": [
-            "Hatterene",
-            "Hatterene-Gmax"
-        ],
-        "otherFormes": [
-            "Hatterene-Gmax"
-        ],
         "prevo": "Hattrem",
         "evoLevel": 42,
         "evoType": "level",
         "evoCondition": "",
         "tier": "obtainable"
-    },
-    "hatterenegmax": {
-        "num": 858,
-        "baseStats": {
-            "hp": 57,
-            "atk": 90,
-            "def": 95,
-            "spe": 29,
-            "spa": 136,
-            "spd": 103
-        },
-        "types": [
-            "Psychic",
-            "Fairy"
-        ],
-        "evYields": {
-            "spa": 3
-        },
-        "items": {},
-        "eggGroups": [
-            "Fairy"
-        ],
-        "catchRate": 45,
-        "expYield": 255,
-        "genderRatio": {
-            "M": 0.0,
-            "F": 1.0
-        },
-        "abilities": {
-            "0": "Healer",
-            "1": "Anticipation",
-            "H": "Magic Bounce"
-        },
-        "color": "Pink",
-        "name": "Hatterene-Gmax",
-        "heightm": 26.0,
-        "weightkg": 0.0,
-        "baseSpecies": "Hatterene",
-        "forme": "Gmax",
-        "tier": "unobtainable"
     },
     "impidimp": {
         "num": 859,
@@ -47942,58 +47159,10 @@ exports.BattlePokedex = {
         "name": "Grimmsnarl",
         "heightm": 1.5,
         "weightkg": 61.0,
-        "formeOrder": [
-            "Grimmsnarl",
-            "Grimmsnarl-Gmax"
-        ],
-        "otherFormes": [
-            "Grimmsnarl-Gmax"
-        ],
         "prevo": "Morgrem",
         "evoLevel": 42,
         "evoType": "level",
         "evoCondition": "",
-        "tier": "unobtainable"
-    },
-    "grimmsnarlgmax": {
-        "num": 861,
-        "baseStats": {
-            "hp": 95,
-            "atk": 120,
-            "def": 65,
-            "spe": 60,
-            "spa": 95,
-            "spd": 75
-        },
-        "types": [
-            "Dark",
-            "Fairy"
-        ],
-        "evYields": {
-            "atk": 3
-        },
-        "items": {},
-        "eggGroups": [
-            "Fairy",
-            "Human-Like"
-        ],
-        "catchRate": 45,
-        "expYield": 255,
-        "genderRatio": {
-            "M": 1.0,
-            "F": 0.0
-        },
-        "abilities": {
-            "0": "Prankster",
-            "1": "Frisk",
-            "H": "Pickpocket"
-        },
-        "color": "Purple",
-        "name": "Grimmsnarl-Gmax",
-        "heightm": 32.0,
-        "weightkg": 0.0,
-        "baseSpecies": "Grimmsnarl",
-        "forme": "Gmax",
         "tier": "unobtainable"
     },
     "milcery": {
@@ -48135,8 +47304,7 @@ exports.BattlePokedex = {
             "Alcremie-Ribbon-Salted-Cream",
             "Alcremie-Ribbon-Ruby-Swirl",
             "Alcremie-Ribbon-Caramel-Swirl",
-            "Alcremie-Ribbon-Rainbow-Swirl",
-            "Alcremie-Gmax"
+            "Alcremie-Ribbon-Rainbow-Swirl"
         ],
         "cosmeticFormes": [
             "Alcremie-Strawberry-Vanilla-Cream",
@@ -48210,45 +47378,6 @@ exports.BattlePokedex = {
         "evoLevel": 0,
         "evoType": "level",
         "evoCondition": "",
-        "tier": "unobtainable"
-    },
-    "alcremiegmax": {
-        "num": 869,
-        "baseStats": {
-            "hp": 65,
-            "atk": 60,
-            "def": 75,
-            "spe": 64,
-            "spa": 110,
-            "spd": 121
-        },
-        "types": [
-            "Fairy"
-        ],
-        "evYields": {
-            "spd": 2
-        },
-        "items": {},
-        "eggGroups": [
-            "Fairy",
-            "Amorphous"
-        ],
-        "catchRate": 100,
-        "expYield": 173,
-        "genderRatio": {
-            "M": 0.0,
-            "F": 1.0
-        },
-        "abilities": {
-            "0": "Sweet Veil",
-            "H": "Well-Baked Body"
-        },
-        "color": "Yellow",
-        "name": "Alcremie-Gmax",
-        "heightm": 0.3,
-        "weightkg": 0.5,
-        "baseSpecies": "Alcremie",
-        "forme": "Gmax",
         "tier": "unobtainable"
     },
     "falinks": {
@@ -48778,58 +47907,10 @@ exports.BattlePokedex = {
         "name": "Copperajah",
         "heightm": 3.0,
         "weightkg": 650.0,
-        "formeOrder": [
-            "Copperajah",
-            "Copperajah-Gmax"
-        ],
-        "otherFormes": [
-            "Copperajah-Gmax"
-        ],
         "prevo": "Cufant",
         "evoLevel": 34,
         "evoType": "level",
         "evoCondition": "",
-        "tier": "unobtainable"
-    },
-    "copperajahgmax": {
-        "num": 879,
-        "baseStats": {
-            "hp": 122,
-            "atk": 130,
-            "def": 69,
-            "spe": 30,
-            "spa": 80,
-            "spd": 69
-        },
-        "types": [
-            "Steel"
-        ],
-        "evYields": {
-            "atk": 2
-        },
-        "items": {
-            "R": "Lagging Tail"
-        },
-        "eggGroups": [
-            "Field",
-            "Mineral"
-        ],
-        "catchRate": 90,
-        "expYield": 175,
-        "genderRatio": {
-            "M": 0.5,
-            "F": 0.5
-        },
-        "abilities": {
-            "0": "Sheer Force",
-            "H": "Heavy Metal"
-        },
-        "color": "Green",
-        "name": "Copperajah-Gmax",
-        "heightm": 23.0,
-        "weightkg": 0.0,
-        "baseSpecies": "Copperajah",
-        "forme": "Gmax",
         "tier": "unobtainable"
     },
     "dracozolt": {
@@ -49008,57 +48089,9 @@ exports.BattlePokedex = {
         "name": "Duraludon",
         "heightm": 1.8,
         "weightkg": 40.0,
-        "formeOrder": [
-            "Duraludon",
-            "Duraludon-Gmax"
-        ],
-        "otherFormes": [
-            "Duraludon-Gmax"
-        ],
         "evos": [
             "Archaludon"
         ],
-        "tier": "unobtainable"
-    },
-    "duraludongmax": {
-        "num": 884,
-        "baseStats": {
-            "hp": 70,
-            "atk": 95,
-            "def": 115,
-            "spe": 85,
-            "spa": 120,
-            "spd": 50
-        },
-        "types": [
-            "Steel",
-            "Dragon"
-        ],
-        "evYields": {
-            "spa": 2
-        },
-        "items": {},
-        "eggGroups": [
-            "Mineral",
-            "Dragon"
-        ],
-        "catchRate": 45,
-        "expYield": 187,
-        "genderRatio": {
-            "M": 0.5,
-            "F": 0.5
-        },
-        "abilities": {
-            "0": "Light Metal",
-            "1": "Heavy Metal",
-            "H": "Stalwart"
-        },
-        "color": "White",
-        "name": "Duraludon-Gmax",
-        "heightm": 43.0,
-        "weightkg": 0.0,
-        "baseSpecies": "Duraludon",
-        "forme": "Gmax",
         "tier": "unobtainable"
     },
     "archaludon": {
@@ -49536,56 +48569,14 @@ exports.BattlePokedex = {
         "baseForme": "Single-Strike",
         "formeOrder": [
             "Urshifu",
-            "Urshifu-Rapid-Strike",
-            "Urshifu-Single-Strike-Gmax",
-            "Urshifu-Rapid-Strike-Gmax"
+            "Urshifu-Rapid-Strike"
         ],
         "otherFormes": [
-            "Urshifu-Rapid-Strike",
-            "Urshifu-Single-Strike-Gmax",
-            "Urshifu-Rapid-Strike-Gmax"
+            "Urshifu-Rapid-Strike"
         ],
         "prevo": "Kubfu",
         "evoType": "other",
         "evoCondition": "take 49 or more damage and walk under stone sculpture in Dusty Bowl",
-        "tier": "unobtainable"
-    },
-    "urshifusinglestrikegmax": {
-        "num": 892,
-        "baseStats": {
-            "hp": 100,
-            "atk": 130,
-            "def": 100,
-            "spe": 97,
-            "spa": 63,
-            "spd": 60
-        },
-        "types": [
-            "Fighting",
-            "Dark"
-        ],
-        "evYields": {
-            "atk": 3
-        },
-        "items": {},
-        "eggGroups": [
-            "Undiscovered"
-        ],
-        "catchRate": 3,
-        "expYield": 275,
-        "genderRatio": {
-            "M": 0.875,
-            "F": 0.125
-        },
-        "abilities": {
-            "0": "Unseen Fist"
-        },
-        "color": "Gray",
-        "name": "Urshifu-Single-Strike-Gmax",
-        "heightm": 29.0,
-        "weightkg": 0.0,
-        "baseSpecies": "Urshifu",
-        "forme": "Single-Strike-Gmax",
         "tier": "unobtainable"
     },
     "urshifurapidstrike": {
@@ -49627,44 +48618,6 @@ exports.BattlePokedex = {
         "prevo": "Kubfu",
         "evoType": "other",
         "evoCondition": "take 49 or more damage and walk under stone sculpture in Dusty Bowl",
-        "tier": "unobtainable"
-    },
-    "urshifurapidstrikegmax": {
-        "num": 892,
-        "baseStats": {
-            "hp": 100,
-            "atk": 130,
-            "def": 100,
-            "spe": 97,
-            "spa": 63,
-            "spd": 60
-        },
-        "types": [
-            "Fighting",
-            "Water"
-        ],
-        "evYields": {
-            "atk": 3
-        },
-        "items": {},
-        "eggGroups": [
-            "Undiscovered"
-        ],
-        "catchRate": 3,
-        "expYield": 275,
-        "genderRatio": {
-            "M": 0.875,
-            "F": 0.125
-        },
-        "abilities": {
-            "0": "Unseen Fist"
-        },
-        "color": "Gray",
-        "name": "Urshifu-Rapid-Strike-Gmax",
-        "heightm": 26.0,
-        "weightkg": 0.0,
-        "baseSpecies": "Urshifu",
-        "forme": "Rapid-Strike-Gmax",
         "tier": "unobtainable"
     },
     "zarude": {
