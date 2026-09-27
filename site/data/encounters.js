@@ -611,6 +611,77 @@ exports.BattleLocationdex = {
             ]
         }
     },
+    "petalburgwoodsmorning": {
+        "name": "Petalburg Woods - Morning",
+        "land": {
+            "baseRate": 10,
+            "encs": [
+                {
+                    "species": "nincada",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "poochyena",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "trapinch",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "shroomish",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "bellsprout",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "weedle",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "ledyba",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "ekans",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "cubone",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "exeggcute",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "gastly",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "gastly",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                }
+            ]
+        },
+        "surf": {},
+        "rock": {},
+        "fish": {}
+    },
     "route105morning": {
         "name": "Route 105 - Morning",
         "land": {},
@@ -2240,77 +2311,6 @@ exports.BattleLocationdex = {
                 }
             ]
         }
-    },
-    "petalburgwoodsmorning": {
-        "name": "Petalburg Woods - Morning",
-        "land": {
-            "baseRate": 10,
-            "encs": [
-                {
-                    "species": "nincada",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "poochyena",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "trapinch",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "shroomish",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "bellsprout",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "weedle",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "ledyba",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "ekans",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "cubone",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "exeggcute",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "gastly",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "gastly",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                }
-            ]
-        },
-        "surf": {},
-        "rock": {},
-        "fish": {}
     },
     "rusturftunnelmorning": {
         "name": "Rusturf Tunnel - Morning",
