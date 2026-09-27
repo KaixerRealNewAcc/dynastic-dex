@@ -3,6 +3,7 @@ Absol
 Accelgor
 Aggron
 Aipom
+Alomomola
 Altaria
 Amaura
 Ambipom
@@ -107,6 +108,7 @@ Darmanitan
 Darumaka
 Dedenne
 Delphox
+Dewgong
 Dewott
 Diglett-Alola
 Dipplin
@@ -160,6 +162,7 @@ Exploud
 Farfetch'd
 Farfetch'd-Galar
 Farigiraf
+Feebas
 Fennekin
 Feraligatr
 Ferroseed
@@ -349,6 +352,7 @@ Metapod
 Mienfoo
 Mienshao
 Mightyena
+Milotic
 Miltank
 Minccino
 Minior
@@ -481,6 +485,7 @@ Seadra
 Seaking
 Sealeo
 Seedot
+Seel
 Seismitoad
 Sentret
 Serperior

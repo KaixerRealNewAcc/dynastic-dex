@@ -6539,7 +6539,7 @@ exports.BattlePokedex = {
         "evos": [
             "Dewgong"
         ],
-        "tier": "unobtainable"
+        "tier": "obtainable"
     },
     "dewgong": {
         "num": 87,
@@ -6582,7 +6582,7 @@ exports.BattlePokedex = {
         "evoLevel": 34,
         "evoType": "level",
         "evoCondition": "",
-        "tier": "unobtainable"
+        "tier": "obtainable"
     },
     "grimer": {
         "num": 88,
@@ -21142,7 +21142,7 @@ exports.BattlePokedex = {
         "evos": [
             "Milotic"
         ],
-        "tier": "unobtainable"
+        "tier": "obtainable"
     },
     "milotic": {
         "num": 350,
@@ -21184,7 +21184,7 @@ exports.BattlePokedex = {
         "evoLevel": 0,
         "evoType": "level",
         "evoCondition": "",
-        "tier": "unobtainable"
+        "tier": "obtainable"
     },
     "castform": {
         "num": 351,
@@ -32829,7 +32829,7 @@ exports.BattlePokedex = {
         "name": "Alomomola",
         "heightm": 1.2,
         "weightkg": 31.6,
-        "tier": "unobtainable"
+        "tier": "obtainable"
     },
     "joltik": {
         "num": 595,

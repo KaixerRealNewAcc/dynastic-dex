@@ -267,7 +267,7 @@ exports.BattleLocationdex = {
             "baseRate": 10,
             "encs": [
                 {
-                    "species": "",
+                    "species": "snover",
                     "minLvl": 5,
                     "maxLvl": 5
                 },
