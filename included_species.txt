@@ -27,6 +27,9 @@ Baltoy
 Banette
 Barbaracle
 Barboach
+Basculegion
+Basculegion-F
+Basculin-White-Striped
 Bayleef
 Beedrill
 Beheeyem
@@ -77,6 +80,7 @@ Clamperl
 Claydol
 Clefable
 Clefairy
+Cleffa
 Clobbopus
 Cloyster
 Coalossal
@@ -202,6 +206,7 @@ Golduck
 Golem
 Golem-Alola
 Golett
+Golisopod
 Golurk
 Goodra
 Goomy
@@ -216,6 +221,7 @@ Grapploct
 Graveler
 Graveler-Alola
 Greninja
+Grimer-Alola
 Groudon
 Grovyle
 Growlithe
@@ -279,6 +285,7 @@ Kyogre
 Lairon
 Lampent
 Lanturn
+Lapras
 Larvesta
 Larvitar
 Leafeon
@@ -350,7 +357,9 @@ Misdreavus
 Mismagius
 Morelull
 Morpeko
+Mr. Mime
 Mudkip
+Muk-Alola
 Munchlax
 Munna
 Murkrow
@@ -466,6 +475,7 @@ Scizor
 Scolipede
 Scrafty
 Scraggy
+Scream Tail
 Scyther
 Seadra
 Seaking
@@ -501,8 +511,11 @@ Slaking
 Slakoth
 Sliggoo
 Slowbro
+Slowbro-Galar
 Slowking
+Slowking-Galar
 Slowpoke
+Slowpoke-Galar
 Slugma
 Slurpuff
 Smoliv
@@ -565,6 +578,8 @@ Tinkaton
 Tinkatuff
 Tirtouga
 Togedemaru
+Togekiss
+Togetic
 Torchic
 Torkoal
 Totodile
@@ -592,6 +607,7 @@ Ursaluna
 Ursaring
 Vaporeon
 Varoom
+Veluza
 Venipede
 Vespiquen
 Vibrava
@@ -617,6 +633,7 @@ Weepinbell
 Whirlipede
 Whiscash
 Whismur
+Wimpod
 Wingull
 Wobbuffet
 Woobat

@@ -386,77 +386,6 @@ exports.BattleLocationdex = {
             ]
         }
     },
-    "alteringcavemorning": {
-        "name": "Altering Cave - Morning",
-        "land": {
-            "baseRate": 10,
-            "encs": [
-                {
-                    "species": "timburr",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "pumpkaboo",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "varoom",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "sandshrew",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "gothita",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "geodude",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "karrablast",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "nickit",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "sandshrew",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "tinkatink",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "goomy",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "goomy",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                }
-            ]
-        },
-        "surf": {},
-        "rock": {},
-        "fish": {}
-    },
     "route102morning": {
         "name": "Route 102 - Morning",
         "land": {
@@ -595,560 +524,92 @@ exports.BattleLocationdex = {
                 }
             ]
         },
-        "surf": {},
-        "rock": {},
-        "fish": {}
-    },
-    "petalburgwoodsmorning": {
-        "name": "Petalburg Woods - Morning",
-        "land": {
-            "baseRate": 10,
+        "surf": {
+            "baseRate": 4,
             "encs": [
                 {
-                    "species": "nincada",
+                    "species": "missingno",
                     "minLvl": 5,
                     "maxLvl": 5
                 },
                 {
-                    "species": "poochyena",
+                    "species": "missingno",
                     "minLvl": 5,
                     "maxLvl": 5
                 },
                 {
-                    "species": "trapinch",
+                    "species": "missingno",
                     "minLvl": 5,
                     "maxLvl": 5
                 },
                 {
-                    "species": "shroomish",
+                    "species": "missingno",
                     "minLvl": 5,
                     "maxLvl": 5
                 },
                 {
-                    "species": "bellsprout",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "weedle",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "ledyba",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "ekans",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "cubone",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "exeggcute",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "gastly",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "gastly",
+                    "species": "missingno",
                     "minLvl": 5,
                     "maxLvl": 5
                 }
             ]
         },
-        "surf": {},
-        "rock": {},
-        "fish": {}
-    },
-    "petalburgwoodsnoibatcavemorning": {
-        "name": "Petalburg Woods Noibat Cave - Morning",
-        "land": {
-            "baseRate": 10,
-            "encs": [
-                {
-                    "species": "zubat",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "rhyhorn",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "drilbur",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "sandshrewalola",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "pancham",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "aron",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "numel",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "roggenrola",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "growlithehisui",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "larvitar",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "noibat",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "noibat",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                }
-            ]
-        },
-        "surf": {},
-        "rock": {},
-        "fish": {}
-    },
-    "rustborocitymorning": {
-        "name": "Rustboro City - Morning",
-        "land": {
-            "baseRate": 10,
-            "encs": [
-                {
-                    "species": "hippopotas",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "chingling",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "timburr",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "diglettalola",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "silicobra",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "bonsly",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "makuhita",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "tyrunt",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "amaura",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "drilbur",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "rhyhorn",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "rhyhorn",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                }
-            ]
-        },
-        "surf": {},
-        "rock": {},
-        "fish": {}
-    },
-    "route115morning": {
-        "name": "Route 115 - Morning",
-        "land": {
-            "baseRate": 10,
-            "encs": [
-                {
-                    "species": "hatenna",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "snubbull",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "swirlix",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "marill",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "morelull",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "eevee",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "eevee",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "klefki",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "ralts",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "ralts",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "minior",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "minior",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                }
-            ]
-        },
-        "surf": {},
         "rock": {},
         "fish": {
             "baseRate": 30,
             "encs": [
                 {
-                    "species": "anorith",
+                    "species": "missingno",
                     "minLvl": 5,
                     "maxLvl": 5
                 },
                 {
-                    "species": "lileep",
+                    "species": "missingno",
                     "minLvl": 5,
                     "maxLvl": 5
                 },
                 {
-                    "species": "kabuto",
+                    "species": "missingno",
                     "minLvl": 5,
                     "maxLvl": 5
                 },
                 {
-                    "species": "tirtouga",
+                    "species": "missingno",
                     "minLvl": 5,
                     "maxLvl": 5
                 },
                 {
-                    "species": "omanyte",
+                    "species": "missingno",
                     "minLvl": 5,
                     "maxLvl": 5
                 },
                 {
-                    "species": "tirtouga",
+                    "species": "missingno",
                     "minLvl": 5,
                     "maxLvl": 5
                 },
                 {
-                    "species": "omanyte",
+                    "species": "missingno",
                     "minLvl": 5,
                     "maxLvl": 5
                 },
                 {
-                    "species": "kabuto",
+                    "species": "missingno",
                     "minLvl": 5,
                     "maxLvl": 5
                 },
                 {
-                    "species": "kabuto",
+                    "species": "missingno",
                     "minLvl": 5,
                     "maxLvl": 5
                 },
                 {
-                    "species": "kabuto",
+                    "species": "missingno",
                     "minLvl": 5,
                     "maxLvl": 5
                 }
             ]
         }
-    },
-    "route116morning": {
-        "name": "Route 116 - Morning",
-        "land": {
-            "baseRate": 10,
-            "encs": [
-                {
-                    "species": "meowthgalar",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "poochyena",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "snubbull",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "shinx",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "houndour",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "riolu",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "espurr",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "rockruff",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "litleo",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "zorua",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "lillipup",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "lillipup",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                }
-            ]
-        },
-        "surf": {},
-        "rock": {},
-        "fish": {}
-    },
-    "rusturftunnelmorning": {
-        "name": "Rusturf Tunnel - Morning",
-        "land": {
-            "baseRate": 10,
-            "encs": [
-                {
-                    "species": "tynamo",
-                    "minLvl": 8,
-                    "maxLvl": 10
-                },
-                {
-                    "species": "nosepass",
-                    "minLvl": 8,
-                    "maxLvl": 10
-                },
-                {
-                    "species": "phanpy",
-                    "minLvl": 8,
-                    "maxLvl": 10
-                },
-                {
-                    "species": "swinub",
-                    "minLvl": 8,
-                    "maxLvl": 10
-                },
-                {
-                    "species": "magnemite",
-                    "minLvl": 8,
-                    "maxLvl": 10
-                },
-                {
-                    "species": "rhyhorn",
-                    "minLvl": 8,
-                    "maxLvl": 10
-                },
-                {
-                    "species": "numel",
-                    "minLvl": 8,
-                    "maxLvl": 10
-                },
-                {
-                    "species": "gligar",
-                    "minLvl": 8,
-                    "maxLvl": 10
-                },
-                {
-                    "species": "roggenrola",
-                    "minLvl": 8,
-                    "maxLvl": 10
-                },
-                {
-                    "species": "baltoy",
-                    "minLvl": 8,
-                    "maxLvl": 10
-                },
-                {
-                    "species": "sandygast",
-                    "minLvl": 8,
-                    "maxLvl": 10
-                },
-                {
-                    "species": "sandygast",
-                    "minLvl": 8,
-                    "maxLvl": 10
-                }
-            ]
-        },
-        "surf": {},
-        "rock": {},
-        "fish": {}
-    },
-    "verdanturftownmorning": {
-        "name": "Verdanturf Town - Morning",
-        "land": {
-            "baseRate": 10,
-            "encs": [
-                {
-                    "species": "snivy",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "fuecoco",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "totodile",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "charmander",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "chikorita",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "oshawott",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "froakie",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "mudkip",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "torchic",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "treecko",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "fennekin",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                },
-                {
-                    "species": "fennekin",
-                    "minLvl": 5,
-                    "maxLvl": 5
-                }
-            ]
-        },
-        "surf": {},
-        "rock": {},
-        "fish": {}
     },
     "route105morning": {
         "name": "Route 105 - Morning",
@@ -2157,6 +1618,77 @@ exports.BattleLocationdex = {
             ]
         }
     },
+    "route116morning": {
+        "name": "Route 116 - Morning",
+        "land": {
+            "baseRate": 10,
+            "encs": [
+                {
+                    "species": "meowthgalar",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "poochyena",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "snubbull",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "shinx",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "houndour",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "riolu",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "espurr",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "rockruff",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "litleo",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "zorua",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "lillipup",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "lillipup",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                }
+            ]
+        },
+        "surf": {},
+        "rock": {},
+        "fish": {}
+    },
     "route117daymorning": {
         "name": "Route 117 - Day - Morning",
         "land": {
@@ -2708,6 +2240,148 @@ exports.BattleLocationdex = {
                 }
             ]
         }
+    },
+    "petalburgwoodsmorning": {
+        "name": "Petalburg Woods - Morning",
+        "land": {
+            "baseRate": 10,
+            "encs": [
+                {
+                    "species": "nincada",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "poochyena",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "trapinch",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "shroomish",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "bellsprout",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "weedle",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "ledyba",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "ekans",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "cubone",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "exeggcute",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "gastly",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "gastly",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                }
+            ]
+        },
+        "surf": {},
+        "rock": {},
+        "fish": {}
+    },
+    "rusturftunnelmorning": {
+        "name": "Rusturf Tunnel - Morning",
+        "land": {
+            "baseRate": 10,
+            "encs": [
+                {
+                    "species": "tynamo",
+                    "minLvl": 8,
+                    "maxLvl": 10
+                },
+                {
+                    "species": "nosepass",
+                    "minLvl": 8,
+                    "maxLvl": 10
+                },
+                {
+                    "species": "phanpy",
+                    "minLvl": 8,
+                    "maxLvl": 10
+                },
+                {
+                    "species": "swinub",
+                    "minLvl": 8,
+                    "maxLvl": 10
+                },
+                {
+                    "species": "magnemite",
+                    "minLvl": 8,
+                    "maxLvl": 10
+                },
+                {
+                    "species": "rhyhorn",
+                    "minLvl": 8,
+                    "maxLvl": 10
+                },
+                {
+                    "species": "numel",
+                    "minLvl": 8,
+                    "maxLvl": 10
+                },
+                {
+                    "species": "gligar",
+                    "minLvl": 8,
+                    "maxLvl": 10
+                },
+                {
+                    "species": "roggenrola",
+                    "minLvl": 8,
+                    "maxLvl": 10
+                },
+                {
+                    "species": "baltoy",
+                    "minLvl": 8,
+                    "maxLvl": 10
+                },
+                {
+                    "species": "sandygast",
+                    "minLvl": 8,
+                    "maxLvl": 10
+                },
+                {
+                    "species": "sandygast",
+                    "minLvl": 8,
+                    "maxLvl": 10
+                }
+            ]
+        },
+        "surf": {},
+        "rock": {},
+        "fish": {}
     },
     "granitecave1fdaymorning": {
         "name": "Granite Cave - 1F - Day - Morning",
@@ -4322,6 +3996,160 @@ exports.BattleLocationdex = {
                     "species": "wailmer",
                     "minLvl": 40,
                     "maxLvl": 45
+                }
+            ]
+        }
+    },
+    "route115morning": {
+        "name": "Route 115 - Morning",
+        "land": {
+            "baseRate": 10,
+            "encs": [
+                {
+                    "species": "hatenna",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "snubbull",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "swirlix",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "marill",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "morelull",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "eevee",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "eevee",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "klefki",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "ralts",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "ralts",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "minior",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "minior",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                }
+            ]
+        },
+        "surf": {
+            "baseRate": 4,
+            "encs": [
+                {
+                    "species": "missingno",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "missingno",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "missingno",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "missingno",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "missingno",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                }
+            ]
+        },
+        "rock": {},
+        "fish": {
+            "baseRate": 30,
+            "encs": [
+                {
+                    "species": "anorith",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "lileep",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "kabuto",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "tirtouga",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "omanyte",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "tirtouga",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "omanyte",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "kabuto",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "kabuto",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "kabuto",
+                    "minLvl": 5,
+                    "maxLvl": 5
                 }
             ]
         }
@@ -12159,6 +11987,148 @@ exports.BattleLocationdex = {
         "rock": {},
         "fish": {}
     },
+    "petalburgwoodsnoibatcavemorning": {
+        "name": "Petalburg Woods Noibat Cave - Morning",
+        "land": {
+            "baseRate": 10,
+            "encs": [
+                {
+                    "species": "zubat",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "rhyhorn",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "drilbur",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "sandshrewalola",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "pancham",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "aron",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "numel",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "roggenrola",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "growlithehisui",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "larvitar",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "noibat",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "noibat",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                }
+            ]
+        },
+        "surf": {},
+        "rock": {},
+        "fish": {}
+    },
+    "rustborocitymorning": {
+        "name": "Rustboro City - Morning",
+        "land": {
+            "baseRate": 10,
+            "encs": [
+                {
+                    "species": "hippopotas",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "chingling",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "timburr",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "diglettalola",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "silicobra",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "bonsly",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "makuhita",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "tyrunt",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "amaura",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "drilbur",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "rhyhorn",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "rhyhorn",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                }
+            ]
+        },
+        "surf": {},
+        "rock": {},
+        "fish": {}
+    },
     "petalburgwoodsextendeddaymorning": {
         "name": "Petalburg Woods Extended - Day - Morning",
         "land": {
@@ -12443,6 +12413,77 @@ exports.BattleLocationdex = {
         "rock": {},
         "fish": {}
     },
+    "verdanturftownmorning": {
+        "name": "Verdanturf Town - Morning",
+        "land": {
+            "baseRate": 10,
+            "encs": [
+                {
+                    "species": "snivy",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "fuecoco",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "totodile",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "charmander",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "chikorita",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "oshawott",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "froakie",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "mudkip",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "torchic",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "treecko",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "fennekin",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "fennekin",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                }
+            ]
+        },
+        "surf": {},
+        "rock": {},
+        "fish": {}
+    },
     "dewfordhillmorning": {
         "name": "Dewford Hill - Morning",
         "land": {
@@ -12505,6 +12546,77 @@ exports.BattleLocationdex = {
                 },
                 {
                     "species": "burmy",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                }
+            ]
+        },
+        "surf": {},
+        "rock": {},
+        "fish": {}
+    },
+    "alteringcave2morning": {
+        "name": "Altering Cave 2 - Morning",
+        "land": {
+            "baseRate": 10,
+            "encs": [
+                {
+                    "species": "timburr",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "pumpkaboo",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "varoom",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "sandshrew",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "gothita",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "geodude",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "karrablast",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "nickit",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "sandshrew",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "tinkatink",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "goomy",
+                    "minLvl": 5,
+                    "maxLvl": 5
+                },
+                {
+                    "species": "goomy",
                     "minLvl": 5,
                     "maxLvl": 5
                 }
@@ -12628,5 +12740,159 @@ exports.BattleLocationdex = {
             ]
         },
         "fish": {}
+    },
+    "starfallcavemorning": {
+        "name": "Starfall Cave - Morning",
+        "land": {
+            "baseRate": 10,
+            "encs": [
+                {
+                    "species": "cleffa",
+                    "minLvl": 4,
+                    "maxLvl": 12
+                },
+                {
+                    "species": "togetic",
+                    "minLvl": 34,
+                    "maxLvl": 34
+                },
+                {
+                    "species": "solrock",
+                    "minLvl": 34,
+                    "maxLvl": 34
+                },
+                {
+                    "species": "lunatone",
+                    "minLvl": 34,
+                    "maxLvl": 34
+                },
+                {
+                    "species": "minior",
+                    "minLvl": 34,
+                    "maxLvl": 34
+                },
+                {
+                    "species": "mrmime",
+                    "minLvl": 34,
+                    "maxLvl": 34
+                },
+                {
+                    "species": "",
+                    "minLvl": 34,
+                    "maxLvl": 34
+                },
+                {
+                    "species": "banette",
+                    "minLvl": 34,
+                    "maxLvl": 34
+                },
+                {
+                    "species": "appletun",
+                    "minLvl": 34,
+                    "maxLvl": 34
+                },
+                {
+                    "species": "flapple",
+                    "minLvl": 34,
+                    "maxLvl": 34
+                },
+                {
+                    "species": "bagon",
+                    "minLvl": 16,
+                    "maxLvl": 24
+                },
+                {
+                    "species": "bagon",
+                    "minLvl": 16,
+                    "maxLvl": 24
+                }
+            ]
+        },
+        "surf": {
+            "baseRate": 4,
+            "encs": [
+                {
+                    "species": "lapras",
+                    "minLvl": 34,
+                    "maxLvl": 34
+                },
+                {
+                    "species": "dudunsparce",
+                    "minLvl": 34,
+                    "maxLvl": 34
+                },
+                {
+                    "species": "scyther",
+                    "minLvl": 34,
+                    "maxLvl": 34
+                },
+                {
+                    "species": "lanturn",
+                    "minLvl": 34,
+                    "maxLvl": 34
+                },
+                {
+                    "species": "screamtail",
+                    "minLvl": 34,
+                    "maxLvl": 34
+                }
+            ]
+        },
+        "rock": {},
+        "fish": {
+            "baseRate": 30,
+            "encs": [
+                {
+                    "species": "grimeralola",
+                    "minLvl": 5,
+                    "maxLvl": 12
+                },
+                {
+                    "species": "",
+                    "minLvl": 34,
+                    "maxLvl": 34
+                },
+                {
+                    "species": "luvdisc",
+                    "minLvl": 34,
+                    "maxLvl": 34
+                },
+                {
+                    "species": "slowpokegalar",
+                    "minLvl": 16,
+                    "maxLvl": 24
+                },
+                {
+                    "species": "veluza",
+                    "minLvl": 34,
+                    "maxLvl": 34
+                },
+                {
+                    "species": "basculinwhitestriped",
+                    "minLvl": 34,
+                    "maxLvl": 34
+                },
+                {
+                    "species": "octillery",
+                    "minLvl": 34,
+                    "maxLvl": 34
+                },
+                {
+                    "species": "popplio",
+                    "minLvl": 5,
+                    "maxLvl": 12
+                },
+                {
+                    "species": "wimpod",
+                    "minLvl": 5,
+                    "maxLvl": 12
+                },
+                {
+                    "species": "wimpod",
+                    "minLvl": 5,
+                    "maxLvl": 12
+                }
+            ]
+        }
     }
 }
