@@ -435,7 +435,6 @@ var PokedexEncounterListPanel = Panels.Panel.extend({
 		sortEncounterLocationsByPreferredOrder(locations);
 		return locations;
 	},
-
 	normalizeSelectionsForSharedMetLocations: function (selections) {
 		var source = selections || {};
 		var normalized = {};
