@@ -94853,49 +94853,58 @@ exports.BattleLearnsets = {
                 "L1"
             ],
             "tailwhip": [
-                "L3"
+                "L1"
             ],
             "ember": [
-                "L7"
+                "L1"
             ],
-            "odorsleuth": [
-                "L9"
-            ],
-            "defensecurl": [
-                "L13",
-                "T"
-            ],
-            "flamecharge": [
-                "L15"
-            ],
-            "smog": [
-                "L19"
-            ],
-            "rollout": [
-                "L21",
-                "T"
-            ],
-            "takedown": [
-                "L25"
-            ],
-            "heatcrash": [
-                "L27"
-            ],
-            "assurance": [
-                "L31"
-            ],
-            "flamethrower": [
-                "L33",
+            "rocksmash": [
+                "L9",
                 "M"
             ],
-            "headsmash": [
-                "L37"
+            "incinerate": [
+                "L13"
             ],
-            "roar": [
-                "L39"
+            "hiddenpower": [
+                "L16"
+            ],
+            "smokescreen": [
+                "L18"
+            ],
+            "submission": [
+                "L22"
+            ],
+            "stompingtantrum": [
+                "L25",
+                "M"
+            ],
+            "heatcrash": [
+                "L29"
+            ],
+            "brickbreak": [
+                "L34"
+            ],
+            "flamethrower": [
+                "L38",
+                "M"
+            ],
+            "suckerpunch": [
+                "L40"
+            ],
+            "blazekick": [
+                "L43"
+            ],
+            "flamecharge": [
+                "L49"
+            ],
+            "headlongrush": [
+                "L54"
+            ],
+            "headsmash": [
+                "L61"
             ],
             "flareblitz": [
-                "L43"
+                "L64"
             ],
             "dig": [
                 "M"
@@ -94921,13 +94930,7 @@ exports.BattleLearnsets = {
             "protect": [
                 "M"
             ],
-            "rocksmash": [
-                "M"
-            ],
             "rocktomb": [
-                "M"
-            ],
-            "stompingtantrum": [
                 "M"
             ],
             "strength": [
@@ -94948,6 +94951,9 @@ exports.BattleLearnsets = {
             "bodyslam": [
                 "T"
             ],
+            "defensecurl": [
+                "T"
+            ],
             "doubleedge": [
                 "T"
             ],
@@ -94955,6 +94961,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "mudslap": [
+                "T"
+            ],
+            "rollout": [
                 "T"
             ],
             "sleeptalk": [
@@ -94970,63 +94979,61 @@ exports.BattleLearnsets = {
     },
     "pignite": {
         "learnset": {
-            "armthrust": [
+            "scorchingsands": [
                 "L0",
                 "L1"
             ],
-            "tackle": [
+            "ember": [
                 "L1"
             ],
-            "tailwhip": [
-                "L1",
-                "L3"
+            "rocksmash": [
+                "L9",
+                "M"
             ],
-            "ember": [
-                "L1",
-                "L7"
+            "incinerate": [
+                "L13"
             ],
-            "odorsleuth": [
-                "L1",
-                "L9"
+            "hiddenpower": [
+                "L16"
             ],
-            "defensecurl": [
-                "L13",
-                "T"
+            "smokescreen": [
+                "L18"
             ],
-            "flamecharge": [
-                "L15"
+            "payback": [
+                "L25"
             ],
-            "smog": [
-                "L20"
-            ],
-            "rollout": [
-                "L23",
-                "T"
-            ],
-            "takedown": [
-                "L28"
+            "stompingtantrum": [
+                "L28",
+                "M"
             ],
             "heatcrash": [
-                "L31"
+                "L32"
             ],
-            "assurance": [
-                "L36"
+            "brickbreak": [
+                "L36",
+                "M"
             ],
             "flamethrower": [
                 "L39",
                 "M"
             ],
-            "headsmash": [
-                "L44"
+            "suckerpunch": [
+                "L42"
             ],
-            "roar": [
-                "L47"
+            "blazekick": [
+                "L45"
+            ],
+            "flamecharge": [
+                "L51"
+            ],
+            "headlongrush": [
+                "L56"
+            ],
+            "headsmash": [
+                "L61"
             ],
             "flareblitz": [
-                "L52"
-            ],
-            "brickbreak": [
-                "M"
+                "L66"
             ],
             "bulkup": [
                 "M"
@@ -95076,13 +95083,7 @@ exports.BattleLearnsets = {
             "rockslide": [
                 "M"
             ],
-            "rocksmash": [
-                "M"
-            ],
             "rocktomb": [
-                "M"
-            ],
-            "stompingtantrum": [
                 "M"
             ],
             "stoneedge": [
@@ -95109,6 +95110,9 @@ exports.BattleLearnsets = {
             "bodyslam": [
                 "T"
             ],
+            "defensecurl": [
+                "T"
+            ],
             "doubleedge": [
                 "T"
             ],
@@ -95116,6 +95120,9 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "mudslap": [
+                "T"
+            ],
+            "rollout": [
                 "T"
             ],
             "sleeptalk": [
@@ -95131,65 +95138,82 @@ exports.BattleLearnsets = {
     },
     "emboar": {
         "learnset": {
-            "armthrust": [
+            "scorchingsands": [
+                "L0",
                 "L1"
             ],
-            "hammerarm": [
+            "drainpunch": [
+                "L1",
+                "M"
+            ],
+            "headlongrush": [
                 "L1"
             ],
-            "tackle": [
+            "machpunch": [
                 "L1"
-            ],
-            "tailwhip": [
-                "L1",
-                "L3"
-            ],
-            "ember": [
-                "L1",
-                "L7"
-            ],
-            "odorsleuth": [
-                "L1",
-                "L9"
-            ],
-            "defensecurl": [
-                "L13",
-                "T"
             ],
             "flamecharge": [
-                "L15"
+                "L1",
+                "L55"
             ],
-            "smog": [
-                "L20"
+            "suckerpunch": [
+                "L1"
             ],
-            "rollout": [
-                "L23",
-                "T"
+            "rocksmash": [
+                "L9",
+                "M"
             ],
-            "takedown": [
-                "L28"
+            "incinerate": [
+                "L13"
+            ],
+            "hiddenpower": [
+                "L18"
+            ],
+            "smokescreen": [
+                "L21"
+            ],
+            "payback": [
+                "L27"
+            ],
+            "stompingtantrum": [
+                "L32",
+                "M"
             ],
             "heatcrash": [
-                "L31"
+                "L36"
             ],
-            "assurance": [
-                "L38"
+            "brickbreak": [
+                "L40",
+                "M"
             ],
             "flamethrower": [
                 "L43",
                 "M"
             ],
-            "headsmash": [
-                "L50"
+            "landswrath": [
+                "L46"
             ],
-            "roar": [
-                "L55"
+            "blazekick": [
+                "L49"
+            ],
+            "precipiceblades": [
+                "L60"
+            ],
+            "headsmash": [
+                "L65"
             ],
             "flareblitz": [
-                "L62"
+                "L71"
             ],
-            "brickbreak": [
+            "knockoff": [
+                "L73",
                 "M"
+            ],
+            "glaciate": [
+                "L80"
+            ],
+            "blueflare": [
+                "L100"
             ],
             "bulkup": [
                 "M"
@@ -95198,9 +95222,6 @@ exports.BattleLearnsets = {
                 "M"
             ],
             "dig": [
-                "M"
-            ],
-            "drainpunch": [
                 "M"
             ],
             "earthquake": [
@@ -95224,9 +95245,6 @@ exports.BattleLearnsets = {
             "irontail": [
                 "M"
             ],
-            "knockoff": [
-                "M"
-            ],
             "lowkick": [
                 "M"
             ],
@@ -95242,16 +95260,10 @@ exports.BattleLearnsets = {
             "rockslide": [
                 "M"
             ],
-            "rocksmash": [
-                "M"
-            ],
             "rocktomb": [
                 "M"
             ],
             "scald": [
-                "M"
-            ],
-            "stompingtantrum": [
                 "M"
             ],
             "stoneedge": [
@@ -95278,6 +95290,9 @@ exports.BattleLearnsets = {
             "bodyslam": [
                 "T"
             ],
+            "defensecurl": [
+                "T"
+            ],
             "doubleedge": [
                 "T"
             ],
@@ -95285,6 +95300,189 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "mudslap": [
+                "T"
+            ],
+            "rollout": [
+                "T"
+            ],
+            "sleeptalk": [
+                "T"
+            ],
+            "snore": [
+                "T"
+            ],
+            "swagger": [
+                "T"
+            ]
+        }
+    },
+    "emboarmega": {
+        "learnset": {
+            "scorchingsands": [
+                "L0",
+                "L1"
+            ],
+            "drainpunch": [
+                "L1",
+                "M"
+            ],
+            "headlongrush": [
+                "L1"
+            ],
+            "machpunch": [
+                "L1"
+            ],
+            "flamecharge": [
+                "L1",
+                "L55"
+            ],
+            "suckerpunch": [
+                "L1"
+            ],
+            "rocksmash": [
+                "L9",
+                "M"
+            ],
+            "incinerate": [
+                "L13"
+            ],
+            "hiddenpower": [
+                "L18"
+            ],
+            "smokescreen": [
+                "L21"
+            ],
+            "payback": [
+                "L27"
+            ],
+            "stompingtantrum": [
+                "L32",
+                "M"
+            ],
+            "heatcrash": [
+                "L36"
+            ],
+            "brickbreak": [
+                "L40",
+                "M"
+            ],
+            "flamethrower": [
+                "L43",
+                "M"
+            ],
+            "landswrath": [
+                "L46"
+            ],
+            "blazekick": [
+                "L49"
+            ],
+            "precipiceblades": [
+                "L60"
+            ],
+            "headsmash": [
+                "L65"
+            ],
+            "flareblitz": [
+                "L71"
+            ],
+            "knockoff": [
+                "L73",
+                "M"
+            ],
+            "glaciate": [
+                "L80"
+            ],
+            "blueflare": [
+                "L100"
+            ],
+            "bulkup": [
+                "M"
+            ],
+            "bulldoze": [
+                "M"
+            ],
+            "dig": [
+                "M"
+            ],
+            "earthquake": [
+                "M"
+            ],
+            "facade": [
+                "M"
+            ],
+            "fireblast": [
+                "M"
+            ],
+            "firepunch": [
+                "M"
+            ],
+            "heatwave": [
+                "M"
+            ],
+            "highhorsepower": [
+                "M"
+            ],
+            "irontail": [
+                "M"
+            ],
+            "lowkick": [
+                "M"
+            ],
+            "lowsweep": [
+                "M"
+            ],
+            "overheat": [
+                "M"
+            ],
+            "protect": [
+                "M"
+            ],
+            "rockslide": [
+                "M"
+            ],
+            "rocktomb": [
+                "M"
+            ],
+            "scald": [
+                "M"
+            ],
+            "stoneedge": [
+                "M"
+            ],
+            "strength": [
+                "M"
+            ],
+            "taunt": [
+                "M"
+            ],
+            "temperflare": [
+                "M"
+            ],
+            "thunderpunch": [
+                "M"
+            ],
+            "toxic": [
+                "M"
+            ],
+            "wildcharge": [
+                "M"
+            ],
+            "bodyslam": [
+                "T"
+            ],
+            "defensecurl": [
+                "T"
+            ],
+            "doubleedge": [
+                "T"
+            ],
+            "endure": [
+                "T"
+            ],
+            "mudslap": [
+                "T"
+            ],
+            "rollout": [
                 "T"
             ],
             "sleeptalk": [

@@ -28167,6 +28167,55 @@ exports.BattlePokedex = {
         "num": 500,
         "baseStats": {
             "hp": 110,
+            "atk": 123,
+            "def": 75,
+            "spe": 55,
+            "spa": 110,
+            "spd": 75
+        },
+        "types": [
+            "Fire",
+            "Ground"
+        ],
+        "evYields": {
+            "atk": 3
+        },
+        "items": {},
+        "eggGroups": [
+            "Field"
+        ],
+        "catchRate": 45,
+        "expYield": 264,
+        "genderRatio": {
+            "M": 0.875,
+            "F": 0.125
+        },
+        "abilities": {
+            "0": "Iron Fist",
+            "1": "Rock Head",
+            "H": "Reckless"
+        },
+        "color": "Red",
+        "name": "Emboar",
+        "heightm": 1.6,
+        "weightkg": 150.0,
+        "formeOrder": [
+            "Emboar",
+            "Emboar-Mega"
+        ],
+        "otherFormes": [
+            "Emboar-Mega"
+        ],
+        "prevo": "Pignite",
+        "evoLevel": 36,
+        "evoType": "level",
+        "evoCondition": "",
+        "tier": "obtainable"
+    },
+    "emboarmega": {
+        "num": 500,
+        "baseStats": {
+            "hp": 110,
             "atk": 148,
             "def": 85,
             "spe": 75,
@@ -28194,10 +28243,12 @@ exports.BattlePokedex = {
             "0": "Supreme Overlord"
         },
         "color": "Red",
-        "name": "Emboar",
+        "name": "Emboar-Mega",
         "heightm": 1.8,
         "weightkg": 180.3,
-        "tier": "obtainable"
+        "baseSpecies": "Emboar",
+        "forme": "Mega",
+        "tier": "unobtainable"
     },
     "oshawott": {
         "num": 501,
