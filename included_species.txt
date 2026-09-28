@@ -464,7 +464,7 @@ Sableye
 Salamence
 Salandit
 Salazzle
-Samurott
+Samurott-Hisui
 Sandaconda
 Sandile
 Sandshrew
@@ -602,7 +602,7 @@ Tsareena
 Turtonator
 Tympole
 Tynamo
-Typhlosion
+Typhlosion-Hisui
 Tyranitar
 Tyrantrum
 Tyrogue

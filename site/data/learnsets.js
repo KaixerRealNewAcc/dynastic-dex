@@ -94482,48 +94482,43 @@ exports.BattleLearnsets = {
             "tackle": [
                 "L1"
             ],
-            "leer": [
-                "L4"
-            ],
             "vinewhip": [
-                "L7"
+                "L1"
             ],
             "wrap": [
-                "L10"
-            ],
-            "growth": [
-                "L13"
-            ],
-            "leaftornado": [
-                "L16"
-            ],
-            "leechseed": [
-                "L19"
+                "L5"
             ],
             "megadrain": [
-                "L22"
+                "L10"
             ],
-            "slam": [
-                "L25"
+            "dragontail": [
+                "L13"
             ],
-            "leafblade": [
-                "L28"
+            "hiddenpower": [
+                "L16"
             ],
-            "coil": [
-                "L31"
+            "breakingswipe": [
+                "L18"
             ],
             "gigadrain": [
-                "L34",
+                "L22",
                 "M"
             ],
-            "wringout": [
-                "L37"
+            "leafblade": [
+                "L24"
             ],
-            "gastroacid": [
-                "L40"
+            "petalblizzard": [
+                "L31"
+            ],
+            "protect": [
+                "L36",
+                "M"
+            ],
+            "dragonhammer": [
+                "L41"
             ],
             "leafstorm": [
-                "L43"
+                "L46"
             ],
             "bulletseed": [
                 "M"
@@ -94553,9 +94548,6 @@ exports.BattleLearnsets = {
                 "M"
             ],
             "lightscreen": [
-                "M"
-            ],
-            "protect": [
                 "M"
             ],
             "reflect": [
@@ -94595,54 +94587,49 @@ exports.BattleLearnsets = {
     },
     "servine": {
         "learnset": {
+            "leaftornado": [
+                "L0",
+                "L1"
+            ],
             "tackle": [
                 "L1"
             ],
-            "leer": [
-                "L1",
-                "L4"
-            ],
             "vinewhip": [
-                "L1",
-                "L7"
+                "L1"
             ],
             "wrap": [
-                "L1",
-                "L10"
-            ],
-            "growth": [
-                "L13"
-            ],
-            "leaftornado": [
-                "L16"
-            ],
-            "leechseed": [
-                "L20"
+                "L5"
             ],
             "megadrain": [
-                "L24"
+                "L10"
             ],
-            "slam": [
-                "L28"
+            "dragontail": [
+                "L15"
+            ],
+            "hiddenpower": [
+                "L18"
+            ],
+            "aerialace": [
+                "L22"
             ],
             "leafblade": [
-                "L32"
+                "L26"
             ],
-            "coil": [
-                "L36"
+            "petalblizzard": [
+                "L30"
             ],
             "gigadrain": [
-                "L40",
+                "L35",
                 "M"
             ],
-            "wringout": [
-                "L44"
-            ],
-            "gastroacid": [
-                "L48"
+            "dragonhammer": [
+                "L45"
             ],
             "leafstorm": [
-                "L52"
+                "L50"
+            ],
+            "ivycudgel": [
+                "L59"
             ],
             "bulletseed": [
                 "M"
@@ -94714,54 +94701,74 @@ exports.BattleLearnsets = {
     },
     "serperior": {
         "learnset": {
-            "tackle": [
+            "glare": [
+                "L0",
                 "L1"
             ],
-            "leer": [
+            "dracometeor": [
+                "L1"
+            ],
+            "irontail": [
                 "L1",
-                "L4"
-            ],
-            "vinewhip": [
-                "L1",
-                "L7"
-            ],
-            "wrap": [
-                "L1",
-                "L10"
-            ],
-            "growth": [
-                "L13"
-            ],
-            "leaftornado": [
-                "L16"
-            ],
-            "leechseed": [
-                "L20"
-            ],
-            "megadrain": [
-                "L24"
-            ],
-            "slam": [
-                "L28"
-            ],
-            "leafblade": [
-                "L32"
-            ],
-            "coil": [
-                "L38"
-            ],
-            "gigadrain": [
-                "L44",
                 "M"
             ],
-            "wringout": [
+            "defog": [
+                "L1"
+            ],
+            "uturn": [
+                "L1"
+            ],
+            "leechseed": [
+                "L1"
+            ],
+            "megadrain": [
+                "L15"
+            ],
+            "dragontail": [
+                "L18"
+            ],
+            "hiddenpower": [
+                "L18"
+            ],
+            "gigadrain": [
+                "L26",
+                "M"
+            ],
+            "leafblade": [
+                "L30"
+            ],
+            "worryseed": [
+                "L36"
+            ],
+            "pursuit": [
+                "L38"
+            ],
+            "petaldance": [
+                "L38"
+            ],
+            "aquatail": [
+                "L41"
+            ],
+            "dragonclaw": [
+                "L45"
+            ],
+            "gravity": [
                 "L50"
             ],
-            "gastroacid": [
-                "L56"
+            "earthquake": [
+                "L57"
+            ],
+            "synthesis": [
+                "L61"
+            ],
+            "ivycudgel": [
+                "L67"
+            ],
+            "dragonhammer": [
+                "L73"
             ],
             "leafstorm": [
-                "L62"
+                "L79"
             ],
             "bulletseed": [
                 "M"
@@ -94785,9 +94792,6 @@ exports.BattleLearnsets = {
                 "M"
             ],
             "grassyglide": [
-                "M"
-            ],
-            "irontail": [
                 "M"
             ],
             "knockoff": [
