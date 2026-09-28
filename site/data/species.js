@@ -28105,7 +28105,7 @@ exports.BattlePokedex = {
             "F": 0.125
         },
         "abilities": {
-            "0": "Iron Fist",
+            "0": "Magma Armor",
             "1": "Blaze",
             "H": "Thick Fat"
         },
@@ -28116,7 +28116,7 @@ exports.BattlePokedex = {
         "evos": [
             "Pignite"
         ],
-        "tier": "obtainable"
+        "tier": "unobtainable"
     },
     "pignite": {
         "num": 499,
@@ -28146,7 +28146,7 @@ exports.BattlePokedex = {
             "F": 0.125
         },
         "abilities": {
-            "0": "Iron Fist",
+            "0": "Magma Armor",
             "1": "Blaze",
             "H": "Thick Fat"
         },
@@ -28161,7 +28161,7 @@ exports.BattlePokedex = {
         "evos": [
             "Emboar"
         ],
-        "tier": "obtainable"
+        "tier": "unobtainable"
     },
     "emboar": {
         "num": 500,
@@ -28169,7 +28169,7 @@ exports.BattlePokedex = {
             "hp": 110,
             "atk": 123,
             "def": 75,
-            "spe": 55,
+            "spe": 59,
             "spa": 110,
             "spd": 75
         },
@@ -28191,7 +28191,7 @@ exports.BattlePokedex = {
             "F": 0.125
         },
         "abilities": {
-            "0": "Iron Fist",
+            "0": "Magma Armor",
             "1": "Rock Head",
             "H": "Reckless"
         },
@@ -28210,7 +28210,7 @@ exports.BattlePokedex = {
         "evoLevel": 36,
         "evoType": "level",
         "evoCondition": "",
-        "tier": "obtainable"
+        "tier": "unobtainable"
     },
     "emboarmega": {
         "num": 500,
@@ -28335,6 +28335,50 @@ exports.BattlePokedex = {
         ],
         "tier": "obtainable"
     },
+    "samurotthisui": {
+        "num": 503,
+        "baseStats": {
+            "hp": 91,
+            "atk": 121,
+            "def": 80,
+            "spe": 97,
+            "spa": 87,
+            "spd": 77
+        },
+        "types": [
+            "Water",
+            "Dark"
+        ],
+        "evYields": {
+            "atk": 3
+        },
+        "items": {},
+        "eggGroups": [
+            "Field"
+        ],
+        "catchRate": 45,
+        "expYield": 264,
+        "genderRatio": {
+            "M": 0.875,
+            "F": 0.125
+        },
+        "abilities": {
+            "0": "Shell Armor",
+            "1": "Swift Swim",
+            "H": "Sharpness"
+        },
+        "color": "Blue",
+        "name": "Samurott-Hisui",
+        "heightm": 1.5,
+        "weightkg": 58.2,
+        "baseSpecies": "Samurott",
+        "forme": "Hisui",
+        "prevo": "Dewott",
+        "evoLevel": 36,
+        "evoType": "level",
+        "evoCondition": "",
+        "tier": "obtainable"
+    },
     "samurott": {
         "num": 503,
         "baseStats": {
@@ -28378,50 +28422,6 @@ exports.BattlePokedex = {
             "Samurott-Hisui"
         ],
         "tier": "unobtainable"
-    },
-    "samurotthisui": {
-        "num": 503,
-        "baseStats": {
-            "hp": 91,
-            "atk": 121,
-            "def": 80,
-            "spe": 92,
-            "spa": 72,
-            "spd": 77
-        },
-        "types": [
-            "Water",
-            "Dark"
-        ],
-        "evYields": {
-            "atk": 3
-        },
-        "items": {},
-        "eggGroups": [
-            "Field"
-        ],
-        "catchRate": 45,
-        "expYield": 264,
-        "genderRatio": {
-            "M": 0.875,
-            "F": 0.125
-        },
-        "abilities": {
-            "0": "Shell Armor",
-            "1": "Swift Swim",
-            "H": "Sharpness"
-        },
-        "color": "Blue",
-        "name": "Samurott-Hisui",
-        "heightm": 1.5,
-        "weightkg": 58.2,
-        "baseSpecies": "Samurott",
-        "forme": "Hisui",
-        "prevo": "Dewott",
-        "evoLevel": 36,
-        "evoType": "level",
-        "evoCondition": "",
-        "tier": "obtainable"
     },
     "patrat": {
         "num": 504,
@@ -48294,7 +48294,7 @@ exports.BattlePokedex = {
         "evos": [
             "Drakloak"
         ],
-        "tier": "unobtainable"
+        "tier": "obtainable"
     },
     "drakloak": {
         "num": 886,

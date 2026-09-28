@@ -95139,7 +95139,6 @@ exports.BattleLearnsets = {
     "emboar": {
         "learnset": {
             "scorchingsands": [
-                "L0",
                 "L1"
             ],
             "drainpunch": [
@@ -95209,11 +95208,11 @@ exports.BattleLearnsets = {
                 "L73",
                 "M"
             ],
-            "glaciate": [
+            "grassknot": [
                 "L80"
             ],
             "blueflare": [
-                "L100"
+                "L91"
             ],
             "bulkup": [
                 "M"
@@ -95319,7 +95318,6 @@ exports.BattleLearnsets = {
     "emboarmega": {
         "learnset": {
             "scorchingsands": [
-                "L0",
                 "L1"
             ],
             "drainpunch": [
@@ -95389,11 +95387,11 @@ exports.BattleLearnsets = {
                 "L73",
                 "M"
             ],
-            "glaciate": [
+            "grassknot": [
                 "L80"
             ],
             "blueflare": [
-                "L100"
+                "L91"
             ],
             "bulkup": [
                 "M"
@@ -95760,6 +95758,126 @@ exports.BattleLearnsets = {
             ]
         }
     },
+    "samurotthisui": {
+        "learnset": {
+            "ceaselessedge": [
+                "L0"
+            ],
+            "slash": [
+                "L1",
+                "L25"
+            ],
+            "suckerpunch": [
+                "L1"
+            ],
+            "megahorn": [
+                "L1"
+            ],
+            "tailwhip": [
+                "L1"
+            ],
+            "tackle": [
+                "L1"
+            ],
+            "aquajet": [
+                "L6"
+            ],
+            "swordsdance": [
+                "L11",
+                "M"
+            ],
+            "waterpulse": [
+                "L18"
+            ],
+            "nightslash": [
+                "L21"
+            ],
+            "aquatail": [
+                "L34"
+            ],
+            "darkpulse": [
+                "L40"
+            ],
+            "hydropump": [
+                "L43"
+            ],
+            "airslash": [
+                "M"
+            ],
+            "blizzard": [
+                "M"
+            ],
+            "brickbreak": [
+                "M"
+            ],
+            "bulldoze": [
+                "M"
+            ],
+            "dig": [
+                "M"
+            ],
+            "facade": [
+                "M"
+            ],
+            "falseswipe": [
+                "M"
+            ],
+            "flipturn": [
+                "M"
+            ],
+            "icebeam": [
+                "M"
+            ],
+            "irontail": [
+                "M"
+            ],
+            "knockoff": [
+                "M"
+            ],
+            "liquidation": [
+                "M"
+            ],
+            "protect": [
+                "M"
+            ],
+            "rocksmash": [
+                "M"
+            ],
+            "snarl": [
+                "M"
+            ],
+            "surf": [
+                "M"
+            ],
+            "taunt": [
+                "M"
+            ],
+            "thief": [
+                "M"
+            ],
+            "waterfall": [
+                "M"
+            ],
+            "bodyslam": [
+                "T"
+            ],
+            "endure": [
+                "T"
+            ],
+            "furycutter": [
+                "T"
+            ],
+            "icywind": [
+                "T"
+            ],
+            "sleeptalk": [
+                "T"
+            ],
+            "swift": [
+                "T"
+            ]
+        }
+    },
     "samurott": {
         "learnset": {
             "slash": [
@@ -95904,126 +96022,6 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "swagger": [
-                "T"
-            ],
-            "swift": [
-                "T"
-            ]
-        }
-    },
-    "samurotthisui": {
-        "learnset": {
-            "ceaselessedge": [
-                "L0"
-            ],
-            "slash": [
-                "L1",
-                "L25"
-            ],
-            "suckerpunch": [
-                "L1"
-            ],
-            "megahorn": [
-                "L1"
-            ],
-            "tailwhip": [
-                "L1"
-            ],
-            "tackle": [
-                "L1"
-            ],
-            "aquajet": [
-                "L6"
-            ],
-            "swordsdance": [
-                "L11",
-                "M"
-            ],
-            "waterpulse": [
-                "L18"
-            ],
-            "nightslash": [
-                "L21"
-            ],
-            "aquatail": [
-                "L34"
-            ],
-            "darkpulse": [
-                "L40"
-            ],
-            "hydropump": [
-                "L43"
-            ],
-            "airslash": [
-                "M"
-            ],
-            "blizzard": [
-                "M"
-            ],
-            "brickbreak": [
-                "M"
-            ],
-            "bulldoze": [
-                "M"
-            ],
-            "dig": [
-                "M"
-            ],
-            "facade": [
-                "M"
-            ],
-            "falseswipe": [
-                "M"
-            ],
-            "flipturn": [
-                "M"
-            ],
-            "icebeam": [
-                "M"
-            ],
-            "irontail": [
-                "M"
-            ],
-            "knockoff": [
-                "M"
-            ],
-            "liquidation": [
-                "M"
-            ],
-            "protect": [
-                "M"
-            ],
-            "rocksmash": [
-                "M"
-            ],
-            "snarl": [
-                "M"
-            ],
-            "surf": [
-                "M"
-            ],
-            "taunt": [
-                "M"
-            ],
-            "thief": [
-                "M"
-            ],
-            "waterfall": [
-                "M"
-            ],
-            "bodyslam": [
-                "T"
-            ],
-            "endure": [
-                "T"
-            ],
-            "furycutter": [
-                "T"
-            ],
-            "icywind": [
-                "T"
-            ],
-            "sleeptalk": [
                 "T"
             ],
             "swift": [

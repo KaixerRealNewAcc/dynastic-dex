@@ -594,17 +594,17 @@ exports.BattleLocationdex = {
                     "maxLvl": 5
                 },
                 {
-                    "species": "oshawott",
+                    "species": "corphish",
                     "minLvl": 5,
                     "maxLvl": 5
                 },
                 {
-                    "species": "oshawott",
+                    "species": "corphish",
                     "minLvl": 5,
                     "maxLvl": 5
                 },
                 {
-                    "species": "oshawott",
+                    "species": "corphish",
                     "minLvl": 5,
                     "maxLvl": 5
                 }
@@ -3277,7 +3277,7 @@ exports.BattleLocationdex = {
                     "maxLvl": 34
                 },
                 {
-                    "species": "tepig",
+                    "species": "fuecoco",
                     "minLvl": 5,
                     "maxLvl": 34
                 },
@@ -3292,13 +3292,13 @@ exports.BattleLocationdex = {
                     "maxLvl": 34
                 },
                 {
-                    "species": "drakloak",
-                    "minLvl": 24,
+                    "species": "dreepy",
+                    "minLvl": 5,
                     "maxLvl": 34
                 },
                 {
-                    "species": "drakloak",
-                    "minLvl": 24,
+                    "species": "dreepy",
+                    "minLvl": 5,
                     "maxLvl": 34
                 }
             ]

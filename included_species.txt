@@ -123,6 +123,7 @@ Dragapult
 Drakloak
 Drapion
 Drednaw
+Dreepy
 Drilbur
 Drowzee
 Druddigon
@@ -149,7 +150,6 @@ Electrode
 Electrode-Hisui
 Elekid
 Elgyem
-Emboar
 Emolga
 Escavalier
 Espathra
@@ -410,7 +410,6 @@ Perrserker
 Petilil
 Phanpy
 Pichu
-Pignite
 Pikachu
 Pikipek
 Piloswine
@@ -574,7 +573,6 @@ Tauros-Paldea-Blaze
 Teddiursa
 Tentacool
 Tentacruel
-Tepig
 Thievul
 Throh
 Timburr
