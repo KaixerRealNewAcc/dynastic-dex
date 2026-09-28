@@ -252,7 +252,7 @@ var DexSearch = /** @class */ (function () {
         // higher priority. We'll do a normal pass through the index with
         // the alias text before any other passes.
         var queryAlias;
-        if (query in BattleAliases) {
+        if (!this.exactMatch && query in BattleAliases) {
             if (['sub', 'tr'].includes(query) || toID(BattleAliases[query]).slice(0, query.length) !== query) {
                 queryAlias = toID(BattleAliases[query]);
                 var aliasPassType = (queryAlias === 'hiddenpower' ? 'exact' : 'normal');
@@ -440,7 +440,61 @@ var DexSearch = /** @class */ (function () {
             bufs.push(this.instafilter(searchType, instafilter[0], instafilter[1]));
         }
         this.results = Array.prototype.concat.apply(topbuf, bufs);
+        if (!searchType) {
+            var evoItemRows = this.itemEvolutionResults(query, this.results);
+            if (evoItemRows.length) {
+                this.results = this.results.concat(evoItemRows);
+            }
+        }
         return this.results;
+    };
+    DexSearch.prototype.itemEvolutionResults = function (query, existingResults) {
+        var item = this.dex.items.get(query);
+        if (!item || !item.exists)
+            return [];
+        var seenPokemon = {};
+        for (var _i = 0, existingResults_1 = existingResults; _i < existingResults_1.length; _i++) {
+            var row = existingResults_1[_i];
+            if (row[0] === 'pokemon') {
+                seenPokemon[row[1]] = 1;
+            }
+        }
+        var itemid = toID(item.name);
+        var rows = [];
+        var seenAdded = {};
+        for (var speciesid in BattlePokedex) {
+            var species = this.dex.species.get(speciesid);
+            if (!species || !species.exists || species.evoType !== 'useItem')
+                continue;
+            var evoItem = toID(species.evoItem || '');
+            var usesItem = evoItem === itemid;
+            if (!usesItem && species.requiredItems && species.requiredItems.length) {
+                for (var i = 0; i < species.requiredItems.length; i++) {
+                    if (toID(species.requiredItems[i]) === itemid) {
+                        usesItem = true;
+                        break;
+                    }
+                }
+            }
+            if (!usesItem)
+                continue;
+            var candidate = species.prevo ? toID(species.prevo) : species.id;
+            if (!candidate || seenPokemon[candidate] || seenAdded[candidate])
+                continue;
+            var prevo = this.dex.species.get(candidate);
+            if (!prevo || !prevo.exists)
+                continue;
+            seenAdded[candidate] = 1;
+            rows.push(['pokemon', candidate]);
+        }
+        if (!rows.length)
+            return [];
+        rows.sort(function (_a, _b) {
+            var id1 = _a[1];
+            var id2 = _b[1];
+            return id1 < id2 ? -1 : id1 > id2 ? 1 : 0;
+        });
+        return __spreadArray([['header', "Pok\u00E9mon that evolve with " + item.name]], rows, true);
     };
     DexSearch.prototype.instafilter = function (searchType, fType, fId) {
         var _a;
@@ -800,6 +854,21 @@ var BattleTypedSearch = /** @class */ (function () {
         return '';
     };
     BattleTypedSearch.prototype.isHere = function (speciesid, location) {
+        if (!location || location === BattleLocationdex.rates)
+            return false;
+        // New encounter structure support: location.{land|surf|rock|fish}.encs[]
+        var zones = ['land', 'surf', 'rock', 'fish'];
+        for (var _i = 0, zones_1 = zones; _i < zones_1.length; _i++) {
+            var zone = zones_1[_i];
+            var zoneData = location[zone];
+            if (zoneData && Array.isArray(zoneData.encs)) {
+                for (var j = 0; j < zoneData.encs.length; j++) {
+                    if (zoneData.encs[j] && zoneData.encs[j].species === speciesid)
+                        return true;
+                }
+            }
+        }
+        // Legacy structure support: slot fields.
         if (typeof location.landslot1 !== 'undefined') {
             if (location.landslot1 === speciesid)
                 return true;
@@ -872,6 +941,7 @@ var BattleTypedSearch = /** @class */ (function () {
             if (location.rockslot5 === speciesid)
                 return true;
         }
+        return false;
     };
     BattleTypedSearch.prototype.canLearn = function (speciesid, moveid) {
         var _a;
@@ -1414,7 +1484,9 @@ var BattleItemSearch = /** @class */ (function (_super) {
 var BattleLocationSearch = /** @class */ (function (_super) {
     __extends(BattleLocationSearch, _super);
     function BattleLocationSearch() {
-        return _super !== null && _super.apply(this, arguments) || this;
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.sortRow = ['sortmove', ''];
+        return _this;
     }
     BattleLocationSearch.prototype.getTable = function () {
         return BattleLocationdex;
@@ -1424,8 +1496,6 @@ var BattleLocationSearch = /** @class */ (function (_super) {
         results.push(['header', "Location"]);
         for (var id in BattleLocationdex) {
             if (id === 'rates')
-                continue;
-            if (!BattleLocationdex[id] || !BattleLocationdex[id].name)
                 continue;
             results.push(['location', id]);
         }
@@ -1455,9 +1525,9 @@ var BattleLocationSearch = /** @class */ (function (_super) {
         var sortOrder = reverseSort ? -1 : 1;
         switch (sortCol) {
             case 'name':
-                return results.sort(function (a, b) {
-                    var name1 = (BattleLocationdex[a[1]] && BattleLocationdex[a[1]].name) || '';
-                    var name2 = (BattleLocationdex[b[1]] && BattleLocationdex[b[1]].name) || '';
+                return results.sort(function (_a, _b) {
+                    var name1 = id1;
+                    var name2 = id2;
                     return (name1 < name2 ? -1 : name1 > name2 ? 1 : 0) * sortOrder;
                 });
         }
@@ -1715,7 +1785,7 @@ var BattleMoveSearch = /** @class */ (function (_super) {
         if ((_b = moveData.flags) === null || _b === void 0 ? void 0 : _b.recharge) {
             return false;
         }
-        if (((_c = moveData.flags) === null || _c === void 0 ? void 0 : _c.slicing) && abilityid === 'sharpness') {
+        if (((_c = moveData.flags) === null || _c === void 0 ? void 0 : _c.slicing) && (abilityid === 'sharpness' || abilityid === 'surgecutter')) {
             return true;
         }
         return !BattleMoveSearch.BAD_STRONG_MOVES.includes(id);

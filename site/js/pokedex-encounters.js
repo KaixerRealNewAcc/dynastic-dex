@@ -1,3 +1,4 @@
+
 var PokedexEncountersPanel = PokedexResultPanel.extend({
 	events: {
 		'change input[name=encounter-static-boost]': 'changeStaticBoost',
@@ -189,7 +190,7 @@ var PokedexEncountersPanel = PokedexResultPanel.extend({
         var rockRates = BattleLocationdex['rates']['rock']        
 
 		var location = this.id;
-		var locationData = BattleLocationdex[location];
+		var locationData = sortEncounterLocationsByPreferredOrder(locations);
 		if (!locationData) return this.results = [];
 		var results = [];
 		var hideRates = !!locationData.hideRates;
@@ -353,8 +354,8 @@ var PokedexEncountersPanel = PokedexResultPanel.extend({
 		// Header rows are single-letter mode markers inserted in getDistribution.
 		if (parsed) {
 			rateText = parsed.rateText;
-			levelText = parsed.levelText;
 			id = parsed.speciesId;
+			levelText = parsed.levelText;
 		}
 
 		var template = id ? BattlePokedex[id] : undefined;
