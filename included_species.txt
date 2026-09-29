@@ -607,6 +607,7 @@ Tyrogue
 Tyrunt
 Umbreon
 Ursaluna
+Ursaluna-Bloodmoon
 Ursaring
 Vaporeon
 Varoom

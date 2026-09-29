@@ -67302,6 +67302,110 @@ exports.BattleLearnsets = {
             ]
         }
     },
+    "maractus": {
+        "learnset": {
+            "spikyshield": [
+                "L1"
+            ],
+            "peck": [
+                "L1"
+            ],
+            "absorb": [
+                "L1"
+            ],
+            "afteryou": [
+                "L1"
+            ],
+            "ingrain": [
+                "L1"
+            ],
+            "growth": [
+                "L4"
+            ],
+            "megadrain": [
+                "L8"
+            ],
+            "leechseed": [
+                "L12"
+            ],
+            "suckerpunch": [
+                "L16"
+            ],
+            "pinmissile": [
+                "L20"
+            ],
+            "gigadrain": [
+                "L24",
+                "M"
+            ],
+            "sweetscent": [
+                "L28"
+            ],
+            "synthesis": [
+                "L32"
+            ],
+            "petalblizzard": [
+                "L36"
+            ],
+            "cottonspore": [
+                "L40"
+            ],
+            "sunnyday": [
+                "L44"
+            ],
+            "solarbeam": [
+                "L48"
+            ],
+            "acupressure": [
+                "L52"
+            ],
+            "petaldance": [
+                "L56"
+            ],
+            "cottonguard": [
+                "L60"
+            ],
+            "bulletseed": [
+                "M"
+            ],
+            "drainpunch": [
+                "M"
+            ],
+            "energyball": [
+                "M"
+            ],
+            "facade": [
+                "M"
+            ],
+            "grassyglide": [
+                "M"
+            ],
+            "knockoff": [
+                "M"
+            ],
+            "protect": [
+                "M"
+            ],
+            "toxic": [
+                "M"
+            ],
+            "weatherball": [
+                "M"
+            ],
+            "endure": [
+                "T"
+            ],
+            "sleeptalk": [
+                "T"
+            ],
+            "snore": [
+                "T"
+            ],
+            "swagger": [
+                "T"
+            ]
+        }
+    },
     "swablu": {
         "learnset": {
             "peck": [
@@ -103097,110 +103201,6 @@ exports.BattleLearnsets = {
                 "T"
             ],
             "uturn": [
-                "T"
-            ]
-        }
-    },
-    "maractus": {
-        "learnset": {
-            "spikyshield": [
-                "L1"
-            ],
-            "peck": [
-                "L1"
-            ],
-            "absorb": [
-                "L1"
-            ],
-            "afteryou": [
-                "L1"
-            ],
-            "ingrain": [
-                "L1"
-            ],
-            "growth": [
-                "L4"
-            ],
-            "megadrain": [
-                "L8"
-            ],
-            "leechseed": [
-                "L12"
-            ],
-            "suckerpunch": [
-                "L16"
-            ],
-            "pinmissile": [
-                "L20"
-            ],
-            "gigadrain": [
-                "L24",
-                "M"
-            ],
-            "sweetscent": [
-                "L28"
-            ],
-            "synthesis": [
-                "L32"
-            ],
-            "petalblizzard": [
-                "L36"
-            ],
-            "cottonspore": [
-                "L40"
-            ],
-            "sunnyday": [
-                "L44"
-            ],
-            "solarbeam": [
-                "L48"
-            ],
-            "acupressure": [
-                "L52"
-            ],
-            "petaldance": [
-                "L56"
-            ],
-            "cottonguard": [
-                "L60"
-            ],
-            "bulletseed": [
-                "M"
-            ],
-            "drainpunch": [
-                "M"
-            ],
-            "energyball": [
-                "M"
-            ],
-            "facade": [
-                "M"
-            ],
-            "grassyglide": [
-                "M"
-            ],
-            "knockoff": [
-                "M"
-            ],
-            "protect": [
-                "M"
-            ],
-            "toxic": [
-                "M"
-            ],
-            "weatherball": [
-                "M"
-            ],
-            "endure": [
-                "T"
-            ],
-            "sleeptalk": [
-                "T"
-            ],
-            "snore": [
-                "T"
-            ],
-            "swagger": [
                 "T"
             ]
         }
